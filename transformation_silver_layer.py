@@ -1,10 +1,15 @@
+import findspark
+findspark.init()
+
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
 
-spark = SparkSession.builder \
-    .appName("Fuel Prices in Brazil") \
+spark = (
+    SparkSession.builder
+    .appName("Parquet Fix Windows")
     .getOrCreate()
+)
 
 df_diesel_cng = spark.read.parquet("bronze/Diesel and CNG Prices.parquet")
 df_lpg = spark.read.parquet("bronze/LPG Prices.parquet")
@@ -84,4 +89,4 @@ df = (
     .withColumn('nm_fuel_brand', regexp_replace(col('nm_fuel_brand'), 'ã', 'a'))
 )
 
-df.to_parquet('silver/fuels_prices.parquet', index=False, engine='pyarrow')
+df.write.mode("overwrite").format("parquet").save("silver/fuels_prices")
