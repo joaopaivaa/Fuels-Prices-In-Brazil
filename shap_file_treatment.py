@@ -40,6 +40,8 @@ brazil_regions_shp = gpd.read_file("brazil_regions_shape\\BR_Regioes_2024.shp")
 
 brazil_regions_shp = brazil_regions_shp[['NM_REGIA', 'geometry']]
 brazil_regions_shp.columns = ['nm_region', 'geometry']
+
+brazil_regions_shp['nm_region'] = brazil_regions_shp['nm_region'].str.title()
     
 brazil_regions_shp["geometry"] = brazil_regions_shp["geometry"].simplify(tolerance=0.01, preserve_topology=True)
 
