@@ -2,10 +2,6 @@ venv
 __pycache__
 bronze/
 silver/
-gold/
 brazil_cities_shape/
 brazil_regions_shape/
 brazil_states_shape/
-brazil_cities_shape_adjusted/
-brazil_regions_shape_adjusted/
-brazil_states_shape_adjusted/
