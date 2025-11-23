@@ -34,43 +34,62 @@ with st.sidebar:
     start_date = st.date_input("Data inicial", df_fuels_copy['dt_date_month_start'].min())
     end_date = st.date_input("Data final", df_fuels_copy['dt_date_month_start'].max())
 
-    state_selected = st.multiselect(
-        "Estado",
-        sorted(df_fuels_copy['nm_state'].unique().tolist() + ['Todos']),
+    region_selected = st.multiselect(
+        "Região",
+        sorted(df_fuels_copy['nm_region'].unique().tolist()),
         max_selections=1
     )
+
+    if len(region_selected) != 0:
+        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_region'].isin(region_selected)].reset_index(drop=True)
+
+    state_selected = st.multiselect(
+        "Estado",
+        sorted(df_fuels_copy['nm_state'].unique().tolist()),
+        max_selections=1
+    )
+
+    if len(state_selected) != 0:
+        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_state'].isin(state_selected)].reset_index(drop=True)
 
     city_selected = st.multiselect(
         "Cidade",
-        sorted(df_fuels_copy['nm_city'].unique().tolist() + ['Todas']),
+        sorted(df_fuels_copy['nm_city'].unique().tolist()),
         max_selections=1
     )
 
+    if len(city_selected) != 0:
+        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'].isin(city_selected)].reset_index(drop=True)
+
     fuel_types_selected = st.multiselect(
         "Tipos de combustível",
-        sorted(df_fuels_copy['nm_fuel_type'].unique().tolist() + ['Todas']),
+        sorted(df_fuels_copy['nm_fuel_type'].unique().tolist()),
         default=['Gasolina']
     )
 
     fuel_brands_selected = st.multiselect(
         "Marcas de combustível",
-        sorted(df_fuels_copy['nm_fuel_brand'].unique().tolist() + ['Todas'])
+        sorted(df_fuels_copy['nm_fuel_brand'].unique().tolist())
     )
 
-if len(state_selected) != 0:
-    df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_state'].isin(state_selected)].reset_index(drop=True)
+title_col1, title_col2 = st.columns([2, 1], vertical_alignment="center", border=False)
 
-if len(city_selected) != 0:
-    df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'].isin(city_selected)].reset_index(drop=True)
+with title_col1:
 
-most_recent_month = df_fuels_copy['dt_date_month_start'].max()
-st.subheader(f"Preço médio de {most_recent_month.strftime('%B').title()} de {most_recent_month.year}")
+    most_recent_month = df_fuels_copy['dt_date_month_start'].max()
+    st.subheader(f"Preço médio de {most_recent_month.strftime('%B').title()} de {most_recent_month.year}")
 
-col1_header_line1, col2_header_line1, col3_header_line1, col4_header_line1 = st.columns(4, vertical_alignment="center", border=True)
-col1_header_line2, col2_header_line2, col3_header_line2, col4_header_line2 = st.columns(4, vertical_alignment="center", border=True)
+with title_col2:
 
-header_cols = [col1_header_line1, col2_header_line1, col3_header_line1, col4_header_line1,
-               col1_header_line2, col2_header_line2, col3_header_line2]
+    inflation_adustment = st.toggle(
+        "Deflacionar preços",
+        value=False
+    )
+
+if inflation_adustment:
+    print('')
+
+header_box1, header_box2 = st.columns([2, 1], vertical_alignment="center", border=False)
 
 average_price_fuel_type = (
     df_fuels_copy
@@ -80,37 +99,56 @@ average_price_fuel_type = (
     .reset_index()
 )
 
-most_recent_average_price_fuel_type = average_price_fuel_type.iloc[0:7].reset_index(drop=True)
-last_month_average_price_fuel_type = average_price_fuel_type.iloc[7:14].reset_index(drop=True)
+most_recent_average_price_fuel_type = average_price_fuel_type.iloc[0:6].reset_index(drop=True)
+last_month_average_price_fuel_type = average_price_fuel_type.iloc[6:12].reset_index(drop=True)
 
-for i in range(len(header_cols)):
+with header_box1:
 
-    col = header_cols[i]
-    fuel_type = most_recent_average_price_fuel_type.iloc[i]['nm_fuel_type']
+    col1_header_line1, col2_header_line1, col3_header_line1, col4_header_line1 = st.columns(4, vertical_alignment="center", border=True)
+    header_box1_cols = [col1_header_line1, col2_header_line1, col3_header_line1, col4_header_line1]
 
-    with col:
-    
-        most_recent_price = most_recent_average_price_fuel_type[most_recent_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
-        last_month_price = last_month_average_price_fuel_type[last_month_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
+    for i in range(len(header_box1_cols)):
 
-        monthly_change = (most_recent_price - last_month_price) / last_month_price * 100 if last_month_price != 0 else 0
+        col = header_box1_cols[i]
+        fuel_type = most_recent_average_price_fuel_type.sort_values('nm_fuel_type').reset_index(drop=True).iloc[i]['nm_fuel_type']
 
-        st.metric(
-            fuel_type,
-            f"R$ {most_recent_price:.2f}",
-            delta=f"{monthly_change:.2f}%",
-            delta_color="inverse"
-        )
+        with col:
+        
+            most_recent_price = most_recent_average_price_fuel_type[most_recent_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
+            last_month_price = last_month_average_price_fuel_type[last_month_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
 
-with col4_header_line2:
+            monthly_change = (most_recent_price - last_month_price) / last_month_price * 100 if last_month_price != 0 else 0
 
-    inflation_adustment = st.toggle(
-        "Deflacionar preços",
-        value=False
-    )  
+            st.metric(
+                fuel_type,
+                f"R$ {most_recent_price:.2f}",
+                delta=f"{monthly_change:.2f}%",
+                delta_color="inverse"
+            )
 
-if inflation_adustment:
-    print('')
+with header_box2:
+
+    col5_header_line1, col6_header_line1 = st.columns(2, vertical_alignment="center", border=True)
+    header_box2_cols = [col5_header_line1, col6_header_line1]
+
+    for i in range(len(header_box2_cols)):
+
+        col = header_box2_cols[i]
+        fuel_type = most_recent_average_price_fuel_type.sort_values('nm_fuel_type').reset_index(drop=True).iloc[i+4]['nm_fuel_type']
+
+        with col:
+        
+            most_recent_price = most_recent_average_price_fuel_type[most_recent_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
+            last_month_price = last_month_average_price_fuel_type[last_month_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
+
+            monthly_change = (most_recent_price - last_month_price) / last_month_price * 100 if last_month_price != 0 else 0
+
+            st.metric(
+                fuel_type,
+                f"R$ {most_recent_price:.2f}",
+                delta=f"{monthly_change:.2f}%",
+                delta_color="inverse"
+            )
 
 if len(fuel_brands_selected) != 0:
     df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_brand'].isin(fuel_brands_selected)].reset_index(drop=True)
@@ -142,7 +180,7 @@ with col1_sup:
         )
 
     if map_selection == 'Municipal':
-        territory_key = 'uf_city'
+        territory_key = 'nm_city'
         gdf_territory = gdf_cities.copy()
     elif map_selection == 'Estadual':
         territory_key = 'nm_state'
@@ -151,10 +189,13 @@ with col1_sup:
         territory_key = 'nm_region'
         gdf_territory = gdf_regions.copy()
 
-    if len(state_selected) != 0:
-        gdf_territory= gdf_territory[gdf_territory['nm_state'].isin(state_selected)].reset_index(drop=True)
+    if (len(region_selected) != 0) and ('nm_region' in gdf_territory.columns):
+        gdf_territory = gdf_territory[gdf_territory['nm_region'].isin(region_selected)].reset_index(drop=True)
 
-    if len(city_selected) != 0:
+    if (len(state_selected) != 0) and ('nm_state' in gdf_territory.columns):
+        gdf_territory = gdf_territory[gdf_territory['nm_state'].isin(state_selected)].reset_index(drop=True)
+
+    if (len(city_selected) != 0) and ('nm_city' in gdf_territory.columns):
         gdf_territory = gdf_territory[gdf_territory['nm_city'].isin(city_selected)].reset_index(drop=True)
 
     df_fuels_by_territory = df_fuels_copy.groupby([territory_key], as_index=False).agg(avg_fuel_price=('avg_fuel_price', 'mean')).sort_values(territory_key).reset_index(drop=True)
@@ -177,14 +218,25 @@ with col1_sup:
     )
 
     gdf_territory_no_nan = gdf_territory.dropna(subset=["avg_fuel_price"]).reset_index(drop=True)
+    gdf_territory_no_nan['id'] = gdf_territory_no_nan.index
 
     brazil_territory_map = px.choropleth(
         gdf_territory_no_nan,
         geojson=gdf_territory_no_nan.__geo_interface__,
-        locations=gdf_territory_no_nan.index,
+        locations='id',
         color="avg_fuel_price",
-        hover_data=[territory_key, "avg_fuel_price"],
-        range_color=(min_price, max_price) 
+        hover_data={
+            'id': False,
+            territory_key: True,
+            "avg_fuel_price": ':.2f'
+        },
+        range_color=(min_price, max_price),
+        labels={
+            "nm_region": "Região",
+            "nm_state": "Estado",
+            "nm_city": "Município",
+            "avg_fuel_price": "Preço Médio (R$)"
+        }
     )
 
     brazil_territory_map_blank.add_trace(brazil_territory_map.data[0])
@@ -236,7 +288,12 @@ fig_fuel_prices_by_brand_top5_highest = px.bar(
     text_auto=True,
     title='5 marcas com maior preço médio',
     orientation='h',
-    category_orders={"nm_brand_label": order_y_highest}
+    category_orders={"nm_brand_label": order_y_highest},
+    labels={
+        "nm_fuel_type": "Combustível",
+        "nm_brand_label": "Marca",
+        "avg_fuel_price": "Preço Médio (R$)"
+    }
 )
 fig_fuel_prices_by_brand_top5_highest.update_xaxes(title_text=None)
 fig_fuel_prices_by_brand_top5_highest.update_yaxes(title_text=None)
@@ -264,7 +321,11 @@ fig_fuel_prices_by_brand_top5_lowest = px.bar(
     title='5 marcas com menor preço médio',
     orientation='h',
     category_orders={"nm_brand_label": order_y_lowest},
-    
+    labels={
+        "nm_fuel_type": "Combustível",
+        "nm_brand_label": "Marca",
+        "avg_fuel_price": "Preço Médio (R$)"
+    }
 )
 fig_fuel_prices_by_brand_top5_lowest.update_xaxes(title_text=None)
 fig_fuel_prices_by_brand_top5_lowest.update_yaxes(title_text=None)
@@ -292,7 +353,12 @@ fig_fuel_prices_overtime = px.line(
     color='nm_fuel_type',
     color_discrete_map=fuel_types_colors,
     markers=True,
-    title='Evolução dos preço médio ao longo do tempo'
+    title='Evolução dos preço médio ao longo do tempo',
+    labels={
+        "dt_date_month_start": "Data",
+        "nm_fuel_type": "Combustível",
+        "avg_fuel_price": "Preço Médio (R$)"
+    }
 )
 fig_fuel_prices_overtime.update_xaxes(title_text=None)
 fig_fuel_prices_overtime.update_yaxes(title_text=None)
