@@ -56,11 +56,11 @@ df = (
 df = (
     df
     .withColumn('ab_state', col('nm_state'))
-    .withColumn('nm_region', when(col('nm_region') == 'N', 'North')
-                            .when(col('nm_region') == 'NE', 'Northeast')
-                            .when(col('nm_region') == 'CO', 'Central-West')
-                            .when(col('nm_region') == 'SE', 'Southeast')
-                            .when(col('nm_region') == 'S', 'South')
+    .withColumn('nm_region', when(col('nm_region') == 'N', 'Norte')
+                            .when(col('nm_region') == 'NE', 'Nordeste')
+                            .when(col('nm_region') == 'CO', 'Centro-Oeste')
+                            .when(col('nm_region') == 'SE', 'Sudeste')
+                            .when(col('nm_region') == 'S', 'Sul')
                             .otherwise(col('nm_region')))
     .withColumn('nm_state', when(col('nm_state') == 'AC', 'Acre')
                            .when(col('nm_state') == 'AL', 'Alagoas')
@@ -109,7 +109,11 @@ df = (
 
 df = (
     df
-    .withColumn('key_uf_city_lower', concat(lower(col('ab_state')), lit('_'), regexp_replace(lower(col('nm_city')), ' ', '_')))
+    .withColumn('uf_city', concat(lower(col('ab_state')), lit('_'), regexp_replace(lower(col('nm_city')), ' ', '_')))
+)
+
+df = (
+    df.filter(col('nm_fuel_type') != 'GLP')
 )
 
 df.write.mode("overwrite").format("parquet").save("silver/fuels_prices")
