@@ -42,7 +42,8 @@ with st.sidebar:
     region_selected = st.multiselect(
         "Região",
         sorted(df_fuels_copy['nm_region'].unique().tolist()),
-        max_selections=1
+        max_selections=1,
+        placeholder="Selecione uma região"
     )
 
     if len(region_selected) != 0:
@@ -51,7 +52,8 @@ with st.sidebar:
     state_selected = st.multiselect(
         "Estado",
         sorted(df_fuels_copy['nm_state'].unique().tolist()),
-        max_selections=1
+        max_selections=1,
+        placeholder="Selecione um estado"
     )
 
     if len(state_selected) != 0:
@@ -60,7 +62,8 @@ with st.sidebar:
     city_selected = st.multiselect(
         "Cidade",
         sorted(df_fuels_copy['nm_city'].unique().tolist()),
-        max_selections=1
+        max_selections=1,
+        placeholder="Selecione uma cidade"
     )
 
     if len(city_selected) != 0:
@@ -69,12 +72,14 @@ with st.sidebar:
     fuel_types_selected = st.multiselect(
         "Tipos de combustível",
         sorted(df_fuels_copy['nm_fuel_type'].unique().tolist()),
-        default=['Gasolina']
+        default=['Gasolina'],
+        placeholder="Selecione um combustível"
     )
 
     fuel_brands_selected = st.multiselect(
         "Marcas de combustível",
-        sorted(df_fuels_copy['nm_fuel_brand'].unique().tolist())
+        sorted(df_fuels_copy['nm_fuel_brand'].unique().tolist()),
+        placeholder="Selecione uma marca"
     )
 
 title_col1, title_col2 = st.columns([2, 1], vertical_alignment="center", border=False)
@@ -120,9 +125,6 @@ with header_box1:
         fuel_type = most_recent_average_price_fuel_type.sort_values('nm_fuel_type').reset_index(drop=True).iloc[i]['nm_fuel_type']
 
         with col:
-            
-            print(most_recent_average_price_fuel_type)
-            print(last_month_average_price_fuel_type)
         
             most_recent_price = most_recent_average_price_fuel_type[most_recent_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
             last_month_price = last_month_average_price_fuel_type[last_month_average_price_fuel_type['nm_fuel_type'] == fuel_type]['avg_fuel_price'].values[0]
@@ -298,7 +300,7 @@ df_fuel_prices_by_brand = (
     .agg(avg_fuel_price=('avg_fuel_price', 'mean'))
 )
 
-if len(fuel_types_selected) > 1:
+if len(fuel_types_selected) != 1:
 
     df_fuel_prices_by_brand["nm_brand_label"] = (
         df_fuel_prices_by_brand["nm_fuel_brand"] + " (" + df_fuel_prices_by_brand["nm_fuel_type"] + ")"
@@ -401,7 +403,7 @@ fig_fuel_prices_overtime = px.line(
     color='nm_fuel_type',
     color_discrete_map=fuel_types_colors,
     markers=True,
-    title='Evolução dos preço médio ao longo do tempo',
+    title='Evolução do preço médio ao longo do tempo',
     hover_data={
         'dt_date_month_start': True,
         'nm_fuel_type': True,
