@@ -25,7 +25,7 @@ gdf_regions = gpd.read_file("brazil_regions_shape_adjusted/brazil_regions.shp")
 
 df_fuels_copy = df_fuels.copy()
 
-#df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'] == 'Apucarana'].reset_index(drop=True)
+#df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'] == 'Assis Chateaubriand'].reset_index(drop=True)
 
 most_recent_month = df_fuels_copy['dt_date_month_start'].max()
 second_most_recent_month = df_fuels_copy['dt_date_month_start'].sort_values(ascending=False).unique()[1]
@@ -298,9 +298,14 @@ df_fuel_prices_by_brand = (
     .agg(avg_fuel_price=('avg_fuel_price', 'mean'))
 )
 
-df_fuel_prices_by_brand["nm_brand_label"] = (
-    df_fuel_prices_by_brand["nm_fuel_brand"] + " (" + df_fuel_prices_by_brand["nm_fuel_type"] + ")"
-)
+if len(fuel_types_selected) > 1:
+
+    df_fuel_prices_by_brand["nm_brand_label"] = (
+        df_fuel_prices_by_brand["nm_fuel_brand"] + " (" + df_fuel_prices_by_brand["nm_fuel_type"] + ")"
+    )
+
+else:
+    df_fuel_prices_by_brand["nm_brand_label"] = df_fuel_prices_by_brand["nm_fuel_brand"]
 
 df_fuel_prices_by_brand_top5_highest = df_fuel_prices_by_brand.sort_values('avg_fuel_price', ascending=False).reset_index().head(5)
 
@@ -312,10 +317,15 @@ fig_fuel_prices_by_brand_top5_highest = px.bar(
     y='nm_brand_label',
     color='nm_fuel_type',
     color_discrete_map=fuel_types_colors,
-    text_auto=True,
+    text_auto='.2f',
     title='5 marcas com maior preço médio',
     orientation='h',
     category_orders={"nm_brand_label": order_y_highest},
+    hover_data={
+        'nm_fuel_type': True,
+        'nm_brand_label': True,
+        "avg_fuel_price": ':.2f'
+    },
     labels={
         "nm_fuel_type": "Combustível",
         "nm_brand_label": "Marca",
@@ -333,6 +343,9 @@ fig_fuel_prices_by_brand_top5_highest.update_layout(
     ),
     legend_title=None
 )
+fig_fuel_prices_by_brand_top5_highest.update_traces(
+    textfont_weight='bold'
+)
 
 df_fuel_prices_by_brand_top5_lowest = df_fuel_prices_by_brand.sort_values('avg_fuel_price', ascending=True).reset_index().head(5)
 
@@ -344,10 +357,15 @@ fig_fuel_prices_by_brand_top5_lowest = px.bar(
     y='nm_brand_label',
     color='nm_fuel_type',
     color_discrete_map=fuel_types_colors,
-    text_auto=True,
+    text_auto='.2f',
     title='5 marcas com menor preço médio',
     orientation='h',
     category_orders={"nm_brand_label": order_y_lowest},
+    hover_data={
+        'nm_fuel_type': True,
+        'nm_brand_label': True,
+        "avg_fuel_price": ':.2f'
+    },
     labels={
         "nm_fuel_type": "Combustível",
         "nm_brand_label": "Marca",
@@ -365,6 +383,9 @@ fig_fuel_prices_by_brand_top5_lowest.update_layout(
     ),
     legend_title=None
 )
+fig_fuel_prices_by_brand_top5_lowest.update_traces(
+    textfont_weight='bold'
+)
 
 with col2_sup:
     st.plotly_chart(fig_fuel_prices_by_brand_top5_highest, width='stretch', config={'displayModeBar': False})
@@ -381,6 +402,11 @@ fig_fuel_prices_overtime = px.line(
     color_discrete_map=fuel_types_colors,
     markers=True,
     title='Evolução dos preço médio ao longo do tempo',
+    hover_data={
+        'dt_date_month_start': True,
+        'nm_fuel_type': True,
+        "avg_fuel_price": ':.2f'
+    },
     labels={
         "dt_date_month_start": "Data",
         "nm_fuel_type": "Combustível",
