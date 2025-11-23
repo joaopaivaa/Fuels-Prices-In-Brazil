@@ -1,2 +1,7 @@
 venv
 __pycache__
+bronze/*
+silver/*
+brazil_cities_shape/*
+brazil_regions_shape/*
+brazil_states_shape/*
