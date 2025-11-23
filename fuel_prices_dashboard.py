@@ -2,9 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import geopandas as gpd
-import locale
-
-locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 
 fuel_types_colors = {
     "Etanol": "#A8D8A8",
@@ -24,8 +21,6 @@ gdf_states = gpd.read_file("brazil_states_shape_adjusted/brazil_states.shp")
 gdf_regions = gpd.read_file("brazil_regions_shape_adjusted/brazil_regions.shp")
 
 df_fuels_copy = df_fuels.copy()
-
-#df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'] == 'Assis Chateaubriand'].reset_index(drop=True)
 
 most_recent_month = df_fuels_copy['dt_date_month_start'].max()
 second_most_recent_month = df_fuels_copy['dt_date_month_start'].sort_values(ascending=False).unique()[1]
@@ -86,7 +81,27 @@ title_col1, title_col2 = st.columns([2, 1], vertical_alignment="center", border=
 
 with title_col1:
 
-    st.subheader(f"Preço médio de {most_recent_month.strftime('%B').title()} de {most_recent_month.year}")
+    months_in_portuguese = {
+        1: "Janeiro",
+        2: "Fevereiro",
+        3: "Março",
+        4: "Abril",
+        5: "Maio",
+        6: "Junho",
+        7: "Julho",
+        8: "Agosto",
+        9: "Setembro",
+        10: "Outubro",
+        11: "Novembro",
+        12: "Dezembro"
+    }
+
+    month_number = most_recent_month.month
+    month_name = months_in_portuguese.get(month_number)
+
+    month_year = most_recent_month.year
+
+    st.subheader(f"Preço médio de {month_name} de {month_year}")
 
 with title_col2:
 
