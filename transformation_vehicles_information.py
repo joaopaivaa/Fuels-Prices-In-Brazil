@@ -6,7 +6,7 @@ df_vehicles.columns = ['nm_category', 'nm_brand', 'nm_model', 'nm_version', 'cd_
                        'ethanol_road_efficiency', 'gasoline_city_efficiency', 'gasoline_road_efficiency',
                        'electric_city_efficiency', 'electric_road_efficiency']
 
-df_vehicles = df_vehicles[~df_vehicles['cd_fuel'].isin(['D', 'E'])].reset_index(drop=True)
+df_vehicles = df_vehicles[df_vehicles['cd_fuel'] == 'F'].reset_index(drop=True)
 
 df_vehicles['nm_category'] = df_vehicles['nm_category'].str.title()
 df_vehicles['nm_brand'] = df_vehicles['nm_category'].str.title()
