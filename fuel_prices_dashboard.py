@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import geopandas as gpd
+import numpy as np
 
 fuel_types_colors = {
     "Etanol": "#A8D8A8",
@@ -18,11 +19,15 @@ st.set_page_config(layout='wide')
 st.title('Preços de combustíveis no Brasil :fuelpump:')
 
 df_fuels = pd.read_parquet('gold/fuels_prices')
+
+df_vehicles = pd.read_csv('dim_vehicles_efficiency.csv', encoding="latin1")
+
 gdf_cities = gpd.read_file("brazil_cities_shape_adjusted/brazil_cities.shp")
 gdf_states = gpd.read_file("brazil_states_shape_adjusted/brazil_states.shp")
 gdf_regions = gpd.read_file("brazil_regions_shape_adjusted/brazil_regions.shp")
 
 df_fuels_copy = df_fuels.copy()
+df_vehicles_copy = df_vehicles.copy()
 
 most_recent_month = df_fuels_copy['dt_date_month_start'].max()
 second_most_recent_month = df_fuels_copy['dt_date_month_start'].sort_values(ascending=False).unique()[1]
@@ -199,6 +204,8 @@ with tab_fuels_comparison:
                         delta=f"{monthly_change:.2f}%",
                         delta_color="inverse"
                     )
+
+    df_fuels_copy_vehicles = df_fuels_copy.copy()
 
     if len(fuel_brands_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_brand'].isin(fuel_brands_selected)].reset_index(drop=True)
@@ -459,14 +466,247 @@ with tab_fuels_comparison:
 
 with tab_gasoline_or_ethanol:
 
-    most_recent_month = df_fuels_copy['dt_date_month_start'].max()
-    second_most_recent_month = df_fuels_copy['dt_date_month_start'].sort_values(ascending=False).unique()[1]
+    col1, col2, col3, col4 = st.columns(4, vertical_alignment="center", border=False)
 
+    with col1:
+        category_selected = st.multiselect(
+            "Categoria",
+            sorted(df_vehicles_copy['nm_category'].unique().tolist()),
+            max_selections=1,
+            placeholder="Selecione uma categoria"
+        )
 
+    if len(category_selected) != 0:
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_category'].isin(category_selected)]
 
+    with col2:
+        brand_selected = st.multiselect(
+            "Marca",
+            sorted(df_vehicles_copy['nm_brand'].unique().tolist()),
+            max_selections=1,
+            placeholder="Selecione uma marca"
+        )
+ 
+    if len(brand_selected) != 0:
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_brand'].isin(brand_selected)]
 
+    with col3:
+        model_selected = st.multiselect(
+            "Modelo",
+            sorted(df_vehicles_copy['nm_model'].unique().tolist()),
+            max_selections=1,
+            placeholder="Selecione um modelo"
+        )
 
+    if len(model_selected) != 0:
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_model'].isin(model_selected)]
 
+    with col4:
+        version_selected = st.multiselect(
+            "Versão",
+            sorted(df_vehicles_copy['nm_version'].unique().tolist()),
+            max_selections=1,
+            placeholder="Selecione uma versão"
+        )
+
+    if len(version_selected) != 0:
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_version'].isin(version_selected)]
+    
+    df_fuels_copy_vehicles = df_fuels_copy_vehicles[df_fuels_copy_vehicles['nm_fuel_type'].isin(['Etanol', 'Gasolina'])]
+    df_fuels_copy_vehicles = df_fuels_copy_vehicles.groupby(['nm_region', 'ab_state', 'nm_state', 'nm_city', 'nm_fuel_type', 'dt_date_month_start', 'uf_city']).mean('avg_fuel_price').reset_index()
+
+    col_city, col_road = st.columns(2, vertical_alignment="center", border=True)
+
+    with col_city:
+
+        st.subheader('Cidade')
+
+        ethanol_efficiency = df_vehicles_copy['ethanol_city_efficiency'].values[0]
+        gasoline_efficiency = df_vehicles_copy['gasoline_city_efficiency'].values[0]
+
+        df_fuels_copy_vehicles['nu_km_cost'] = np.where(df_fuels_copy_vehicles['nm_fuel_type'] == 'Gasolina',
+                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency ,
+                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
+
+        df_gasoline_ethanol_overtime = df_fuels_copy_vehicles.groupby(['dt_date_month_start', 'nm_fuel_type']).mean('nu_km_cost').reset_index()
+
+        fig_gasoline_ethanol_overtime = px.line(
+            df_gasoline_ethanol_overtime,
+            x='dt_date_month_start',
+            y='nu_km_cost',
+            color='nm_fuel_type',
+            color_discrete_map=fuel_types_colors,
+            markers=True,
+            title='Evolução do preço médio por Km (R$) ao longo do tempo',
+            hover_data={
+                'dt_date_month_start': True,
+                'nm_fuel_type': True,
+                "nu_km_cost": ':.2f'
+            },
+            labels={
+                "dt_date_month_start": "Data",
+                "nm_fuel_type": "Combustível",
+                "nu_km_cost": "Preço Médio por Km (R$)"
+            }
+        )
+        fig_gasoline_ethanol_overtime.update_xaxes(title_text=None)
+        fig_gasoline_ethanol_overtime.update_yaxes(title_text=None)
+        fig_gasoline_ethanol_overtime.update_layout(
+            legend=dict(
+                x=0,
+                y=-0.1,
+                orientation="h",
+                xanchor='left'
+            ),
+            legend_title=None
+        )
+
+        st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+
+    with col_road:
+
+        st.subheader('Estrada')
+
+        ethanol_efficiency = df_vehicles_copy['ethanol_road_efficiency'].values[0]
+        gasoline_efficiency = df_vehicles_copy['gasoline_road_efficiency'].values[0]
+
+        df_fuels_copy_vehicles['nu_km_cost'] = np.where(df_fuels_copy_vehicles['nm_fuel_type'] == 'Gasolina',
+                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency ,
+                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
+
+        df_gasoline_ethanol_overtime = df_fuels_copy_vehicles.groupby(['dt_date_month_start', 'nm_fuel_type']).mean('nu_km_cost').reset_index()
+
+        fig_gasoline_ethanol_overtime = px.line(
+            df_gasoline_ethanol_overtime,
+            x='dt_date_month_start',
+            y='nu_km_cost',
+            color='nm_fuel_type',
+            color_discrete_map=fuel_types_colors,
+            markers=True,
+            title='Evolução do preço médio por Km (R$) ao longo do tempo',
+            hover_data={
+                'dt_date_month_start': True,
+                'nm_fuel_type': True,
+                "nu_km_cost": ':.2f'
+            },
+            labels={
+                "dt_date_month_start": "Data",
+                "nm_fuel_type": "Combustível",
+                "nu_km_cost": "Preço Médio por Km (R$)"
+            }
+        )
+        fig_gasoline_ethanol_overtime.update_xaxes(title_text=None)
+        fig_gasoline_ethanol_overtime.update_yaxes(title_text=None)
+        fig_gasoline_ethanol_overtime.update_layout(
+            legend=dict(
+                x=0,
+                y=-0.1,
+                orientation="h",
+                xanchor='left'
+            ),
+            legend_title=None
+        )
+
+        st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+
+    map_selection_gasolina_ethanol = st.radio(
+        "Nível territorial",
+        options=['Regional', 'Estadual', 'Municipal'],
+        index=1,
+        key="map_selection_gasolina_ethanol"
+    )
+
+    if map_selection_gasolina_ethanol == 'Municipal':
+        territory_key = 'nm_city'
+        gdf_territory = gdf_cities.copy()
+    elif map_selection_gasolina_ethanol == 'Estadual':
+        territory_key = 'nm_state'
+        gdf_territory = gdf_states.copy()
+    else:
+        territory_key = 'nm_region'
+        gdf_territory = gdf_regions.copy()
+
+    df_gasoline_ethanol_by_territory = df_fuels_copy_vehicles.groupby([territory_key, 'nm_fuel_type']).mean('nu_km_cost').reset_index()
+
+    df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory.pivot(index=territory_key, columns='nm_fuel_type', values='nu_km_cost')
+
+    df_gasoline_ethanol_by_territory_pivoted['choice'] = np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] > df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
+                                                                  'Gasolina',
+                                                                  np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] < df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
+                                                                           'Etanol',
+                                                                           'Indiferente'))
+
+    df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory_pivoted.drop(['Etanol', 'Gasolina'], axis=1)
+
+    if (len(region_selected) != 0) and ('nm_region' in gdf_territory.columns):
+        gdf_territory = gdf_territory[gdf_territory['nm_region'].isin(region_selected)].reset_index(drop=True)
+
+    if (len(state_selected) != 0) and ('nm_state' in gdf_territory.columns):
+        gdf_territory = gdf_territory[gdf_territory['nm_state'].isin(state_selected)].reset_index(drop=True)
+
+    if (len(city_selected) != 0) and ('nm_city' in gdf_territory.columns):
+        gdf_territory = gdf_territory[gdf_territory['nm_city'].isin(city_selected)].reset_index(drop=True)
+
+    gdf_territory = gdf_territory.sort_values(territory_key).reset_index(drop=True)
+    gdf_territory = gdf_territory.merge(df_gasoline_ethanol_by_territory_pivoted, left_on= territory_key, right_on=territory_key, how="left")
+
+    gdf_territory
+    
+    brazil_territory_map_blank = px.choropleth(
+        gdf_territory,
+        geojson=gdf_territory.__geo_interface__,
+        locations=gdf_territory.index,
+        color_discrete_sequence=["#EEEEEE"]
+    )
+    brazil_territory_map_blank.update_traces(
+        marker_line_width=1, 
+        marker_line_color="black"
+    )
+
+    gdf_territory_no_nan = gdf_territory.dropna(subset=["choice"]).reset_index(drop=True)
+    gdf_territory_no_nan['id'] = gdf_territory_no_nan.index
+
+    gdf_territory_no_nan
+
+    brazil_territory_map = px.choropleth(
+        gdf_territory_no_nan,
+        geojson=gdf_territory_no_nan.__geo_interface__,
+        locations='id',
+        color="choice",
+        color_discrete_map=fuel_types_colors,
+        hover_data={
+            'id': False,
+            territory_key: True,
+            "choice": True
+        },
+        labels={
+            "nm_region": "Região",
+            "nm_state": "Estado",
+            "nm_city": "Município",
+            "choice": "Escolha"
+        }
+    )
+
+    brazil_territory_map_blank.add_trace(brazil_territory_map.data[0])
+
+    brazil_territory_map_blank.update_layout(
+        margin=dict(r=0,l=0,t=0,b=0),
+        paper_bgcolor='#0e1117',
+        plot_bgcolor='#0e1117',
+        dragmode=False
+    )
+    brazil_territory_map_blank.update_geos(
+        fitbounds="locations",
+        visible=False,
+        projection_type="mercator",
+        bgcolor='#0e1117'
+    )
+    brazil_territory_map_blank.update_traces(
+        marker_line_width=0.5,
+        marker_line_color="black"
+    )
+
+    st.plotly_chart(brazil_territory_map_blank, width='stretch', config={'displayModeBar': False})
 
 
 
