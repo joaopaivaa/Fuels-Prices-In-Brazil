@@ -1,291 +1,291 @@
-,nm_category,nm_brand,nm_model,nm_version,cd_fuel,ethanol_city_efficiency,ethanol_road_efficiency,gasoline_city_efficiency,gasoline_road_efficiency,electric_city_efficiency,electric_road_efficiency
-0,Sub Compacto,Sub Compacto,MOBI,TREKKING,F,9.8,10.6,14.0,15.1,,
-1,Sub Compacto,Sub Compacto,MOBI,LIKE,F,9.8,10.6,14.0,15.1,,
-2,Compacto,Compacto,ARGO,1,F,9.4,10.4,13.6,14.5,,
-3,Compacto,Compacto,ARGO,DRIVE 1.0,F,9.4,10.4,13.6,14.5,,
-4,Compacto,Compacto,ARGO,DRIVE 1.3 AT,F,9.0,10.3,12.8,14.3,,
-5,Compacto,Compacto,HB20,Sense,F,9.9,10.7,13.3,15.4,,
-6,Compacto,Compacto,HB20,Comfort,F,9.9,10.7,13.3,15.4,,
-7,Compacto,Compacto,HB20,Limited,F,9.9,10.7,13.3,15.4,,
-8,Compacto,Compacto,HB20,Platinum,F,9.9,10.7,13.3,15.4,,
-9,Compacto,Compacto,HB20,SE,F,9.9,10.7,13.3,15.4,,
-10,Compacto,Compacto,HB20,Comfort,F,9.2,10.2,13.2,14.7,,
-11,Compacto,Compacto,HB20,Platinum Safety,F,9.2,10.2,13.2,14.7,,
-12,Compacto,Compacto,HB20,SE,F,9.2,10.2,13.2,14.7,,
-13,Compacto,Compacto,208,STYLE MT,F,9.5,10.8,13.6,15.3,,
-14,Compacto,Compacto,208,ACTIVE MT,F,9.5,10.8,13.6,15.3,,
-15,Compacto,Compacto,208,ALLUR T200,F,8.8,10.1,12.6,14.3,,
-16,Compacto,Compacto,208,GT T200,F,8.3,9.7,12.0,13.7,,
-17,Mã©Dio,Mã©Dio,ONIX,MT,F,9.6,11.9,13.8,16.9,,
-18,Mã©Dio,Mã©Dio,ONIX,LT,F,9.6,11.9,13.8,16.9,,
-19,Mã©Dio,Mã©Dio,ONIX,LT,F,9.3,11.7,13.5,16.7,,
-20,Mã©Dio,Mã©Dio,ONIX,AT,F,8.2,10.5,12.0,14.8,,
-21,Mã©Dio,Mã©Dio,ONIX,LT,F,8.2,10.5,12.0,14.8,,
-22,Mã©Dio,Mã©Dio,ONIX,LTZ,F,8.2,10.5,12.0,14.8,,
-23,Mã©Dio,Mã©Dio,ONIX,PREMIER,F,8.2,10.5,12.0,14.8,,
-24,Mã©Dio,Mã©Dio,ONIX,RS,F,8.2,9.8,11.8,13.5,,
-25,Mã©Dio,Mã©Dio,ONIX PLUS,LT,F,9.2,12.4,13.5,17.4,,
-26,Mã©Dio,Mã©Dio,ONIX PLUS,LT2,F,9.7,12.2,13.9,17.4,,
-27,Mã©Dio,Mã©Dio,ONIX PLUS,PREMIER,F,8.5,11.0,12.0,15.6,,
-28,Mã©Dio,Mã©Dio,ONIX PLUS,LT,F,8.5,11.0,12.0,15.6,,
-29,Mã©Dio,Mã©Dio,ONIX PLUS,LTZ,F,8.5,11.0,12.0,15.6,,
-30,Mã©Dio,Mã©Dio,ONIX PLUS,AT,F,8.5,11.0,12.0,15.6,,
-31,Mã©Dio,Mã©Dio,ONIX PLUS (MY26),LTZ,F,8.5,11.2,12.2,16.0,,
-32,Mã©Dio,Mã©Dio,ONIX PLUS (MY26),PREMIER,F,8.5,11.2,12.2,16.0,,
-33,Mã©Dio,Mã©Dio,ONIX PLUS (MY26),MT,F,9.2,12.3,13.3,16.8,,
-34,Mã©Dio,Mã©Dio,ONIX PLUS (MY26),LT,F,8.5,11.2,12.2,16.0,,
-35,Mã©Dio,Mã©Dio,ONIX PLUS (MY26),MT,F,9.8,12.1,13.9,17.1,,
-36,Mã©Dio,Mã©Dio,ONIX PLUS (MY26),AT,F,8.5,11.2,12.2,16.0,,
-37,Mã©Dio,Mã©Dio,ONIX (MY26),AT,F,8.6,10.9,12.1,15.3,,
-38,Mã©Dio,Mã©Dio,ONIX (MY26),100 ANOS,F,9.5,11.3,13.5,16.3,,
-39,Mã©Dio,Mã©Dio,ONIX (MY26),LTZ,F,,,,,,
-40,Mã©Dio,Mã©Dio,ONIX (MY26),PREMIER,F,,,,,,
-41,Mã©Dio,Mã©Dio,ONIX (MY26),RS,F,,,,,,
-42,Mã©Dio,Mã©Dio,ONIX (MY26),MT,F,9.8,12.4,13.7,17.7,,
-43,Mã©Dio,Mã©Dio,ONIX (MY26),LT,F,8.6,10.9,12.1,15.3,,
-44,Mã©Dio,Mã©Dio,ONIX (MY26),MT,F,9.5,11.3,13.5,16.3,,
-45,Mã©Dio,Mã©Dio,SPIN,LS E,F,7.7,8.6,11.0,12.5,,
-46,Mã©Dio,Mã©Dio,SPIN,LS2,F,7.7,8.6,11.0,12.5,,
-47,Mã©Dio,Mã©Dio,SPIN,LT,F,7.7,8.6,11.0,12.5,,
-48,Mã©Dio,Mã©Dio,SPIN,LT,F,7.4,9.3,10.5,13.4,,
-49,Mã©Dio,Mã©Dio,SPIN,AT,F,7.4,9.3,10.5,13.4,,
-50,Mã©Dio,Mã©Dio,SPIN,LTZ5,F,7.4,9.3,10.5,13.4,,
-51,Mã©Dio,Mã©Dio,SPIN (MY26.5),AT,F,7.1,9.1,10.1,13.1,,
-52,Mã©Dio,Mã©Dio,SPIN (MY26.5),LT,F,7.8,8.8,11.0,12.6,,
-53,Mã©Dio,Mã©Dio,SPIN (MY26.5),LT,F,7.1,9.1,10.1,13.1,,
-54,Mã©Dio,Mã©Dio,CRONOS,1,F,9.7,11.2,13.4,15.9,,
-55,Mã©Dio,Mã©Dio,CRONOS,DRIVE 1.0,F,9.7,11.2,13.4,15.9,,
-56,Mã©Dio,Mã©Dio,CRONOS,DRIVE1.3AT,F,8.9,10.7,12.6,14.6,,
-57,Mã©Dio,Mã©Dio,CRONOS,PREC 1.3AT,F,8.9,10.7,12.6,14.6,,
-58,Mã©Dio,Mã©Dio,CITY,LX,F,9.3,10.4,12.8,15.5,,
-59,Mã©Dio,Mã©Dio,CITY,EX,F,9.3,10.4,12.8,15.5,,
-60,Mã©Dio,Mã©Dio,CITY,EXL,F,9.3,10.4,12.8,15.5,,
-61,Mã©Dio,Mã©Dio,CITY,TOURING,F,9.3,10.4,12.8,15.5,,
-62,Mã©Dio,Mã©Dio,CITY HATCH,LX,F,9.2,10.5,13.2,15.0,,
-63,Mã©Dio,Mã©Dio,CITY HATCH,EX,F,9.2,10.5,13.2,15.0,,
-64,Mã©Dio,Mã©Dio,CITY HATCH,EXL,F,9.2,10.5,13.2,15.0,,
-65,Mã©Dio,Mã©Dio,CITY HATCH,TOURING,F,9.2,10.5,13.2,15.0,,
-66,Mã©Dio,Mã©Dio,CITY HATCH,TOURING SPORT,F,9.2,10.5,13.2,15.0,,
-67,Mã©Dio,Mã©Dio,HR-V,EX HONDA SENSING,F,8.8,9.9,12.5,13.9,,
-68,Mã©Dio,Mã©Dio,HR-V,EXL HONDA SENSING,F,8.8,9.9,12.5,13.9,,
-69,Mã©Dio,Mã©Dio,HR-V,ADVANCE,F,8.0,9.2,11.3,13.0,,
-70,Mã©Dio,Mã©Dio,HR-V,TOURING,F,8.0,9.2,11.3,13.0,,
-71,Mã©Dio,Mã©Dio,HR-V (mod. 26),ADVANCE,F,8.1,9.1,11.5,12.9,,
-72,Mã©Dio,Mã©Dio,HR-V (mod. 26),TOURING,F,8.1,9.1,11.5,12.9,,
-73,Mã©Dio,Mã©Dio,HB20S,Comfort,F,9.7,10.9,13.4,15.4,,
-74,Mã©Dio,Mã©Dio,HB20S,Limited,F,9.7,10.9,13.4,15.4,,
-75,Mã©Dio,Mã©Dio,HB20S,Platinum,F,9.7,10.9,13.4,15.4,,
-76,Mã©Dio,Mã©Dio,HB20S,SE,F,9.7,10.9,13.4,15.4,,
-77,Mã©Dio,Mã©Dio,HB20S,Comfort,F,9.2,10.7,13.0,15.2,,
-78,Mã©Dio,Mã©Dio,HB20S,Platinum Safety,F,9.2,10.7,13.0,15.2,,
-79,Mã©Dio,Mã©Dio,HB20S,SE,F,9.2,10.7,13.0,15.2,,
-80,Mã©Dio,Mã©Dio,Versa,SENSE CVT,F,7.9,10.5,11.5,15.0,,
-81,Mã©Dio,Mã©Dio,Versa,ADVNC CVT,F,7.9,10.5,11.5,15.0,,
-82,Mã©Dio,Mã©Dio,Versa,SR CVT,F,7.9,10.5,11.5,15.0,,
-83,Mã©Dio,Mã©Dio,Versa,EXCL CVT,F,7.9,10.5,11.5,15.0,,
-84,Mã©Dio,Mã©Dio,VIRTUS,"COMFORTLINE 200TSI 
-AUTOMÃTICO",F,8.3,10.2,12.1,14.7,,
-85,Mã©Dio,Mã©Dio,VIRTUS,"HIGHLINE 200TSI 
-AUTOMÃTICO",F,8.3,10.2,12.1,14.7,,
-86,Mã©Dio,Mã©Dio,VIRTUS,TSI AUTOMÃTICO,F,8.5,10.4,12.2,14.9,,
-87,Mã©Dio,Mã©Dio,VIRTUS,TSI MECÃNICO,F,9.2,11.2,13.2,15.8,,
-88,Mã©Dio,Mã©Dio,VIRTUS,SENSE TSI MECÃNICO,F,9.2,11.2,13.2,15.8,,
-89,Mã©Dio,Mã©Dio,VIRTUS,"EXCLUSIVE 250TSI 
-AUTOMÃTICO",F,8.1,9.9,11.7,14.0,,
-90,Mã©Dio,Mã©Dio,POLO,TSI MECÃNICO,F,9.6,11.4,13.9,16.3,,
-91,Mã©Dio,Mã©Dio,POLO,SENSE TSI AUTOMÃTICO,F,9.0,11.1,13.1,16.1,,
-92,Mã©Dio,Mã©Dio,POLO,MPI,F,9.3,10.9,13.5,15.7,,
-93,Mã©Dio,Mã©Dio,POLO,TRACK 1.0 MPI,F,9.3,10.9,13.5,15.7,,
-94,Mã©Dio,Mã©Dio,POLO,TRACK ROBUST 1.0 MPI,F,9.3,10.9,13.5,15.7,,
-95,Mã©Dio,Mã©Dio,TERA,MPI,F,9.1,10.2,13.2,14.7,,
-96,Grande,Grande,COROLLA CROSS,XR 20,F,7.6,8.8,11.2,13.0,,
-97,Grande,Grande,COROLLA CROSS,XRE 20,F,7.6,8.8,11.2,13.0,,
-98,Grande,Grande,COROLLA CROSS,XRX 20,F,7.6,8.8,11.2,13.0,,
-99,Grande,Grande,COROLLA CROSS,GRS,F,7.6,8.8,11.2,13.0,,
-100,Grande,Grande,COROLLA CROSS,XRV HYBRID,F,11.6,9.9,16.6,14.0,,
-101,Grande,Grande,COROLLA CROSS,XRX HYBRID,F,11.6,9.9,16.6,14.0,,
-102,Grande,Grande,COROLLA,GLI,F,8.0,10.0,11.9,14.5,,
-103,Grande,Grande,COROLLA,GLI 20,F,8.0,10.0,11.9,14.5,,
-104,Grande,Grande,COROLLA,XEI 20,F,8.0,10.0,11.9,14.5,,
-105,Grande,Grande,COROLLA,ALTIS 20,F,8.0,10.0,11.9,14.5,,
-106,Grande,Grande,COROLLA,GRS,F,8.0,10.0,11.9,14.5,,
-107,Grande,Grande,COROLLA,ALTIS HV,F,12.5,10.7,17.5,15.2,,
-108,Grande,Grande,COROLLA,APREMIUMH,F,12.5,10.7,17.5,15.2,,
-109,Grande,Grande,COROLLA,GLI HEV,F,12.5,10.7,17.5,15.2,,
-110,Extra Grande,Extra Grande,320i,M Sport Flex,F,7.4,9.0,10.5,13.1,,
-111,Extra Grande,Extra Grande,320i,Sport GP Flex,F,7.6,9.2,10.9,13.3,,
-112,Extra Grande,Extra Grande,320i,GP Flex,F,7.6,9.2,10.9,13.3,,
-113,Extra Grande,Extra Grande,320i,Active Flex,F,7.1,8.6,10.0,12.3,,
-114,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TIGGO 5X,PRO HA,F,8.1,8.5,11.4,11.8,,
-115,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TIGGO 5X,PRO,F,6.5,8.4,10.0,12.1,,
-116,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TIGGO 5X,SPORT,F,6.5,8.4,10.0,12.1,,
-117,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER,LT,F,8.0,9.8,11.6,13.7,,
-118,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER,MID,F,8.0,9.8,11.6,13.7,,
-119,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER,AT,F,8.0,9.8,11.6,13.7,,
-120,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER,LTZ,F,8.0,9.8,11.6,13.7,,
-121,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER,RS,F,7.7,10.0,11.2,14.1,,
-122,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER,PREMIER,F,7.7,10.0,11.2,14.1,,
-123,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),LT,F,8.1,9.9,11.5,13.8,,
-124,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),LTZ,F,8.1,9.9,11.5,13.8,,
-125,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),AT,F,8.1,9.9,11.5,13.8,,
-126,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),LT,F,8.1,9.9,11.5,13.8,,
-127,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),LTZ,F,8.1,9.9,11.5,13.8,,
-128,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),RS,F,7.6,9.7,11.0,13.7,,
-129,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),PREMIER,F,7.6,9.7,11.0,13.7,,
-130,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),100 ANOS,F,7.6,9.7,11.0,13.7,,
-131,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TRACKER (MY26),PREMIER,F,7.6,9.7,11.0,13.7,,
-132,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,BASALT,T200 1ST,F,8.4,9.6,12.1,13.7,,
-133,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,BASALT,FEEL 1.0,F,9.2,10.1,13.2,14.3,,
-134,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,BASALT,SHINE T200,F,8.4,9.6,12.1,13.7,,
-135,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,BASALT,FEEL T200,F,8.4,9.6,12.1,13.7,,
-136,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3,FEEL 1.0,F,9.3,10.3,13.2,14.5,,
-137,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3,LIVE 1.0,F,9.3,10.3,13.2,14.5,,
-138,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3,LIVE PK 1.0,F,9.3,10.3,13.2,14.5,,
-139,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3,YOU 1.0T CVT,F,8.1,8.9,11.5,12.9,,
-140,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3 AIRCROSS,FL,F,7.9,9.1,11.2,13.0,,
-141,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3 AIRCROSS,FL 7,F,7.9,9.1,11.2,13.0,,
-142,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3 AIRCROSS,FL PK,F,7.9,9.1,11.2,13.0,,
-143,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3 AIRCROSS,FLPK7,F,7.9,9.1,11.2,13.0,,
-144,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3 AIRCROSS,SH,F,7.9,9.1,11.2,13.0,,
-145,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,C3 AIRCROSS,SH 7,F,7.9,9.1,11.2,13.0,,
-146,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,ARGO,TREKKING 1.3AT,F,9.0,10.3,12.8,14.3,,
-147,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,FASTBACK,AUDACE HYB,F,8.9,9.8,12.6,13.9,,
-148,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,FASTBACK,IMPETUS HY,F,8.9,9.8,12.6,13.9,,
-149,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,FASTBACK,ABARTH 270,F,7.3,9.1,10.8,12.9,,
-150,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,FASTBACK,LIMITED ED,F,7.8,9.8,11.3,13.6,,
-151,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,FASTBACK,TURBO 200,F,8.5,10.1,12.1,14.3,,
-152,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,PULSE,AUDACE HYB,F,9.3,10.2,13.4,14.4,,
-153,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,PULSE,IMPETUS HYB,F,9.3,10.2,13.4,14.4,,
-154,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,PULSE,DRIVE AT,F,8.9,10.5,13.0,14.7,,
-155,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,PULSE,DRIVE TF 200,F,8.6,10.0,12.3,14.4,,
-156,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,PULSE,ABARTH 270,F,7.2,8.8,10.5,12.2,,
-157,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,WR-V,EX,F,8.2,8.9,12.0,12.8,,
-158,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,WR-V,EXL,F,8.2,8.9,12.0,12.8,,
-159,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,CRETA,Comfort,F,8.4,9.0,12.0,12.7,,
-160,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,CRETA,Limited,F,8.4,9.0,12.0,12.7,,
-161,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,CRETA,Platinum,F,8.4,9.0,12.0,12.7,,
-162,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,CRETA,N Line,F,8.4,9.0,12.0,12.7,,
-163,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,RENEGADE,SPT T270,F,7.8,8.9,11.1,12.4,,
-164,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,RENEGADE,LGTD T270,F,7.8,8.9,11.1,12.4,,
-165,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,RENEGADE,1.3 TURBO,F,7.8,8.9,11.1,12.4,,
-166,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,RENEGADE,1.3 T FLEX,F,7.8,8.9,11.1,12.4,,
-167,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,RENEGADE,SAHARA,F,7.8,8.9,11.1,12.4,,
-168,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks Play,SENSE,F,7.8,9.4,11.3,13.7,,
-169,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks Play,ADV,F,7.8,9.4,11.3,13.7,,
-170,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks Play,ACTIVE,F,7.8,9.4,11.3,13.7,,
-171,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks,SENSE AT,F,8.3,9.9,11.7,14.3,,
-172,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks,ADVANCE AT,F,8.3,9.9,11.7,14.3,,
-173,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks,EXCLUSIV AT,F,8.3,9.9,11.7,14.3,,
-174,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,Kicks,PLATINUM AT,F,8.3,9.9,11.7,14.3,,
-175,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,2008,GT T200,F,8.5,9.8,12.0,14.1,,
-176,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,2008,ACT T200,F,8.5,9.8,12.0,14.1,,
-177,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,2008,ALLU T200,F,8.5,9.8,12.0,14.1,,
-178,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,ZEN,F,10.4,10.8,14.6,15.5,,
-179,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,INTENSE,F,10.4,10.8,14.6,15.5,,
-180,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,OUTSIDER,F,10.4,10.8,14.6,15.5,,
-181,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,INTENSE BITON,F,10.4,10.8,14.6,15.5,,
-182,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,ICONIC 2,F,10.4,10.8,14.6,15.5,,
-183,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,ZEN 2,F,10.4,10.7,14.4,15.4,,
-184,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,INTENSE 2,F,10.4,10.7,14.4,15.4,,
-185,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,OUTSIDER 2,F,10.4,10.7,14.4,15.4,,
-186,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,INTENSE BITON 2,F,10.4,10.7,14.4,15.4,,
-187,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,ICONIC 2,F,10.4,10.7,14.4,15.4,,
-188,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KWID,LIFE 2,F,10.4,10.7,14.4,15.4,,
-189,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KARDIAN,PREM AT,F,8.8,9.8,12.2,13.8,,
-190,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KARDIAN,TECH AT,F,8.8,9.8,12.2,13.8,,
-191,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KARDIAN,EVO AT,F,8.8,9.8,12.2,13.8,,
-192,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,KARDIAN,EVO MT,F,8.6,10.2,12.4,14.8,,
-193,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,T CROSS,"HIGHLINE 250TSI 
-AUTOMÃTICO",F,8.2,9.9,11.8,14.2,,
-194,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,T CROSS,"COMFORTLINE 200TSI 
-AUTOMATICO",F,8.5,10.2,12.1,14.5,,
-195,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,T CROSS,200TSI AUTOMATICO,F,8.5,10.2,12.1,14.5,,
-196,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,T CROSS,"SENSE 200TSI 
-AUTOMATICO",F,8.5,10.2,12.1,14.5,,
-197,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,NIVUS,"HIGHLINE 200TSI 
-AUTOMÃTICO",F,8.6,10.3,12.4,14.8,,
-198,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,NIVUS,"COMFORTLINE 200TSI 
-AUTOMÃTICO",F,8.6,10.3,12.4,14.8,,
-199,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TERA,COMFORT TSI,F,8.6,10.3,12.2,14.5,,
-200,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TERA,HIGH TSI,F,8.6,10.3,12.2,14.5,,
-201,Utilitã¡Rio Esportivo Compacto,Utilitã¡Rio Esportivo Compacto,TERA,TSI,F,9.0,10.3,12.9,15.0,,
-202,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,TIGGO 7,PRO HA,F,7.8,8.3,11.1,11.6,,
-203,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,TIGGO 7,SPORT,F,6.4,8.3,10.1,12.3,,
-204,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,"OVR T270 (""Mestre"")",F,7.0,8.3,9.9,11.4,,
-205,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,LIM T270,F,7.0,8.3,9.9,11.4,,
-206,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,LONGITUDE,F,7.0,8.3,9.9,11.4,,
-207,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,FLEX,F,7.0,8.3,9.9,11.4,,
-208,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,OVE 7 270 (MY26),F,6.9,8.3,10.0,11.5,,
-209,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,LIM 7 270 (MY26),F,6.9,8.3,10.0,11.5,,
-210,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,LON 7 270 (MY26),F,6.9,8.3,10.0,11.5,,
-211,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMMANDER,LON 5 270 (MY26),F,7.2,8.4,10.2,11.5,,
-212,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMPASS,LIMITED T,F,7.3,8.6,10.1,12.1,,
-213,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMPASS,LONG T,F,7.3,8.6,10.1,12.1,,
-214,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMPASS,SERIE S T,F,7.3,8.6,10.1,12.1,,
-215,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,COMPASS,SPORT T,F,7.3,8.6,10.1,12.1,,
-216,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,ICO,F,7.5,8.3,10.8,11.4,,
-217,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,ICOP,F,7.5,8.3,10.8,11.4,,
-218,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,INT,F,7.5,8.3,10.8,11.4,,
-219,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,INTP,F,7.5,8.3,10.8,11.4,,
-220,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,LIF,F,7.5,8.3,10.8,11.4,,
-221,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,ZEN,F,7.5,8.3,10.8,11.4,,
-222,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,DUSTER INT 16,F,7.6,8.4,11.2,12.3,,
-223,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,DUSTER INTP MT,F,7.6,8.4,11.2,12.3,,
-224,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,DUSTER ZEN 16,F,7.6,8.4,11.2,12.3,,
-225,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,ICO TCE,F,7.5,8.6,10.9,12.3,,
-226,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,ICOUT TCE,F,7.5,8.6,10.9,12.3,,
-227,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,DUSTER,ZEN 13TCE,F,7.5,8.6,10.9,12.3,,
-228,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,BOREAL,EVO,F,7.8,9.4,11.2,13.6,,
-229,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,BOREAL,TECH,F,7.8,9.4,11.2,13.6,,
-230,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,BOREAL,ICO,F,7.8,9.4,11.2,13.6,,
-231,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,TAOS,"COMFORTLINE 250TSI 
-AUTOMÃTICO",F,7.7,9.3,11.1,13.3,,
-232,Utilitã¡Rio Esportivo Grande,Utilitã¡Rio Esportivo Grande,TAOS,"HIGHLINE 250TSI 
-AUTOMÃTICO",F,7.7,9.3,11.1,13.3,,
-233,Fora De Estrada Compacto,Fora De Estrada Compacto,RENEGADE,S T2704X4T,F,6.3,7.4,9.2,10.1,,
-234,Fora De Estrada Compacto,Fora De Estrada Compacto,RENEGADE,TRAIL 4x4,F,6.3,7.4,9.2,10.1,,
-235,Fora De Estrada Compacto,Fora De Estrada Compacto,RENEGADE,WILLYS 4x4,F,6.3,7.4,9.2,10.1,,
-236,Fora De Estrada Grande,Fora De Estrada Grande,EVOQUE,P250FF AB,F,5.1,6.6,7.4,9.4,,
-237,Fora De Estrada Grande,Fora De Estrada Grande,DISCOVERY SPORT,P250FF SE D,F,5.1,6.6,7.2,9.6,,
-238,Fora De Estrada Grande,Fora De Estrada Grande,DISCOVERY SPORT,P250FF SED7L,F,5.1,6.6,7.2,9.6,,
-239,Minivan,Minivan,SPIN,LT7,F,7.7,8.6,11.0,12.5,,
-240,Minivan,Minivan,SPIN,LT7,F,7.4,9.3,10.5,13.4,,
-241,Minivan,Minivan,SPIN,LTZ,F,7.4,9.3,10.5,13.4,,
-242,Minivan,Minivan,SPIN,PREMIER,F,7.4,9.3,10.5,13.4,,
-243,Minivan,Minivan,SPIN (MY26.5),LTZ,F,7.1,9.1,10.1,13.1,,
-244,Minivan,Minivan,SPIN (MY26.5),PREMIER,F,7.1,9.1,10.1,13.1,,
-245,Comercial,Comercial,ONIX,LOG,F,9.6,11.9,13.8,16.9,,
-246,Comercial,Comercial,FIORINO,ENDURANCE,F,8.7,9.6,12.4,13.6,,
-247,Comercial,Comercial,PARTRAPID,BUSIPK,F,8.7,9.6,12.4,13.6,,
-248,Comercial,Comercial,KANGOO,ADV16,F,7.6,8.1,11.0,11.7,,
-249,Comercial,Comercial,KANGOO,EX PRO,F,7.6,8.1,11.0,11.7,,
-250,Comercial,Comercial,KANGOO,SRT16,F,7.6,8.1,11.0,11.7,,
-251,Picape Compacta,Picape Compacta,MONTANA,MT,F,8.4,9.7,12.3,13.7,,
-252,Picape Compacta,Picape Compacta,MONTANA,LT,F,8.4,9.7,12.3,13.7,,
-253,Picape Compacta,Picape Compacta,MONTANA,LTZ,F,7.5,9.7,11.0,13.5,,
-254,Picape Compacta,Picape Compacta,MONTANA,PREMIER,F,7.5,9.7,11.0,13.5,,
-255,Picape Compacta,Picape Compacta,MONTANA,RS,F,7.5,9.7,11.0,13.5,,
-256,Picape Compacta,Picape Compacta,STRADA,ENDURAN CS13,F,9.1,10.1,13.0,14.7,,
-257,Picape Compacta,Picape Compacta,STRADA,FREEDOM CS13,F,9.1,10.1,13.0,14.7,,
-258,Picape Compacta,Picape Compacta,STRADA,FREEDOM CD13,F,8.9,10.1,12.8,14.4,,
-259,Picape Compacta,Picape Compacta,STRADA,VOLCANO CD13,F,8.9,9.8,12.4,13.9,,
-260,Picape Compacta,Picape Compacta,STRADA,VOLCANO 13AT,F,8.9,9.7,12.6,13.5,,
-261,Picape Compacta,Picape Compacta,STRADA,RANCH T200AT,F,8.3,9.2,11.9,13.1,,
-262,Picape Compacta,Picape Compacta,STRADA,ULTRA T200AT,F,8.3,9.2,11.9,13.1,,
-263,Picape Compacta,Picape Compacta,OROCH,Intense16M,F,7.6,8.1,11.3,11.7,,
-264,Picape Compacta,Picape Compacta,OROCH,PRO 16,F,7.6,8.1,11.3,11.7,,
-265,Picape Compacta,Picape Compacta,SAVEIRO,"SAVEIRO CABINE SIMPLES 
-ROBUST MF",F,7.7,8.8,11.2,12.9,,
-266,Picape Compacta,Picape Compacta,SAVEIRO,"CABINE SIMPLES 
-TRENDLINE MF",F,7.7,8.8,11.2,12.9,,
-267,Picape Compacta,Picape Compacta,SAVEIRO,CABINE DUPLA ROBUST MF,F,7.9,8.7,11.3,12.4,,
-268,Picape Compacta,Picape Compacta,SAVEIRO,"CABINE DUPLA EXTREME 
-MF",F,7.9,8.7,11.3,12.4,,
-269,Picape,Picape,TORO,ENDUR T270 AT6,F,6.9,8.0,9.9,11.5,,
-270,Picape,Picape,TORO,FREED T270 AT6,F,6.5,7.8,9.4,10.8,,
-271,Picape,Picape,TORO,VOLC T270 AT6,F,6.5,7.8,9.4,10.8,,
-272,Picape,Picape,TORO,ULTRA T270 AT6,F,6.5,7.8,9.4,10.8,,
-273,Picape,Picape,TORO,ENDUR T270 AT (MY26),F,,,,,,
-274,Picape,Picape,TORO,FREED T270 AT (MY26),F,6.5,7.8,9.4,10.8,,
-275,Picape,Picape,TORO,VOLC T270 AT (MY26),F,6.5,7.8,9.4,10.8,,
-276,Picape,Picape,TORO,ULTRA T270 AT (MY26),F,6.5,7.8,9.4,10.8,,
+,nm_category,nm_brand,nm_model,nm_version,ethanol_city_efficiency,ethanol_road_efficiency,gasoline_city_efficiency,gasoline_road_efficiency
+0,Sub Compacto,Fiat,Mobi,Trekking,9.8,10.6,14.0,15.1
+1,Sub Compacto,Fiat,Mobi,Like,9.8,10.6,14.0,15.1
+2,Compacto,Fiat,Argo,1,9.4,10.4,13.6,14.5
+3,Compacto,Fiat,Argo,Drive 1.0,9.4,10.4,13.6,14.5
+4,Compacto,Fiat,Argo,Drive 1.3 At,9.0,10.3,12.8,14.3
+5,Compacto,Hyundai,Hb20,Sense,9.9,10.7,13.3,15.4
+6,Compacto,Hyundai,Hb20,Comfort,9.9,10.7,13.3,15.4
+7,Compacto,Hyundai,Hb20,Limited,9.9,10.7,13.3,15.4
+8,Compacto,Hyundai,Hb20,Platinum,9.9,10.7,13.3,15.4
+9,Compacto,Hyundai,Hb20,Se,9.9,10.7,13.3,15.4
+10,Compacto,Hyundai,Hb20,Comfort,9.2,10.2,13.2,14.7
+11,Compacto,Hyundai,Hb20,Platinum Safety,9.2,10.2,13.2,14.7
+12,Compacto,Hyundai,Hb20,Se,9.2,10.2,13.2,14.7
+13,Compacto,Peugeot,208,Style Mt,9.5,10.8,13.6,15.3
+14,Compacto,Peugeot,208,Active Mt,9.5,10.8,13.6,15.3
+15,Compacto,Peugeot,208,Allur T200,8.8,10.1,12.6,14.3
+16,Compacto,Peugeot,208,Gt T200,8.3,9.7,12.0,13.7
+17,Mã©Dio,Chevrolet,Onix,Mt,9.6,11.9,13.8,16.9
+18,Mã©Dio,Chevrolet,Onix,Lt,9.6,11.9,13.8,16.9
+19,Mã©Dio,Chevrolet,Onix,Lt,9.3,11.7,13.5,16.7
+20,Mã©Dio,Chevrolet,Onix,At,8.2,10.5,12.0,14.8
+21,Mã©Dio,Chevrolet,Onix,Lt,8.2,10.5,12.0,14.8
+22,Mã©Dio,Chevrolet,Onix,Ltz,8.2,10.5,12.0,14.8
+23,Mã©Dio,Chevrolet,Onix,Premier,8.2,10.5,12.0,14.8
+24,Mã©Dio,Chevrolet,Onix,Rs,8.2,9.8,11.8,13.5
+25,Mã©Dio,Chevrolet,Onix Plus,Lt,9.2,12.4,13.5,17.4
+26,Mã©Dio,Chevrolet,Onix Plus,Lt2,9.7,12.2,13.9,17.4
+27,Mã©Dio,Chevrolet,Onix Plus,Premier,8.5,11.0,12.0,15.6
+28,Mã©Dio,Chevrolet,Onix Plus,Lt,8.5,11.0,12.0,15.6
+29,Mã©Dio,Chevrolet,Onix Plus,Ltz,8.5,11.0,12.0,15.6
+30,Mã©Dio,Chevrolet,Onix Plus,At,8.5,11.0,12.0,15.6
+31,Mã©Dio,Chevrolet,Onix Plus (My26),Ltz,8.5,11.2,12.2,16.0
+32,Mã©Dio,Chevrolet,Onix Plus (My26),Premier,8.5,11.2,12.2,16.0
+33,Mã©Dio,Chevrolet,Onix Plus (My26),Mt,9.2,12.3,13.3,16.8
+34,Mã©Dio,Chevrolet,Onix Plus (My26),Lt,8.5,11.2,12.2,16.0
+35,Mã©Dio,Chevrolet,Onix Plus (My26),Mt,9.8,12.1,13.9,17.1
+36,Mã©Dio,Chevrolet,Onix Plus (My26),At,8.5,11.2,12.2,16.0
+37,Mã©Dio,Chevrolet,Onix (My26),At,8.6,10.9,12.1,15.3
+38,Mã©Dio,Chevrolet,Onix (My26),100 Anos,9.5,11.3,13.5,16.3
+39,Mã©Dio,Chevrolet,Onix (My26),Ltz,,,,
+40,Mã©Dio,Chevrolet,Onix (My26),Premier,,,,
+41,Mã©Dio,Chevrolet,Onix (My26),Rs,,,,
+42,Mã©Dio,Chevrolet,Onix (My26),Mt,9.8,12.4,13.7,17.7
+43,Mã©Dio,Chevrolet,Onix (My26),Lt,8.6,10.9,12.1,15.3
+44,Mã©Dio,Chevrolet,Onix (My26),Mt,9.5,11.3,13.5,16.3
+45,Mã©Dio,Chevrolet,Spin,Ls E,7.7,8.6,11.0,12.5
+46,Mã©Dio,Chevrolet,Spin,Ls2,7.7,8.6,11.0,12.5
+47,Mã©Dio,Chevrolet,Spin,Lt,7.7,8.6,11.0,12.5
+48,Mã©Dio,Chevrolet,Spin,Lt,7.4,9.3,10.5,13.4
+49,Mã©Dio,Chevrolet,Spin,At,7.4,9.3,10.5,13.4
+50,Mã©Dio,Chevrolet,Spin,Ltz5,7.4,9.3,10.5,13.4
+51,Mã©Dio,Chevrolet,Spin (My26.5),At,7.1,9.1,10.1,13.1
+52,Mã©Dio,Chevrolet,Spin (My26.5),Lt,7.8,8.8,11.0,12.6
+53,Mã©Dio,Chevrolet,Spin (My26.5),Lt,7.1,9.1,10.1,13.1
+54,Mã©Dio,Fiat,Cronos,1,9.7,11.2,13.4,15.9
+55,Mã©Dio,Fiat,Cronos,Drive 1.0,9.7,11.2,13.4,15.9
+56,Mã©Dio,Fiat,Cronos,Drive1.3At,8.9,10.7,12.6,14.6
+57,Mã©Dio,Fiat,Cronos,Prec 1.3At,8.9,10.7,12.6,14.6
+58,Mã©Dio,Honda,City,Lx,9.3,10.4,12.8,15.5
+59,Mã©Dio,Honda,City,Ex,9.3,10.4,12.8,15.5
+60,Mã©Dio,Honda,City,Exl,9.3,10.4,12.8,15.5
+61,Mã©Dio,Honda,City,Touring,9.3,10.4,12.8,15.5
+62,Mã©Dio,Honda,City Hatch,Lx,9.2,10.5,13.2,15.0
+63,Mã©Dio,Honda,City Hatch,Ex,9.2,10.5,13.2,15.0
+64,Mã©Dio,Honda,City Hatch,Exl,9.2,10.5,13.2,15.0
+65,Mã©Dio,Honda,City Hatch,Touring,9.2,10.5,13.2,15.0
+66,Mã©Dio,Honda,City Hatch,Touring Sport,9.2,10.5,13.2,15.0
+67,Mã©Dio,Honda,Hr-V,Ex Honda Sensing,8.8,9.9,12.5,13.9
+68,Mã©Dio,Honda,Hr-V,Exl Honda Sensing,8.8,9.9,12.5,13.9
+69,Mã©Dio,Honda,Hr-V,Advance,8.0,9.2,11.3,13.0
+70,Mã©Dio,Honda,Hr-V,Touring,8.0,9.2,11.3,13.0
+71,Mã©Dio,Honda,Hr-V (Mod. 26),Advance,8.1,9.1,11.5,12.9
+72,Mã©Dio,Honda,Hr-V (Mod. 26),Touring,8.1,9.1,11.5,12.9
+73,Mã©Dio,Hyundai,Hb20S,Comfort,9.7,10.9,13.4,15.4
+74,Mã©Dio,Hyundai,Hb20S,Limited,9.7,10.9,13.4,15.4
+75,Mã©Dio,Hyundai,Hb20S,Platinum,9.7,10.9,13.4,15.4
+76,Mã©Dio,Hyundai,Hb20S,Se,9.7,10.9,13.4,15.4
+77,Mã©Dio,Hyundai,Hb20S,Comfort,9.2,10.7,13.0,15.2
+78,Mã©Dio,Hyundai,Hb20S,Platinum Safety,9.2,10.7,13.0,15.2
+79,Mã©Dio,Hyundai,Hb20S,Se,9.2,10.7,13.0,15.2
+80,Mã©Dio,Nissan,Versa,Sense Cvt,7.9,10.5,11.5,15.0
+81,Mã©Dio,Nissan,Versa,Advnc Cvt,7.9,10.5,11.5,15.0
+82,Mã©Dio,Nissan,Versa,Sr Cvt,7.9,10.5,11.5,15.0
+83,Mã©Dio,Nissan,Versa,Excl Cvt,7.9,10.5,11.5,15.0
+84,Mã©Dio,Volkswagen,Virtus,"Comfortline 200Tsi 
+AutomãTico",8.3,10.2,12.1,14.7
+85,Mã©Dio,Volkswagen,Virtus,"Highline 200Tsi 
+AutomãTico",8.3,10.2,12.1,14.7
+86,Mã©Dio,Volkswagen,Virtus,Tsi AutomãTico,8.5,10.4,12.2,14.9
+87,Mã©Dio,Volkswagen,Virtus,Tsi MecãNico,9.2,11.2,13.2,15.8
+88,Mã©Dio,Volkswagen,Virtus,Sense Tsi MecãNico,9.2,11.2,13.2,15.8
+89,Mã©Dio,Volkswagen,Virtus,"Exclusive 250Tsi 
+AutomãTico",8.1,9.9,11.7,14.0
+90,Mã©Dio,Volkswagen,Polo,Tsi MecãNico,9.6,11.4,13.9,16.3
+91,Mã©Dio,Volkswagen,Polo,Sense Tsi AutomãTico,9.0,11.1,13.1,16.1
+92,Mã©Dio,Volkswagen,Polo,Mpi,9.3,10.9,13.5,15.7
+93,Mã©Dio,Volkswagen,Polo,Track 1.0 Mpi,9.3,10.9,13.5,15.7
+94,Mã©Dio,Volkswagen,Polo,Track Robust 1.0 Mpi,9.3,10.9,13.5,15.7
+95,Mã©Dio,Volkswagen,Tera,Mpi,9.1,10.2,13.2,14.7
+96,Grande,Toyota,Corolla Cross,Xr 20,7.6,8.8,11.2,13.0
+97,Grande,Toyota,Corolla Cross,Xre 20,7.6,8.8,11.2,13.0
+98,Grande,Toyota,Corolla Cross,Xrx 20,7.6,8.8,11.2,13.0
+99,Grande,Toyota,Corolla Cross,Grs,7.6,8.8,11.2,13.0
+100,Grande,Toyota,Corolla Cross,Xrv Hybrid,11.6,9.9,16.6,14.0
+101,Grande,Toyota,Corolla Cross,Xrx Hybrid,11.6,9.9,16.6,14.0
+102,Grande,Toyota,Corolla,Gli,8.0,10.0,11.9,14.5
+103,Grande,Toyota,Corolla,Gli 20,8.0,10.0,11.9,14.5
+104,Grande,Toyota,Corolla,Xei 20,8.0,10.0,11.9,14.5
+105,Grande,Toyota,Corolla,Altis 20,8.0,10.0,11.9,14.5
+106,Grande,Toyota,Corolla,Grs,8.0,10.0,11.9,14.5
+107,Grande,Toyota,Corolla,Altis Hv,12.5,10.7,17.5,15.2
+108,Grande,Toyota,Corolla,Apremiumh,12.5,10.7,17.5,15.2
+109,Grande,Toyota,Corolla,Gli Hev,12.5,10.7,17.5,15.2
+110,Extra Grande,Bmw,320I,M Sport Flex,7.4,9.0,10.5,13.1
+111,Extra Grande,Bmw,320I,Sport Gp Flex,7.6,9.2,10.9,13.3
+112,Extra Grande,Bmw,320I,Gp Flex,7.6,9.2,10.9,13.3
+113,Extra Grande,Bmw,320I,Active Flex,7.1,8.6,10.0,12.3
+114,Utilitã¡Rio Esportivo Compacto,Caoa Chery,Tiggo 5X,Pro Ha,8.1,8.5,11.4,11.8
+115,Utilitã¡Rio Esportivo Compacto,Caoa Chery,Tiggo 5X,Pro,6.5,8.4,10.0,12.1
+116,Utilitã¡Rio Esportivo Compacto,Caoa Chery,Tiggo 5X,Sport,6.5,8.4,10.0,12.1
+117,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker,Lt,8.0,9.8,11.6,13.7
+118,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker,Mid,8.0,9.8,11.6,13.7
+119,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker,At,8.0,9.8,11.6,13.7
+120,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker,Ltz,8.0,9.8,11.6,13.7
+121,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker,Rs,7.7,10.0,11.2,14.1
+122,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker,Premier,7.7,10.0,11.2,14.1
+123,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Lt,8.1,9.9,11.5,13.8
+124,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Ltz,8.1,9.9,11.5,13.8
+125,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),At,8.1,9.9,11.5,13.8
+126,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Lt,8.1,9.9,11.5,13.8
+127,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Ltz,8.1,9.9,11.5,13.8
+128,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Rs,7.6,9.7,11.0,13.7
+129,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Premier,7.6,9.7,11.0,13.7
+130,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),100 Anos,7.6,9.7,11.0,13.7
+131,Utilitã¡Rio Esportivo Compacto,Chevrolet,Tracker (My26),Premier,7.6,9.7,11.0,13.7
+132,Utilitã¡Rio Esportivo Compacto,Citroen,Basalt,T200 1St,8.4,9.6,12.1,13.7
+133,Utilitã¡Rio Esportivo Compacto,Citroen,Basalt,Feel 1.0,9.2,10.1,13.2,14.3
+134,Utilitã¡Rio Esportivo Compacto,Citroen,Basalt,Shine T200,8.4,9.6,12.1,13.7
+135,Utilitã¡Rio Esportivo Compacto,Citroen,Basalt,Feel T200,8.4,9.6,12.1,13.7
+136,Utilitã¡Rio Esportivo Compacto,Citroen,C3,Feel 1.0,9.3,10.3,13.2,14.5
+137,Utilitã¡Rio Esportivo Compacto,Citroen,C3,Live 1.0,9.3,10.3,13.2,14.5
+138,Utilitã¡Rio Esportivo Compacto,Citroen,C3,Live Pk 1.0,9.3,10.3,13.2,14.5
+139,Utilitã¡Rio Esportivo Compacto,Citroen,C3,You 1.0T Cvt,8.1,8.9,11.5,12.9
+140,Utilitã¡Rio Esportivo Compacto,Citroen,C3 Aircross,Fl,7.9,9.1,11.2,13.0
+141,Utilitã¡Rio Esportivo Compacto,Citroen,C3 Aircross,Fl 7,7.9,9.1,11.2,13.0
+142,Utilitã¡Rio Esportivo Compacto,Citroen,C3 Aircross,Fl Pk,7.9,9.1,11.2,13.0
+143,Utilitã¡Rio Esportivo Compacto,Citroen,C3 Aircross,Flpk7,7.9,9.1,11.2,13.0
+144,Utilitã¡Rio Esportivo Compacto,Citroen,C3 Aircross,Sh,7.9,9.1,11.2,13.0
+145,Utilitã¡Rio Esportivo Compacto,Citroen,C3 Aircross,Sh 7,7.9,9.1,11.2,13.0
+146,Utilitã¡Rio Esportivo Compacto,Fiat,Argo,Trekking 1.3At,9.0,10.3,12.8,14.3
+147,Utilitã¡Rio Esportivo Compacto,Fiat,Fastback,Audace Hyb,8.9,9.8,12.6,13.9
+148,Utilitã¡Rio Esportivo Compacto,Fiat,Fastback,Impetus Hy,8.9,9.8,12.6,13.9
+149,Utilitã¡Rio Esportivo Compacto,Fiat,Fastback,Abarth 270,7.3,9.1,10.8,12.9
+150,Utilitã¡Rio Esportivo Compacto,Fiat,Fastback,Limited Ed,7.8,9.8,11.3,13.6
+151,Utilitã¡Rio Esportivo Compacto,Fiat,Fastback,Turbo 200,8.5,10.1,12.1,14.3
+152,Utilitã¡Rio Esportivo Compacto,Fiat,Pulse,Audace Hyb,9.3,10.2,13.4,14.4
+153,Utilitã¡Rio Esportivo Compacto,Fiat,Pulse,Impetus Hyb,9.3,10.2,13.4,14.4
+154,Utilitã¡Rio Esportivo Compacto,Fiat,Pulse,Drive At,8.9,10.5,13.0,14.7
+155,Utilitã¡Rio Esportivo Compacto,Fiat,Pulse,Drive Tf 200,8.6,10.0,12.3,14.4
+156,Utilitã¡Rio Esportivo Compacto,Fiat,Pulse,Abarth 270,7.2,8.8,10.5,12.2
+157,Utilitã¡Rio Esportivo Compacto,Honda,Wr-V,Ex,8.2,8.9,12.0,12.8
+158,Utilitã¡Rio Esportivo Compacto,Honda,Wr-V,Exl,8.2,8.9,12.0,12.8
+159,Utilitã¡Rio Esportivo Compacto,Hyundai,Creta,Comfort,8.4,9.0,12.0,12.7
+160,Utilitã¡Rio Esportivo Compacto,Hyundai,Creta,Limited,8.4,9.0,12.0,12.7
+161,Utilitã¡Rio Esportivo Compacto,Hyundai,Creta,Platinum,8.4,9.0,12.0,12.7
+162,Utilitã¡Rio Esportivo Compacto,Hyundai,Creta,N Line,8.4,9.0,12.0,12.7
+163,Utilitã¡Rio Esportivo Compacto,Jeep,Renegade,Spt T270,7.8,8.9,11.1,12.4
+164,Utilitã¡Rio Esportivo Compacto,Jeep,Renegade,Lgtd T270,7.8,8.9,11.1,12.4
+165,Utilitã¡Rio Esportivo Compacto,Jeep,Renegade,1.3 Turbo,7.8,8.9,11.1,12.4
+166,Utilitã¡Rio Esportivo Compacto,Jeep,Renegade,1.3 T Flex,7.8,8.9,11.1,12.4
+167,Utilitã¡Rio Esportivo Compacto,Jeep,Renegade,Sahara,7.8,8.9,11.1,12.4
+168,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks Play,Sense,7.8,9.4,11.3,13.7
+169,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks Play,Adv,7.8,9.4,11.3,13.7
+170,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks Play,Active,7.8,9.4,11.3,13.7
+171,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks,Sense At,8.3,9.9,11.7,14.3
+172,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks,Advance At,8.3,9.9,11.7,14.3
+173,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks,Exclusiv At,8.3,9.9,11.7,14.3
+174,Utilitã¡Rio Esportivo Compacto,Nissan,Kicks,Platinum At,8.3,9.9,11.7,14.3
+175,Utilitã¡Rio Esportivo Compacto,Peugeot,2008,Gt T200,8.5,9.8,12.0,14.1
+176,Utilitã¡Rio Esportivo Compacto,Peugeot,2008,Act T200,8.5,9.8,12.0,14.1
+177,Utilitã¡Rio Esportivo Compacto,Peugeot,2008,Allu T200,8.5,9.8,12.0,14.1
+178,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Zen,10.4,10.8,14.6,15.5
+179,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Intense,10.4,10.8,14.6,15.5
+180,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Outsider,10.4,10.8,14.6,15.5
+181,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Intense Biton,10.4,10.8,14.6,15.5
+182,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Iconic 2,10.4,10.8,14.6,15.5
+183,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Zen 2,10.4,10.7,14.4,15.4
+184,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Intense 2,10.4,10.7,14.4,15.4
+185,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Outsider 2,10.4,10.7,14.4,15.4
+186,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Intense Biton 2,10.4,10.7,14.4,15.4
+187,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Iconic 2,10.4,10.7,14.4,15.4
+188,Utilitã¡Rio Esportivo Compacto,Renault,Kwid,Life 2,10.4,10.7,14.4,15.4
+189,Utilitã¡Rio Esportivo Compacto,Renault,Kardian,Prem At,8.8,9.8,12.2,13.8
+190,Utilitã¡Rio Esportivo Compacto,Renault,Kardian,Tech At,8.8,9.8,12.2,13.8
+191,Utilitã¡Rio Esportivo Compacto,Renault,Kardian,Evo At,8.8,9.8,12.2,13.8
+192,Utilitã¡Rio Esportivo Compacto,Renault,Kardian,Evo Mt,8.6,10.2,12.4,14.8
+193,Utilitã¡Rio Esportivo Compacto,Volkswagen,T Cross,"Highline 250Tsi 
+AutomãTico",8.2,9.9,11.8,14.2
+194,Utilitã¡Rio Esportivo Compacto,Volkswagen,T Cross,"Comfortline 200Tsi 
+Automatico",8.5,10.2,12.1,14.5
+195,Utilitã¡Rio Esportivo Compacto,Volkswagen,T Cross,200Tsi Automatico,8.5,10.2,12.1,14.5
+196,Utilitã¡Rio Esportivo Compacto,Volkswagen,T Cross,"Sense 200Tsi 
+Automatico",8.5,10.2,12.1,14.5
+197,Utilitã¡Rio Esportivo Compacto,Volkswagen,Nivus,"Highline 200Tsi 
+AutomãTico",8.6,10.3,12.4,14.8
+198,Utilitã¡Rio Esportivo Compacto,Volkswagen,Nivus,"Comfortline 200Tsi 
+AutomãTico",8.6,10.3,12.4,14.8
+199,Utilitã¡Rio Esportivo Compacto,Volkswagen,Tera,Comfort Tsi,8.6,10.3,12.2,14.5
+200,Utilitã¡Rio Esportivo Compacto,Volkswagen,Tera,High Tsi,8.6,10.3,12.2,14.5
+201,Utilitã¡Rio Esportivo Compacto,Volkswagen,Tera,Tsi,9.0,10.3,12.9,15.0
+202,Utilitã¡Rio Esportivo Grande,Caoa Chery,Tiggo 7,Pro Ha,7.8,8.3,11.1,11.6
+203,Utilitã¡Rio Esportivo Grande,Caoa Chery,Tiggo 7,Sport,6.4,8.3,10.1,12.3
+204,Utilitã¡Rio Esportivo Grande,Jeep,Commander,"Ovr T270 (""Mestre"")",7.0,8.3,9.9,11.4
+205,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Lim T270,7.0,8.3,9.9,11.4
+206,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Longitude,7.0,8.3,9.9,11.4
+207,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Flex,7.0,8.3,9.9,11.4
+208,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Ove 7 270 (My26),6.9,8.3,10.0,11.5
+209,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Lim 7 270 (My26),6.9,8.3,10.0,11.5
+210,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Lon 7 270 (My26),6.9,8.3,10.0,11.5
+211,Utilitã¡Rio Esportivo Grande,Jeep,Commander,Lon 5 270 (My26),7.2,8.4,10.2,11.5
+212,Utilitã¡Rio Esportivo Grande,Jeep,Compass,Limited T,7.3,8.6,10.1,12.1
+213,Utilitã¡Rio Esportivo Grande,Jeep,Compass,Long T,7.3,8.6,10.1,12.1
+214,Utilitã¡Rio Esportivo Grande,Jeep,Compass,Serie S T,7.3,8.6,10.1,12.1
+215,Utilitã¡Rio Esportivo Grande,Jeep,Compass,Sport T,7.3,8.6,10.1,12.1
+216,Utilitã¡Rio Esportivo Grande,Renault,Duster,Ico,7.5,8.3,10.8,11.4
+217,Utilitã¡Rio Esportivo Grande,Renault,Duster,Icop,7.5,8.3,10.8,11.4
+218,Utilitã¡Rio Esportivo Grande,Renault,Duster,Int,7.5,8.3,10.8,11.4
+219,Utilitã¡Rio Esportivo Grande,Renault,Duster,Intp,7.5,8.3,10.8,11.4
+220,Utilitã¡Rio Esportivo Grande,Renault,Duster,Lif,7.5,8.3,10.8,11.4
+221,Utilitã¡Rio Esportivo Grande,Renault,Duster,Zen,7.5,8.3,10.8,11.4
+222,Utilitã¡Rio Esportivo Grande,Renault,Duster,Duster Int 16,7.6,8.4,11.2,12.3
+223,Utilitã¡Rio Esportivo Grande,Renault,Duster,Duster Intp Mt,7.6,8.4,11.2,12.3
+224,Utilitã¡Rio Esportivo Grande,Renault,Duster,Duster Zen 16,7.6,8.4,11.2,12.3
+225,Utilitã¡Rio Esportivo Grande,Renault,Duster,Ico Tce,7.5,8.6,10.9,12.3
+226,Utilitã¡Rio Esportivo Grande,Renault,Duster,Icout Tce,7.5,8.6,10.9,12.3
+227,Utilitã¡Rio Esportivo Grande,Renault,Duster,Zen 13Tce,7.5,8.6,10.9,12.3
+228,Utilitã¡Rio Esportivo Grande,Renault,Boreal,Evo,7.8,9.4,11.2,13.6
+229,Utilitã¡Rio Esportivo Grande,Renault,Boreal,Tech,7.8,9.4,11.2,13.6
+230,Utilitã¡Rio Esportivo Grande,Renault,Boreal,Ico,7.8,9.4,11.2,13.6
+231,Utilitã¡Rio Esportivo Grande,Volkswagen,Taos,"Comfortline 250Tsi 
+AutomãTico",7.7,9.3,11.1,13.3
+232,Utilitã¡Rio Esportivo Grande,Volkswagen,Taos,"Highline 250Tsi 
+AutomãTico",7.7,9.3,11.1,13.3
+233,Fora De Estrada Compacto,Jeep,Renegade,S T2704X4T,6.3,7.4,9.2,10.1
+234,Fora De Estrada Compacto,Jeep,Renegade,Trail 4X4,6.3,7.4,9.2,10.1
+235,Fora De Estrada Compacto,Jeep,Renegade,Willys 4X4,6.3,7.4,9.2,10.1
+236,Fora De Estrada Grande,Land Rover,Evoque,P250Ff Ab,5.1,6.6,7.4,9.4
+237,Fora De Estrada Grande,Land Rover,Discovery Sport,P250Ff Se D,5.1,6.6,7.2,9.6
+238,Fora De Estrada Grande,Land Rover,Discovery Sport,P250Ff Sed7L,5.1,6.6,7.2,9.6
+239,Minivan,Chevrolet,Spin,Lt7,7.7,8.6,11.0,12.5
+240,Minivan,Chevrolet,Spin,Lt7,7.4,9.3,10.5,13.4
+241,Minivan,Chevrolet,Spin,Ltz,7.4,9.3,10.5,13.4
+242,Minivan,Chevrolet,Spin,Premier,7.4,9.3,10.5,13.4
+243,Minivan,Chevrolet,Spin (My26.5),Ltz,7.1,9.1,10.1,13.1
+244,Minivan,Chevrolet,Spin (My26.5),Premier,7.1,9.1,10.1,13.1
+245,Comercial,Chevrolet,Onix,Log,9.6,11.9,13.8,16.9
+246,Comercial,Fiat,Fiorino,Endurance,8.7,9.6,12.4,13.6
+247,Comercial,Peugeot,Partrapid,Busipk,8.7,9.6,12.4,13.6
+248,Comercial,Renault,Kangoo,Adv16,7.6,8.1,11.0,11.7
+249,Comercial,Renault,Kangoo,Ex Pro,7.6,8.1,11.0,11.7
+250,Comercial,Renault,Kangoo,Srt16,7.6,8.1,11.0,11.7
+251,Picape Compacta,Chevrolet,Montana,Mt,8.4,9.7,12.3,13.7
+252,Picape Compacta,Chevrolet,Montana,Lt,8.4,9.7,12.3,13.7
+253,Picape Compacta,Chevrolet,Montana,Ltz,7.5,9.7,11.0,13.5
+254,Picape Compacta,Chevrolet,Montana,Premier,7.5,9.7,11.0,13.5
+255,Picape Compacta,Chevrolet,Montana,Rs,7.5,9.7,11.0,13.5
+256,Picape Compacta,Fiat,Strada,Enduran Cs13,9.1,10.1,13.0,14.7
+257,Picape Compacta,Fiat,Strada,Freedom Cs13,9.1,10.1,13.0,14.7
+258,Picape Compacta,Fiat,Strada,Freedom Cd13,8.9,10.1,12.8,14.4
+259,Picape Compacta,Fiat,Strada,Volcano Cd13,8.9,9.8,12.4,13.9
+260,Picape Compacta,Fiat,Strada,Volcano 13At,8.9,9.7,12.6,13.5
+261,Picape Compacta,Fiat,Strada,Ranch T200At,8.3,9.2,11.9,13.1
+262,Picape Compacta,Fiat,Strada,Ultra T200At,8.3,9.2,11.9,13.1
+263,Picape Compacta,Renault,Oroch,Intense16M,7.6,8.1,11.3,11.7
+264,Picape Compacta,Renault,Oroch,Pro 16,7.6,8.1,11.3,11.7
+265,Picape Compacta,Volkswagen,Saveiro,"Saveiro Cabine Simples 
+Robust Mf",7.7,8.8,11.2,12.9
+266,Picape Compacta,Volkswagen,Saveiro,"Cabine Simples 
+Trendline Mf",7.7,8.8,11.2,12.9
+267,Picape Compacta,Volkswagen,Saveiro,Cabine Dupla Robust Mf,7.9,8.7,11.3,12.4
+268,Picape Compacta,Volkswagen,Saveiro,"Cabine Dupla Extreme 
+Mf",7.9,8.7,11.3,12.4
+269,Picape,Fiat,Toro,Endur T270 At6,6.9,8.0,9.9,11.5
+270,Picape,Fiat,Toro,Freed T270 At6,6.5,7.8,9.4,10.8
+271,Picape,Fiat,Toro,Volc T270 At6,6.5,7.8,9.4,10.8
+272,Picape,Fiat,Toro,Ultra T270 At6,6.5,7.8,9.4,10.8
+273,Picape,Fiat,Toro,Endur T270 At (My26),,,,
+274,Picape,Fiat,Toro,Freed T270 At (My26),6.5,7.8,9.4,10.8
+275,Picape,Fiat,Toro,Volc T270 At (My26),6.5,7.8,9.4,10.8
+276,Picape,Fiat,Toro,Ultra T270 At (My26),6.5,7.8,9.4,10.8
