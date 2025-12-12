@@ -16,6 +16,23 @@ fuel_types_colors = {
 
 st.set_page_config(layout='wide')
 
+st.markdown("""
+    <style>
+    /* Limita a largura do conteúdo principal */
+    .block-container {
+        max-width: 1280px; /* largura típica 16:9 */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Define altura mínima simulando 16:9 */
+    .main {
+        min-height: calc(1280px * 0.5625);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 st.title('Preços de combustíveis no Brasil :fuelpump:')
 
 df_fuels = pd.read_parquet('gold/fuels_prices')
@@ -306,7 +323,8 @@ with tab_fuels_comparison:
             dragmode=False,
             coloraxis=dict(
                 showscale=False
-            )
+            ),
+            showlegend=False
         )
         brazil_territory_map_blank.update_geos(
             fitbounds="locations",
@@ -525,8 +543,8 @@ with tab_gasoline_or_ethanol:
         gasoline_efficiency = df_vehicles_copy['gasoline_city_efficiency'].values[0]
 
         df_fuels_copy_vehicles['nu_km_cost'] = np.where(df_fuels_copy_vehicles['nm_fuel_type'] == 'Gasolina',
-                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency ,
-                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
+                                                        df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency,
+                                                        df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
 
         df_gasoline_ethanol_overtime = df_fuels_copy_vehicles.groupby(['dt_date_month_start', 'nm_fuel_type']).mean('nu_km_cost').reset_index()
 
@@ -562,6 +580,106 @@ with tab_gasoline_or_ethanol:
         )
 
         st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+
+        subcol1_city, subcol2_city = st.columns([3, 1], vertical_alignment="center", border=False)
+
+        with subcol2_city:
+            map_selection_gasolina_ethanol = st.radio(
+                "Nível territorial",
+                options=['Regional', 'Estadual', 'Municipal'],
+                index=1,
+                key="map_selection_gasolina_ethanol_city"
+            )
+
+        if map_selection_gasolina_ethanol == 'Municipal':
+            territory_key = 'nm_city'
+            gdf_territory = gdf_cities.copy()
+        elif map_selection_gasolina_ethanol == 'Estadual':
+            territory_key = 'nm_state'
+            gdf_territory = gdf_states.copy()
+        else:
+            territory_key = 'nm_region'
+            gdf_territory = gdf_regions.copy()
+
+        df_gasoline_ethanol_by_territory = df_fuels_copy_vehicles.groupby([territory_key, 'nm_fuel_type']).mean('nu_km_cost').reset_index()
+
+        df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory.pivot(index=territory_key, columns='nm_fuel_type', values='nu_km_cost')
+
+        df_gasoline_ethanol_by_territory_pivoted['choice'] = np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] > df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
+                                                                    'Gasolina',
+                                                                    np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] < df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
+                                                                            'Etanol',
+                                                                            'Indiferente'))
+
+        df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory_pivoted.drop(['Etanol', 'Gasolina'], axis=1)
+
+        if (len(region_selected) != 0) and ('nm_region' in gdf_territory.columns):
+            gdf_territory = gdf_territory[gdf_territory['nm_region'].isin(region_selected)].reset_index(drop=True)
+
+        if (len(state_selected) != 0) and ('nm_state' in gdf_territory.columns):
+            gdf_territory = gdf_territory[gdf_territory['nm_state'].isin(state_selected)].reset_index(drop=True)
+
+        if (len(city_selected) != 0) and ('nm_city' in gdf_territory.columns):
+            gdf_territory = gdf_territory[gdf_territory['nm_city'].isin(city_selected)].reset_index(drop=True)
+
+        gdf_territory = gdf_territory.sort_values(territory_key).reset_index(drop=True)
+        gdf_territory = gdf_territory.merge(df_gasoline_ethanol_by_territory_pivoted, left_on= territory_key, right_on=territory_key, how="left")
+        
+        brazil_territory_map_eff_city_blank = px.choropleth(
+            gdf_territory,
+            geojson=gdf_territory.__geo_interface__,
+            locations=gdf_territory.index,
+            color_discrete_sequence=["#EEEEEE"]
+        )
+        brazil_territory_map_eff_city_blank.update_traces(
+            marker_line_width=1, 
+            marker_line_color="black"
+        )
+
+        gdf_territory_no_nan = gdf_territory.dropna(subset=["choice"]).reset_index(drop=True)
+        gdf_territory_no_nan['id'] = gdf_territory_no_nan.index
+
+        brazil_territory_map_eff_city = px.choropleth(
+            gdf_territory_no_nan,
+            geojson=gdf_territory_no_nan.__geo_interface__,
+            locations='id',
+            color="choice",
+            color_discrete_map=fuel_types_colors,
+            hover_data={
+                'id': False,
+                territory_key: True,
+                "choice": True
+            },
+            labels={
+                "nm_region": "Região",
+                "nm_state": "Estado",
+                "nm_city": "Município",
+                "choice": "Escolha"
+            }
+        )
+
+        brazil_territory_map_eff_city_blank.add_traces(brazil_territory_map_eff_city.data)
+        
+        brazil_territory_map_eff_city_blank.update_layout(
+            margin=dict(r=0,l=0,t=0,b=0),
+            paper_bgcolor='#0e1117',
+            plot_bgcolor='#0e1117',
+            dragmode=False,
+            showlegend=False
+        )
+        brazil_territory_map_eff_city_blank.update_geos(
+            fitbounds="locations",
+            visible=False,
+            projection_type="mercator",
+            bgcolor='#0e1117'
+        )
+        brazil_territory_map_eff_city_blank.update_traces(
+            marker_line_width=0.5,
+            marker_line_color="black"
+        )
+
+        with subcol1_city:
+            st.plotly_chart(brazil_territory_map_eff_city_blank, width='stretch', config={'displayModeBar': False}, key="map_eff_city")
 
     with col_road:
 
@@ -571,8 +689,8 @@ with tab_gasoline_or_ethanol:
         gasoline_efficiency = df_vehicles_copy['gasoline_road_efficiency'].values[0]
 
         df_fuels_copy_vehicles['nu_km_cost'] = np.where(df_fuels_copy_vehicles['nm_fuel_type'] == 'Gasolina',
-                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency ,
-                                                                    df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
+                                                        df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency ,
+                                                        df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
 
         df_gasoline_ethanol_overtime = df_fuels_copy_vehicles.groupby(['dt_date_month_start', 'nm_fuel_type']).mean('nu_km_cost').reset_index()
 
@@ -609,110 +727,102 @@ with tab_gasoline_or_ethanol:
 
         st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
 
-    map_selection_gasolina_ethanol = st.radio(
-        "Nível territorial",
-        options=['Regional', 'Estadual', 'Municipal'],
-        index=1,
-        key="map_selection_gasolina_ethanol"
-    )
+        subcol1_road, subcol2_road = st.columns([3, 1], vertical_alignment="center", border=False)
 
-    if map_selection_gasolina_ethanol == 'Municipal':
-        territory_key = 'nm_city'
-        gdf_territory = gdf_cities.copy()
-    elif map_selection_gasolina_ethanol == 'Estadual':
-        territory_key = 'nm_state'
-        gdf_territory = gdf_states.copy()
-    else:
-        territory_key = 'nm_region'
-        gdf_territory = gdf_regions.copy()
+        with subcol2_road:
+            map_selection_gasolina_ethanol = st.radio(
+                "Nível territorial",
+                options=['Regional', 'Estadual', 'Municipal'],
+                index=1,
+                key="map_selection_gasolina_ethanol_road"
+            )
 
-    df_gasoline_ethanol_by_territory = df_fuels_copy_vehicles.groupby([territory_key, 'nm_fuel_type']).mean('nu_km_cost').reset_index()
+        if map_selection_gasolina_ethanol == 'Municipal':
+            territory_key = 'nm_city'
+            gdf_territory = gdf_cities.copy()
+        elif map_selection_gasolina_ethanol == 'Estadual':
+            territory_key = 'nm_state'
+            gdf_territory = gdf_states.copy()
+        else:
+            territory_key = 'nm_region'
+            gdf_territory = gdf_regions.copy()
 
-    df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory.pivot(index=territory_key, columns='nm_fuel_type', values='nu_km_cost')
+        df_gasoline_ethanol_by_territory = df_fuels_copy_vehicles.groupby([territory_key, 'nm_fuel_type']).mean('nu_km_cost').reset_index()
 
-    df_gasoline_ethanol_by_territory_pivoted['choice'] = np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] > df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
-                                                                  'Gasolina',
-                                                                  np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] < df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
-                                                                           'Etanol',
-                                                                           'Indiferente'))
+        df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory.pivot(index=territory_key, columns='nm_fuel_type', values='nu_km_cost')
 
-    df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory_pivoted.drop(['Etanol', 'Gasolina'], axis=1)
+        df_gasoline_ethanol_by_territory_pivoted['choice'] = np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] > df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
+                                                                    'Gasolina',
+                                                                    np.where(df_gasoline_ethanol_by_territory_pivoted['Etanol'] < df_gasoline_ethanol_by_territory_pivoted['Gasolina'],
+                                                                            'Etanol',
+                                                                            'Indiferente'))
 
-    if (len(region_selected) != 0) and ('nm_region' in gdf_territory.columns):
-        gdf_territory = gdf_territory[gdf_territory['nm_region'].isin(region_selected)].reset_index(drop=True)
+        df_gasoline_ethanol_by_territory_pivoted = df_gasoline_ethanol_by_territory_pivoted.drop(['Etanol', 'Gasolina'], axis=1)
 
-    if (len(state_selected) != 0) and ('nm_state' in gdf_territory.columns):
-        gdf_territory = gdf_territory[gdf_territory['nm_state'].isin(state_selected)].reset_index(drop=True)
+        if (len(region_selected) != 0) and ('nm_region' in gdf_territory.columns):
+            gdf_territory = gdf_territory[gdf_territory['nm_region'].isin(region_selected)].reset_index(drop=True)
 
-    if (len(city_selected) != 0) and ('nm_city' in gdf_territory.columns):
-        gdf_territory = gdf_territory[gdf_territory['nm_city'].isin(city_selected)].reset_index(drop=True)
+        if (len(state_selected) != 0) and ('nm_state' in gdf_territory.columns):
+            gdf_territory = gdf_territory[gdf_territory['nm_state'].isin(state_selected)].reset_index(drop=True)
 
-    gdf_territory = gdf_territory.sort_values(territory_key).reset_index(drop=True)
-    gdf_territory = gdf_territory.merge(df_gasoline_ethanol_by_territory_pivoted, left_on= territory_key, right_on=territory_key, how="left")
+        if (len(city_selected) != 0) and ('nm_city' in gdf_territory.columns):
+            gdf_territory = gdf_territory[gdf_territory['nm_city'].isin(city_selected)].reset_index(drop=True)
 
-    gdf_territory
-    
-    brazil_territory_map_blank = px.choropleth(
-        gdf_territory,
-        geojson=gdf_territory.__geo_interface__,
-        locations=gdf_territory.index,
-        color_discrete_sequence=["#EEEEEE"]
-    )
-    brazil_territory_map_blank.update_traces(
-        marker_line_width=1, 
-        marker_line_color="black"
-    )
+        gdf_territory = gdf_territory.sort_values(territory_key).reset_index(drop=True)
+        gdf_territory = gdf_territory.merge(df_gasoline_ethanol_by_territory_pivoted, left_on= territory_key, right_on=territory_key, how="left")
+        
+        brazil_territory_map_eff_road_blank = px.choropleth(
+            gdf_territory,
+            geojson=gdf_territory.__geo_interface__,
+            locations=gdf_territory.index,
+            color_discrete_sequence=["#EEEEEE"]
+        )
+        brazil_territory_map_eff_road_blank.update_traces(
+            marker_line_width=1, 
+            marker_line_color="black"
+        )
 
-    gdf_territory_no_nan = gdf_territory.dropna(subset=["choice"]).reset_index(drop=True)
-    gdf_territory_no_nan['id'] = gdf_territory_no_nan.index
+        gdf_territory_no_nan = gdf_territory.dropna(subset=["choice"]).reset_index(drop=True)
+        gdf_territory_no_nan['id'] = gdf_territory_no_nan.index
 
-    gdf_territory_no_nan
+        brazil_territory_map_eff_road = px.choropleth(
+            gdf_territory_no_nan,
+            geojson=gdf_territory_no_nan.__geo_interface__,
+            locations='id',
+            color="choice",
+            color_discrete_map=fuel_types_colors,
+            hover_data={
+                'id': False,
+                territory_key: True,
+                "choice": True
+            },
+            labels={
+                "nm_region": "Região",
+                "nm_state": "Estado",
+                "nm_city": "Município",
+                "choice": "Escolha"
+            }
+        )
 
-    brazil_territory_map = px.choropleth(
-        gdf_territory_no_nan,
-        geojson=gdf_territory_no_nan.__geo_interface__,
-        locations='id',
-        color="choice",
-        color_discrete_map=fuel_types_colors,
-        hover_data={
-            'id': False,
-            territory_key: True,
-            "choice": True
-        },
-        labels={
-            "nm_region": "Região",
-            "nm_state": "Estado",
-            "nm_city": "Município",
-            "choice": "Escolha"
-        }
-    )
+        brazil_territory_map_eff_road_blank.add_traces(brazil_territory_map_eff_road.data)
+        
+        brazil_territory_map_eff_road_blank.update_layout(
+            margin=dict(r=0,l=0,t=0,b=0),
+            paper_bgcolor='#0e1117',
+            plot_bgcolor='#0e1117',
+            dragmode=False,
+            showlegend=False
+        )
+        brazil_territory_map_eff_road_blank.update_geos(
+            fitbounds="locations",
+            visible=False,
+            projection_type="mercator",
+            bgcolor='#0e1117'
+        )
+        brazil_territory_map_eff_road_blank.update_traces(
+            marker_line_width=0.5,
+            marker_line_color="black"
+        )
 
-    brazil_territory_map_blank.add_trace(brazil_territory_map.data[0])
-
-    brazil_territory_map_blank.update_layout(
-        margin=dict(r=0,l=0,t=0,b=0),
-        paper_bgcolor='#0e1117',
-        plot_bgcolor='#0e1117',
-        dragmode=False
-    )
-    brazil_territory_map_blank.update_geos(
-        fitbounds="locations",
-        visible=False,
-        projection_type="mercator",
-        bgcolor='#0e1117'
-    )
-    brazil_territory_map_blank.update_traces(
-        marker_line_width=0.5,
-        marker_line_color="black"
-    )
-
-    st.plotly_chart(brazil_territory_map_blank, width='stretch', config={'displayModeBar': False})
-
-
-
-
-
-
-
-
-
+        with subcol1_road:
+            st.plotly_chart(brazil_territory_map_eff_road_blank, width='stretch', config={'displayModeBar': False}, key="map_eff_road")
