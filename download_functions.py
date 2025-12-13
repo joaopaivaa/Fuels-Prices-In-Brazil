@@ -2,12 +2,7 @@ import requests
 import pandas as pd
 import chardet
 
-def download_LPG(first_year_month, last_year_month):
-
-    first_year = int(first_year_month.split('-')[0])
-    first_month = int(first_year_month.split('-')[1])
-    last_year = int(last_year_month.split('-')[0])
-    last_month = int(last_year_month.split('-')[1])
+def download_LPG(first_month, first_year, last_month, last_year):
 
     years = range(first_year, last_year + 1)
     months = range(first_month, last_month + 1)
@@ -46,12 +41,7 @@ def download_LPG(first_year_month, last_year_month):
     return df_lpg
 
 
-def download_Gasoline_Ethanol(first_year_month, last_year_month):
-
-    first_year = int(first_year_month.split('-')[0])
-    first_month = int(first_year_month.split('-')[1])
-    last_year = int(last_year_month.split('-')[0])
-    last_month = int(last_year_month.split('-')[1])
+def download_Gasoline_Ethanol(first_month, first_year, last_month, last_year):
 
     years = range(first_year, last_year + 1)
     months = range(first_month, last_month + 1)
@@ -90,12 +80,7 @@ def download_Gasoline_Ethanol(first_year_month, last_year_month):
     return df_gasoline_ethanol
 
 
-def download_Diesel_CNG(first_year_month, last_year_month):
-
-    first_year = int(first_year_month.split('-')[0])
-    first_month = int(first_year_month.split('-')[1])
-    last_year = int(last_year_month.split('-')[0])
-    last_month = int(last_year_month.split('-')[1])
+def download_Diesel_CNG(first_month, first_year, last_month, last_year):
 
     years = range(first_year, last_year + 1)
     months = range(first_month, last_month + 1)
