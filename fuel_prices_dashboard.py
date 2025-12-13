@@ -32,6 +32,15 @@ df_vehicles_copy = df_vehicles.copy()
 most_recent_month = df_fuels_copy['dt_date_month_start'].max()
 second_most_recent_month = df_fuels_copy['dt_date_month_start'].sort_values(ascending=False).unique()[1]
 
+def clean_filters(available_dates):
+    st.session_state.start_date = available_dates[0]
+    st.session_state.end_date = available_dates[-1]
+    st.session_state.regions_selected = []
+    st.session_state.states_selected = []
+    st.session_state.cities_selected = []
+    st.session_state.fuel_types_selected = ['Gasolina']
+    st.session_state.fuel_brands_selected = []
+
 with st.sidebar:
 
     st.title('Filtros')
@@ -66,47 +75,58 @@ with st.sidebar:
         "Região",
         sorted(df_fuels_copy['nm_region'].unique().tolist()),
         max_selections=1,
-        placeholder="Selecione uma região"
+        placeholder="Selecione uma região",
+        key='regions_selected'
     )
 
     if len(region_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_region'].isin(region_selected)].reset_index(drop=True)
-        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_region'].isin(region_selected)].reset_index(drop=True)
 
     state_selected = st.multiselect(
         "Estado",
         sorted(df_fuels_copy['nm_state'].unique().tolist()),
         max_selections=1,
-        placeholder="Selecione um estado"
+        placeholder="Selecione um estado",
+        key='states_selected'
     )
 
     if len(state_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_state'].isin(state_selected)].reset_index(drop=True)
-        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_state'].isin(state_selected)].reset_index(drop=True)
 
     city_selected = st.multiselect(
         "Cidade",
         sorted(df_fuels_copy['nm_city'].unique().tolist()),
         max_selections=1,
-        placeholder="Selecione uma cidade"
+        placeholder="Selecione uma cidade",
+        key='cities_selected'
     )
 
     if len(city_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'].isin(city_selected)].reset_index(drop=True)
-        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_city'].isin(city_selected)].reset_index(drop=True)
 
     fuel_types_selected = st.multiselect(
         "Tipos de combustível",
         sorted(df_fuels_copy['nm_fuel_type'].unique().tolist()),
         default=['Gasolina'],
-        placeholder="Selecione um combustível"
+        placeholder="Selecione um combustível",
+        key='fuel_types_selected'
     )
 
     fuel_brands_selected = st.multiselect(
         "Marcas de combustível",
         sorted(df_fuels_copy['nm_fuel_brand'].unique().tolist()),
-        placeholder="Selecione uma marca"
+        placeholder="Selecione uma marca",
+        key='fuel_brands_selected'
     )
+
+    st.space('small')
+
+    st.button(
+        "Limpar filtros",
+        on_click=clean_filters,
+        args=(available_dates,)
+    )
+        
 
 tab_fuels_comparison, tab_gasoline_or_ethanol = st.tabs(['Comparativo de combustíveis', 'Gasolina ou etanol?'])
 
@@ -457,6 +477,7 @@ with tab_fuels_comparison:
         color_discrete_map=fuel_types_colors,
         markers=True,
         title='Evolução do preço médio ao longo do tempo',
+        range_y=[0, df_fuel_prices_overtime['avg_fuel_price'].max() * 1.1],
         hover_data={
             'dt_date_month_start': True,
             'nm_fuel_type': True,
@@ -543,6 +564,8 @@ with tab_gasoline_or_ethanol:
 
         st.subheader('Cidade')
 
+        st.space('small')
+
         ethanol_efficiency = df_vehicles_copy['ethanol_city_efficiency'].values[0]
         gasoline_efficiency = df_vehicles_copy['gasoline_city_efficiency'].values[0]
 
@@ -562,6 +585,7 @@ with tab_gasoline_or_ethanol:
                 color_discrete_map=fuel_types_colors,
                 markers=True,
                 title='Evolução do preço médio por Km (R$) ao longo do tempo',
+                range_y=[0, df_gasoline_ethanol_overtime['nu_km_cost'].max() * 1.1],
                 hover_data={
                     'dt_date_month_start': True,
                     'nm_fuel_type': True,
@@ -622,7 +646,8 @@ with tab_gasoline_or_ethanol:
                 width=0.3,
                 textposition="inside",
                 texttemplate="%{y:.2f}",
-                textfont_color="black"
+                textfont_color="black",
+                textfont_weight='bold'
             )
             fig_gasoline_ethanol_at_date.update_layout(
                 legend=dict(
@@ -740,6 +765,8 @@ with tab_gasoline_or_ethanol:
 
         st.subheader('Estrada')
 
+        st.space('small')
+
         ethanol_efficiency = df_vehicles_copy['ethanol_road_efficiency'].values[0]
         gasoline_efficiency = df_vehicles_copy['gasoline_road_efficiency'].values[0]
 
@@ -759,6 +786,7 @@ with tab_gasoline_or_ethanol:
                 color_discrete_map=fuel_types_colors,
                 markers=True,
                 title='Evolução do preço médio por Km (R$) ao longo do tempo',
+                range_y=[0, df_gasoline_ethanol_overtime['nu_km_cost'].max() * 1.1],
                 hover_data={
                     'dt_date_month_start': True,
                     'nm_fuel_type': True,
@@ -819,7 +847,8 @@ with tab_gasoline_or_ethanol:
                 width=0.3,
                 textposition="inside",
                 texttemplate="%{y:.2f}",
-                textfont_color="black"
+                textfont_color="black",
+                textfont_weight='bold'
             )
             fig_gasoline_ethanol_at_date.update_layout(
                 legend=None
