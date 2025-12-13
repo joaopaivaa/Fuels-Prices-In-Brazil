@@ -16,23 +16,6 @@ fuel_types_colors = {
 
 st.set_page_config(layout='wide')
 
-st.markdown("""
-    <style>
-    /* Limita a largura do conteúdo principal */
-    .block-container {
-        max-width: 1280px; /* largura típica 16:9 */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Define altura mínima simulando 16:9 */
-    .main {
-        min-height: calc(1280px * 0.5625);
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-
 st.title('Preços de combustíveis no Brasil :fuelpump:')
 
 df_fuels = pd.read_parquet('gold/fuels_prices')
@@ -55,8 +38,29 @@ with st.sidebar:
 
     st.space('small')
 
-    start_date = st.date_input("Data inicial", df_fuels_copy['dt_date_month_start'].min())
-    end_date = st.date_input("Data final", df_fuels_copy['dt_date_month_start'].max())
+    available_dates = pd.period_range(df_fuels['dt_date_month_start'].min(), df_fuels['dt_date_month_start'].max(), freq="M").to_timestamp().to_list()
+
+    if "start_date" not in st.session_state:
+        st.session_state.start_date = available_dates[0]
+
+    if "end_date" not in st.session_state:
+        st.session_state.end_date = available_dates[-1]
+
+    start_date = st.select_slider(
+        "Data inicial",
+        options=[d for d in available_dates if d <= st.session_state.end_date],
+        value=st.session_state.start_date,
+        format_func=lambda d: d.strftime("%m/%Y"),
+        key="start_date"
+    )
+
+    end_date = st.select_slider(
+        "Data final",
+        options=[d for d in available_dates if d >= st.session_state.start_date],
+        value=st.session_state.end_date,
+        format_func=lambda d: d.strftime("%m/%Y"),
+        key="end_date"
+    )
 
     region_selected = st.multiselect(
         "Região",
@@ -67,6 +71,7 @@ with st.sidebar:
 
     if len(region_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_region'].isin(region_selected)].reset_index(drop=True)
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_region'].isin(region_selected)].reset_index(drop=True)
 
     state_selected = st.multiselect(
         "Estado",
@@ -77,6 +82,7 @@ with st.sidebar:
 
     if len(state_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_state'].isin(state_selected)].reset_index(drop=True)
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_state'].isin(state_selected)].reset_index(drop=True)
 
     city_selected = st.multiselect(
         "Cidade",
@@ -87,6 +93,7 @@ with st.sidebar:
 
     if len(city_selected) != 0:
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_city'].isin(city_selected)].reset_index(drop=True)
+        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_city'].isin(city_selected)].reset_index(drop=True)
 
     fuel_types_selected = st.multiselect(
         "Tipos de combustível",
@@ -222,14 +229,6 @@ with tab_fuels_comparison:
                         delta_color="inverse"
                     )
 
-    df_fuels_copy_vehicles = df_fuels_copy.copy()
-
-    if len(fuel_brands_selected) != 0:
-        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_brand'].isin(fuel_brands_selected)].reset_index(drop=True)
-
-    if len(fuel_types_selected) != 0: 
-        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_type'].isin(fuel_types_selected)].reset_index(drop=True)
-
     start_date = pd.to_datetime(start_date)
     end_date = pd.to_datetime(end_date)
 
@@ -239,6 +238,14 @@ with tab_fuels_comparison:
         (df_fuels_copy['dt_date_month_start'] >= start_date) &
         (df_fuels_copy['dt_date_month_start'] <= end_date)
     ].reset_index(drop=True)
+
+    df_fuels_copy_vehicles = df_fuels_copy.copy()
+
+    if len(fuel_brands_selected) != 0:
+        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_brand'].isin(fuel_brands_selected)].reset_index(drop=True)
+
+    if len(fuel_types_selected) != 0: 
+        df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_type'].isin(fuel_types_selected)].reset_index(drop=True)
 
     col1_sup, col2_sup = st.columns([2, 1], vertical_alignment="center", border=True)
 
@@ -484,20 +491,9 @@ with tab_fuels_comparison:
 
 with tab_gasoline_or_ethanol:
 
-    col1, col2, col3, col4 = st.columns(4, vertical_alignment="center", border=False)
+    col1, col2, col3 = st.columns(3, vertical_alignment="center", border=False)
 
     with col1:
-        category_selected = st.multiselect(
-            "Categoria",
-            sorted(df_vehicles_copy['nm_category'].unique().tolist()),
-            max_selections=1,
-            placeholder="Selecione uma categoria"
-        )
-
-    if len(category_selected) != 0:
-        df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_category'].isin(category_selected)]
-
-    with col2:
         brand_selected = st.multiselect(
             "Marca",
             sorted(df_vehicles_copy['nm_brand'].unique().tolist()),
@@ -508,7 +504,7 @@ with tab_gasoline_or_ethanol:
     if len(brand_selected) != 0:
         df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_brand'].isin(brand_selected)]
 
-    with col3:
+    with col2:
         model_selected = st.multiselect(
             "Modelo",
             sorted(df_vehicles_copy['nm_model'].unique().tolist()),
@@ -519,7 +515,7 @@ with tab_gasoline_or_ethanol:
     if len(model_selected) != 0:
         df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_model'].isin(model_selected)]
 
-    with col4:
+    with col3:
         version_selected = st.multiselect(
             "Versão",
             sorted(df_vehicles_copy['nm_version'].unique().tolist()),
@@ -529,6 +525,14 @@ with tab_gasoline_or_ethanol:
 
     if len(version_selected) != 0:
         df_vehicles_copy = df_vehicles_copy[df_vehicles_copy['nm_version'].isin(version_selected)]
+
+    if df_vehicles_copy.empty:
+        st.warning("Nenhum veículo encontrado com os filtros selecionados. Por favor, ajuste a seleção.")
+        st.stop()
+
+    if (len(brand_selected) == 0) or (len(model_selected) == 0) or (len(version_selected) == 0):
+        st.warning("Selecione uma marca, modelo e versão de veículo para continuar.")
+        st.stop()
     
     df_fuels_copy_vehicles = df_fuels_copy_vehicles[df_fuels_copy_vehicles['nm_fuel_type'].isin(['Etanol', 'Gasolina'])]
     df_fuels_copy_vehicles = df_fuels_copy_vehicles.groupby(['nm_region', 'ab_state', 'nm_state', 'nm_city', 'nm_fuel_type', 'dt_date_month_start', 'uf_city']).mean('avg_fuel_price').reset_index()
@@ -545,41 +549,92 @@ with tab_gasoline_or_ethanol:
         df_fuels_copy_vehicles['nu_km_cost'] = np.where(df_fuels_copy_vehicles['nm_fuel_type'] == 'Gasolina',
                                                         df_fuels_copy_vehicles['avg_fuel_price'] / gasoline_efficiency,
                                                         df_fuels_copy_vehicles['avg_fuel_price'] / ethanol_efficiency)
-
+        
         df_gasoline_ethanol_overtime = df_fuels_copy_vehicles.groupby(['dt_date_month_start', 'nm_fuel_type']).mean('nu_km_cost').reset_index()
 
-        fig_gasoline_ethanol_overtime = px.line(
-            df_gasoline_ethanol_overtime,
-            x='dt_date_month_start',
-            y='nu_km_cost',
-            color='nm_fuel_type',
-            color_discrete_map=fuel_types_colors,
-            markers=True,
-            title='Evolução do preço médio por Km (R$) ao longo do tempo',
-            hover_data={
-                'dt_date_month_start': True,
-                'nm_fuel_type': True,
-                "nu_km_cost": ':.2f'
-            },
-            labels={
-                "dt_date_month_start": "Data",
-                "nm_fuel_type": "Combustível",
-                "nu_km_cost": "Preço Médio por Km (R$)"
-            }
-        )
-        fig_gasoline_ethanol_overtime.update_xaxes(title_text=None)
-        fig_gasoline_ethanol_overtime.update_yaxes(title_text=None)
-        fig_gasoline_ethanol_overtime.update_layout(
-            legend=dict(
-                x=0,
-                y=-0.1,
-                orientation="h",
-                xanchor='left'
-            ),
-            legend_title=None
-        )
+        if start_date != end_date:
 
-        st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+            fig_gasoline_ethanol_overtime = px.line(
+                df_gasoline_ethanol_overtime,
+                x='dt_date_month_start',
+                y='nu_km_cost',
+                color='nm_fuel_type',
+                color_discrete_map=fuel_types_colors,
+                markers=True,
+                title='Evolução do preço médio por Km (R$) ao longo do tempo',
+                hover_data={
+                    'dt_date_month_start': True,
+                    'nm_fuel_type': True,
+                    "nu_km_cost": ':.2f'
+                },
+                labels={
+                    "dt_date_month_start": "Data",
+                    "nm_fuel_type": "Combustível",
+                    "nu_km_cost": "Preço Médio por Km (R$)"
+                }
+            )
+            fig_gasoline_ethanol_overtime.update_xaxes(title_text=None)
+            fig_gasoline_ethanol_overtime.update_yaxes(title_text=None)
+            fig_gasoline_ethanol_overtime.update_layout(
+                legend=dict(
+                    x=0,
+                    y=-0.1,
+                    orientation="h",
+                    xanchor='left'
+                ),
+                legend_title=None
+            )
+
+            st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+
+        else:
+
+            selected_date = df_gasoline_ethanol_overtime['dt_date_month_start'].values[0]
+            selected_date = pd.to_datetime(selected_date)
+
+            month_number = selected_date.month
+            month_name = months_in_portuguese.get(month_number)
+
+            month_year = selected_date.year
+
+            gasoline_ethanol_at_date = df_gasoline_ethanol_overtime.drop(['dt_date_month_start', 'avg_fuel_price'], axis=1)
+
+            fig_gasoline_ethanol_at_date = px.bar(
+                gasoline_ethanol_at_date,
+                x='nm_fuel_type',
+                y='nu_km_cost',
+                text="nu_km_cost",
+                color='nm_fuel_type',
+                color_discrete_map=fuel_types_colors,
+                title=f'Preço médio por Km (R$) em {month_name.lower()} de {month_year}',
+                hover_data={
+                    'nm_fuel_type': True,
+                    "nu_km_cost": ':.2f'
+                },
+                labels={
+                    "nm_fuel_type": "Combustível",
+                    "nu_km_cost": "Preço Médio por Km (R$)"
+                }
+            )
+            fig_gasoline_ethanol_at_date.update_xaxes(title_text=None)
+            fig_gasoline_ethanol_at_date.update_yaxes(title_text=None)
+            fig_gasoline_ethanol_at_date.update_traces(
+                width=0.3,
+                textposition="inside",
+                texttemplate="%{y:.2f}",
+                textfont_color="black"
+            )
+            fig_gasoline_ethanol_at_date.update_layout(
+                legend=dict(
+                    x=0,
+                    y=-0.1,
+                    orientation="h",
+                    xanchor='left'
+                ),
+                legend_title=None
+            )
+
+            st.plotly_chart(fig_gasoline_ethanol_at_date, width='stretch', config={'displayModeBar': False})
 
         subcol1_city, subcol2_city = st.columns([3, 1], vertical_alignment="center", border=False)
 
@@ -694,38 +749,83 @@ with tab_gasoline_or_ethanol:
 
         df_gasoline_ethanol_overtime = df_fuels_copy_vehicles.groupby(['dt_date_month_start', 'nm_fuel_type']).mean('nu_km_cost').reset_index()
 
-        fig_gasoline_ethanol_overtime = px.line(
-            df_gasoline_ethanol_overtime,
-            x='dt_date_month_start',
-            y='nu_km_cost',
-            color='nm_fuel_type',
-            color_discrete_map=fuel_types_colors,
-            markers=True,
-            title='Evolução do preço médio por Km (R$) ao longo do tempo',
-            hover_data={
-                'dt_date_month_start': True,
-                'nm_fuel_type': True,
-                "nu_km_cost": ':.2f'
-            },
-            labels={
-                "dt_date_month_start": "Data",
-                "nm_fuel_type": "Combustível",
-                "nu_km_cost": "Preço Médio por Km (R$)"
-            }
-        )
-        fig_gasoline_ethanol_overtime.update_xaxes(title_text=None)
-        fig_gasoline_ethanol_overtime.update_yaxes(title_text=None)
-        fig_gasoline_ethanol_overtime.update_layout(
-            legend=dict(
-                x=0,
-                y=-0.1,
-                orientation="h",
-                xanchor='left'
-            ),
-            legend_title=None
-        )
+        if start_date != end_date:
 
-        st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+            fig_gasoline_ethanol_overtime = px.line(
+                df_gasoline_ethanol_overtime,
+                x='dt_date_month_start',
+                y='nu_km_cost',
+                color='nm_fuel_type',
+                color_discrete_map=fuel_types_colors,
+                markers=True,
+                title='Evolução do preço médio por Km (R$) ao longo do tempo',
+                hover_data={
+                    'dt_date_month_start': True,
+                    'nm_fuel_type': True,
+                    "nu_km_cost": ':.2f'
+                },
+                labels={
+                    "dt_date_month_start": "Data",
+                    "nm_fuel_type": "Combustível",
+                    "nu_km_cost": "Preço Médio por Km (R$)"
+                }
+            )
+            fig_gasoline_ethanol_overtime.update_xaxes(title_text=None)
+            fig_gasoline_ethanol_overtime.update_yaxes(title_text=None)
+            fig_gasoline_ethanol_overtime.update_layout(
+                legend=dict(
+                    x=0,
+                    y=-0.1,
+                    orientation="h",
+                    xanchor='left'
+                ),
+                legend_title=None
+            )
+
+            st.plotly_chart(fig_gasoline_ethanol_overtime, width='stretch', config={'displayModeBar': False})
+
+        else:
+
+            selected_date = df_gasoline_ethanol_overtime['dt_date_month_start'].values[0]
+            selected_date = pd.to_datetime(selected_date)
+
+            month_number = selected_date.month
+            month_name = months_in_portuguese.get(month_number)
+
+            month_year = selected_date.year
+
+            gasoline_ethanol_at_date = df_gasoline_ethanol_overtime.drop(['dt_date_month_start', 'avg_fuel_price'], axis=1)
+
+            fig_gasoline_ethanol_at_date = px.bar(
+                gasoline_ethanol_at_date,
+                x='nm_fuel_type',
+                y='nu_km_cost',
+                text="nu_km_cost",
+                color='nm_fuel_type',
+                color_discrete_map=fuel_types_colors,
+                title=f'Preço médio por Km (R$) em {month_name.lower()} de {month_year}',
+                hover_data={
+                    'nm_fuel_type': True,
+                    "nu_km_cost": ':.2f'
+                },
+                labels={
+                    "nm_fuel_type": "Combustível",
+                    "nu_km_cost": "Preço Médio por Km (R$)"
+                }
+            )
+            fig_gasoline_ethanol_at_date.update_xaxes(title_text=None)
+            fig_gasoline_ethanol_at_date.update_yaxes(title_text=None)
+            fig_gasoline_ethanol_at_date.update_traces(
+                width=0.3,
+                textposition="inside",
+                texttemplate="%{y:.2f}",
+                textfont_color="black"
+            )
+            fig_gasoline_ethanol_at_date.update_layout(
+                legend=None
+            )
+
+            st.plotly_chart(fig_gasoline_ethanol_at_date, width='stretch', config={'displayModeBar': False})
 
         subcol1_road, subcol2_road = st.columns([3, 1], vertical_alignment="center", border=False)
 
