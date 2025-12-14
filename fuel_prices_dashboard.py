@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import geopandas as gpd
 import numpy as np
+from datetime import date
 
 fuel_types_colors = {
     "Etanol": "#A8D8A8",
@@ -126,6 +127,14 @@ with st.sidebar:
         on_click=clean_filters,
         args=(available_dates,)
     )
+
+    st.space('small')
+
+    today_date = date.today().strftime('%d/%m/%Y')
+    st.text(f"Atualizado em: {today_date}")
+
+    st.text(f"Competência mais recente: {most_recent_month.strftime('%m/%Y')}")
+
         
 
 tab_fuels_comparison, tab_gasoline_or_ethanol = st.tabs(['Comparativo de combustíveis', 'Gasolina ou etanol?'])
@@ -507,6 +516,9 @@ with tab_fuels_comparison:
     with col2_inf:
         st.plotly_chart(fig_fuel_prices_by_brand_top5_lowest, width='stretch', config={'displayModeBar': False})
 
+    st.space('small')
+    st.link_button("Desenvolvido por João Paiva", "https://joaopaivaa.github.io/")
+
 
 # "Gasolina ou etanol" tab
 
@@ -549,10 +561,14 @@ with tab_gasoline_or_ethanol:
 
     if df_vehicles_copy.empty:
         st.warning("Nenhum veículo encontrado com os filtros selecionados. Por favor, ajuste a seleção.")
+        st.space('small')
+        st.link_button("Desenvolvido por João Paiva", "https://joaopaivaa.github.io/")
         st.stop()
 
     if (len(brand_selected) == 0) or (len(model_selected) == 0) or (len(version_selected) == 0):
         st.warning("Selecione uma marca, modelo e versão de veículo para continuar.")
+        st.space('small')
+        st.link_button("Desenvolvido por João Paiva", "https://joaopaivaa.github.io/")
         st.stop()
     
     df_fuels_copy_vehicles = df_fuels_copy_vehicles[df_fuels_copy_vehicles['nm_fuel_type'].isin(['Etanol', 'Gasolina'])]
@@ -955,3 +971,6 @@ with tab_gasoline_or_ethanol:
 
         with subcol1_road:
             st.plotly_chart(brazil_territory_map_eff_road_blank, width='stretch', config={'displayModeBar': False}, key="map_eff_road")
+
+    st.space('small')
+    st.link_button("Desenvolvido por João Paiva", "https://joaopaivaa.github.io/")
