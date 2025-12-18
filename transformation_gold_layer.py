@@ -15,11 +15,13 @@ import requests
 spark = (
     SparkSession.builder
     .appName("Fuel Prices in Brazil")
-    .config("spark.driver.memory", "6g")
+    .master("local[2]")
+    .config("spark.driver.memory", "4g")
+    .config("spark.sql.shuffle.partitions", "4")
     .getOrCreate()
 )
 
-df = spark.read.parquet("silver/fuels_prices")
+df = spark.read.parquet("databases/fuel_prices/silver/fuels_prices")
 
 df = df.dropna(how='all')
 
@@ -31,15 +33,19 @@ df = (
     .agg(
         mean('nu_fuel_price').alias('avg_fuel_price')
     )
+    .withColumn("avg_fuel_price_r", round(col("avg_fuel_price"), 2))
     .orderBy('dt_date_month_start', 'ab_state', 'nm_state', 'nm_city', 'nm_fuel_type')
 )
 
 most_recent_date = df.select('dt_date_month_start').distinct().orderBy(col('dt_date_month_start').desc()).first()['dt_date_month_start'].strftime('%Y-%m-%d')
 
-# list_of_dates = df.select('dt_date_month_start').rdd.flatMap(lambda x: x).collect()
-# list_of_values = df.select('avg_fuel_price').rdd.flatMap(lambda x: x).collect()
-list_of_dates = [row.dt_date_month_start for row in df.select('dt_date_month_start').collect()]
-list_of_values = [row.avg_fuel_price for row in df.select('avg_fuel_price').collect()]
+rows = df.select(
+    'dt_date_month_start',
+    'avg_fuel_price'
+).collect()
+
+list_of_dates = [row.dt_date_month_start for row in rows]
+list_of_values = [row.avg_fuel_price for row in rows]
 
 dates_as_strings = [
     d.isoformat() if isinstance(d, (datetime.date, datetime.datetime)) else d 
@@ -66,6 +72,11 @@ df_inflation_adjusted_values = spark.createDataFrame(pd.DataFrame(values_inflati
 
 df_inflation_adjusted_values = df_inflation_adjusted_values.toDF('date', 'original_value', 'inflation_adjusted_value', 'inflation_perc')
 
+df_inflation_adjusted_values = (
+    df_inflation_adjusted_values
+    .withColumn("original_value", round(col("original_value"), 2))
+)
+
 df = (
     df
     .join(
@@ -80,4 +91,4 @@ df = (
     )
 )
 
-df.write.mode("overwrite").format("parquet").save("gold/fuels_prices")
+df.write.mode("overwrite").format("parquet").save("databases/fuel_prices/gold/fuels_prices")

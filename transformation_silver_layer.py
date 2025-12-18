@@ -21,9 +21,9 @@ def remove_accents(s):
 
 remove_accents_udf = udf(remove_accents, StringType())
 
-df_diesel_cng = spark.read.parquet("bronze/Diesel and CNG Prices.parquet")
-df_lpg = spark.read.parquet("bronze/LPG Prices.parquet")
-df_gasoline_ethanol = spark.read.parquet("bronze/Gasoline and Ethanol Prices.parquet")
+df_diesel_cng = spark.read.parquet("databases/fuel_prices/bronze/Diesel and CNG Prices.parquet")
+df_lpg = spark.read.parquet("databases/fuel_prices/bronze/LPG Prices.parquet")
+df_gasoline_ethanol = spark.read.parquet("databases/fuel_prices/bronze/Gasoline and Ethanol Prices.parquet")
 
 df = df_diesel_cng.unionByName(df_lpg, allowMissingColumns=True).unionByName(df_gasoline_ethanol, allowMissingColumns=True)
 
@@ -116,4 +116,4 @@ df = (
     df.filter(col('nm_fuel_type') != 'GLP')
 )
 
-df.write.mode("overwrite").format("parquet").save("silver/fuels_prices")
+df.write.mode("overwrite").format("parquet").save("databases/fuel_prices/silver/fuels_prices")
