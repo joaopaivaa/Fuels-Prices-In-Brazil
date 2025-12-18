@@ -23,9 +23,9 @@ df_fuels = pd.read_parquet('databases/fuel_prices/gold/fuels_prices')
 
 df_vehicles = pd.read_csv('databases/cars_efficiency/dim_vehicles_efficiency.csv', encoding="latin1")
 
-gdf_cities = gpd.read_file("databases/brazil_map/brazil_cities_shape/brazil_cities.shp")
-gdf_states = gpd.read_file("databases/brazil_map/brazil_states_shape/brazil_states.shp")
-gdf_regions = gpd.read_file("databases/brazil_map/brazil_regions_shape/brazil_regions.shp")
+gdf_cities = gpd.read_file("databases/brazil_map/brazil_cities_shape_adjusted/brazil_cities.shp")
+gdf_states = gpd.read_file("databases/brazil_map/brazil_states_shape_adjusted/brazil_states.shp")
+gdf_regions = gpd.read_file("databases/brazil_map/brazil_regions_shape_adjusted/brazil_regions.shp")
 df_fuels_copy = df_fuels.copy()
 df_vehicles_copy = df_vehicles.copy()
 
