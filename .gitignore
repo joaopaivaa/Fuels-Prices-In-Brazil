@@ -1,7 +1,9 @@
 venv
 __pycache__
-bronze/
-silver/
-brazil_cities_shape/
-brazil_regions_shape/
-brazil_states_shape/
+
+databases/fuel_prices/bronze/
+databases/fuel_prices/silver/
+
+databases/brazil_map/brazil_cities_shape/
+databases/brazil_map/brazil_regions_shape/
+databases/brazil_map/brazil_states_shape/
