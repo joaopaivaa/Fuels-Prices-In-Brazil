@@ -1,0 +1,913 @@
+Categoria,Marca,Modelo,Vers�o,Combust��vel,Etanol - Cidade,Etanol  - Estrada,Gasolina ou Diesel - Cidade,Gasolina ou Diesel - Estrada,El�trico - Cidade,El�trico - Estrada
+Sub Compacto,BYD,DOLPHIN MINI,GS EV,E,,,,,58.6,41.9
+Sub Compacto,BYD,DOLPHIN MINI,GS 5 EV,E,,,,,58.6,41.9
+Sub Compacto,BYD,DOLPHIN MINI,GL5EV,E,,,,,60.6,44.4
+Sub Compacto,CAOA CHERY,ICAR EQ1,TEC,E,,,,,50.8,38.6
+Sub Compacto,FIAT,500E,ICON,E,,,,,47.3,40.4
+Sub Compacto,FIAT,MOBI,TREKKING,F,9.8,10.6,14,15.1,,
+Sub Compacto,FIAT,MOBI,LIKE,F,9.8,10.6,14,15.1,,
+Sub Compacto,JAC,e-JS1,e-JS1,E,,,,,46.6,35
+Sub Compacto,JAC,e-JS1,e-JS1 EXT,E,,,,,46.6,35
+Sub Compacto,Renault,E-KWID,INTENS,E,,,,,52.7,39.6
+Compacto,FIAT,ARGO,1,F,9.4,10.4,13.6,14.5,,
+Compacto,FIAT,ARGO,DRIVE 1.0,F,9.4,10.4,13.6,14.5,,
+Compacto,FIAT,ARGO,DRIVE 1.3 AT,F,9,10.3,12.8,14.3,,
+Compacto,Hyundai,HB20,Sense,F,9.9,10.7,13.3,15.4,,
+Compacto,Hyundai,HB20,Comfort,F,9.9,10.7,13.3,15.4,,
+Compacto,Hyundai,HB20,Limited,F,9.9,10.7,13.3,15.4,,
+Compacto,Hyundai,HB20,Platinum,F,9.9,10.7,13.3,15.4,,
+Compacto,Hyundai,HB20,SE,F,9.9,10.7,13.3,15.4,,
+Compacto,Hyundai,HB20,Comfort,F,9.2,10.2,13.2,14.7,,
+Compacto,Hyundai,HB20,Platinum Safety,F,9.2,10.2,13.2,14.7,,
+Compacto,Hyundai,HB20,SE,F,9.2,10.2,13.2,14.7,,
+Compacto,MINI,Cooper,S 3P EXCLUSIVE,G,,,11.5,14,,
+Compacto,MINI,Cooper,S 3P SPORT,G,,,11.5,14,,
+Compacto,MINI,Cooper,S 3P TOP,G,,,11.5,14,,
+Compacto,MINI,Cooper,S CABRIO,G,,,11.2,14.6,,
+Compacto,MINI,Cooper,E,E,,,,,48.1,38.5
+Compacto,MINI,Cooper,SE,E,,,,,45.2,37.3
+Compacto,MINI,JCW-E,3P,E,,,,,43.8,40.2
+Compacto,MINI,JCW,3P,G,,,10.8,13.9,,
+Compacto,MINI,JCW,CABRIO,G,,,10.1,12.8,,
+Compacto,NETA,AYA,COMFORT 4S,E,,,,,52.9,42.7
+Compacto,NETA,AYA,LUXURY 4S,E,,,,,52.9,42.7
+Compacto,PEUGEOT,208,STYLE MT,F,9.5,10.8,13.6,15.3,,
+Compacto,PEUGEOT,208,ACTIVE MT,F,9.5,10.8,13.6,15.3,,
+Compacto,PEUGEOT,208,ALLUR T200,F,8.8,10.1,12.6,14.3,,
+Compacto,PEUGEOT,208,GT T200,F,8.3,9.7,12,13.7,,
+Compacto,PEUGEOT,E-208,GT,E,,,,,37.8,30.8
+Médio,AUDI,A3 Spotback,Peformance (ed.0),G,,,9.7,12.7,,
+Médio,AUDI,A3 Spotback,Performance Black (ed.0),G,,,9.7,12.7,,
+Médio,AUDI,A3 Spotback,Peformance,G,,,10.2,12.4,,
+Médio,AUDI,A3 Spotback,Performance Black,G,,,10.2,12.4,,
+Médio,BYD,DOLPHIN,GS 180EV,E,,,,,51.9,43.5
+Médio,BYD,DOLPHIN,PLUS 310EV,E,,,,,42.1,36.8
+Médio,BYD,YUAN PRO,GS 290EV,E,,,,,44,35.7
+Médio,CAOA CHERY,TIGGO 7,PHEV,G,,,12.3,11.9,36.4,28.8
+Médio,CHEVROLET,ONIX,MT,F,9.6,11.9,13.8,16.9,,
+Médio,CHEVROLET,ONIX,LT,F,9.6,11.9,13.8,16.9,,
+Médio,CHEVROLET,ONIX,LT,F,9.3,11.7,13.5,16.7,,
+Médio,CHEVROLET,ONIX,AT,F,8.2,10.5,12,14.8,,
+Médio,CHEVROLET,ONIX,LT,F,8.2,10.5,12,14.8,,
+Médio,CHEVROLET,ONIX,LTZ,F,8.2,10.5,12,14.8,,
+Médio,CHEVROLET,ONIX,PREMIER,F,8.2,10.5,12,14.8,,
+Médio,CHEVROLET,ONIX,RS,F,8.2,9.8,11.8,13.5,,
+Médio,CHEVROLET,ONIX PLUS,LT,F,9.2,12.4,13.5,17.4,,
+Médio,CHEVROLET,ONIX PLUS,LT2,F,9.7,12.2,13.9,17.4,,
+Médio,CHEVROLET,ONIX PLUS,PREMIER,F,8.5,11,12,15.6,,
+Médio,CHEVROLET,ONIX PLUS,LT,F,8.5,11,12,15.6,,
+Médio,CHEVROLET,ONIX PLUS,LTZ,F,8.5,11,12,15.6,,
+Médio,CHEVROLET,ONIX PLUS,AT,F,8.5,11,12,15.6,,
+Médio,CHEVROLET,ONIX PLUS (MY26),LTZ,F,8.5,11.2,12.2,16,,
+Médio,CHEVROLET,ONIX PLUS (MY26),PREMIER,F,8.5,11.2,12.2,16,,
+Médio,CHEVROLET,ONIX PLUS (MY26),MT,F,9.2,12.3,13.3,16.8,,
+Médio,CHEVROLET,ONIX PLUS (MY26),LT,F,8.5,11.2,12.2,16,,
+Médio,CHEVROLET,ONIX PLUS (MY26),MT,F,9.8,12.1,13.9,17.1,,
+Médio,CHEVROLET,ONIX PLUS (MY26),AT,F,8.5,11.2,12.2,16,,
+Médio,CHEVROLET,ONIX (MY26),AT,F,8.6,10.9,12.1,15.3,,
+Médio,CHEVROLET,ONIX (MY26),100 ANOS,F,9.5,11.3,13.5,16.3,,
+Médio,CHEVROLET,ONIX (MY26),LTZ,F,,,,,,
+Médio,CHEVROLET,ONIX (MY26),PREMIER,F,,,,,,
+Médio,CHEVROLET,ONIX (MY26),RS,F,,,,,,
+Médio,CHEVROLET,ONIX (MY26),MT,F,9.8,12.4,13.7,17.7,,
+Médio,CHEVROLET,ONIX (MY26),LT,F,8.6,10.9,12.1,15.3,,
+Médio,CHEVROLET,ONIX (MY26),MT,F,9.5,11.3,13.5,16.3,,
+Médio,CHEVROLET,SPARK EUV,ACTIV,E,,,,,47.4,34.9
+Médio,CHEVROLET,SPIN,LS E,F,7.7,8.6,11,12.5,,
+Médio,CHEVROLET,SPIN,LS2,F,7.7,8.6,11,12.5,,
+Médio,CHEVROLET,SPIN,LT,F,7.7,8.6,11,12.5,,
+Médio,CHEVROLET,SPIN,LT,F,7.4,9.3,10.5,13.4,,
+Médio,CHEVROLET,SPIN,AT,F,7.4,9.3,10.5,13.4,,
+Médio,CHEVROLET,SPIN,LTZ5,F,7.4,9.3,10.5,13.4,,
+Médio,CHEVROLET,SPIN (MY26.5),AT,F,7.1,9.1,10.1,13.1,,
+Médio,CHEVROLET,SPIN (MY26.5),LT,F,7.8,8.8,11,12.6,,
+Médio,CHEVROLET,SPIN (MY26.5),LT,F,7.1,9.1,10.1,13.1,,
+Médio,FIAT,CRONOS,1,F,9.7,11.2,13.4,15.9,,
+Médio,FIAT,CRONOS,DRIVE 1.0,F,9.7,11.2,13.4,15.9,,
+Médio,FIAT,CRONOS,DRIVE1.3AT,F,8.9,10.7,12.6,14.6,,
+Médio,FIAT,CRONOS,PREC 1.3AT,F,8.9,10.7,12.6,14.6,,
+Médio,Geely,EX2,MAX,E,,,,,60.1,45.2
+Médio,Geely,EX2,PRO,E,,,,,60.1,45.2
+Médio,GWM,ORA 03,SKIN BEV48,E,,,,,41.7,35.7
+Médio,GWM,ORA 03,GT BEV63,E,,,,,41.1,33.7
+Médio,GWM,ORA 03,BEV58,E,,,,,42.8,36.1
+Médio,HONDA,CITY,LX,F,9.3,10.4,12.8,15.5,,
+Médio,HONDA,CITY,EX,F,9.3,10.4,12.8,15.5,,
+Médio,HONDA,CITY,EXL,F,9.3,10.4,12.8,15.5,,
+Médio,HONDA,CITY,TOURING,F,9.3,10.4,12.8,15.5,,
+Médio,HONDA,CITY HATCH,LX,F,9.2,10.5,13.2,15,,
+Médio,HONDA,CITY HATCH,EX,F,9.2,10.5,13.2,15,,
+Médio,HONDA,CITY HATCH,EXL,F,9.2,10.5,13.2,15,,
+Médio,HONDA,CITY HATCH,TOURING,F,9.2,10.5,13.2,15,,
+Médio,HONDA,CITY HATCH,TOURING SPORT,F,9.2,10.5,13.2,15,,
+Médio,HONDA,HR-V,EX HONDA SENSING,F,8.8,9.9,12.5,13.9,,
+Médio,HONDA,HR-V,EXL HONDA SENSING,F,8.8,9.9,12.5,13.9,,
+Médio,HONDA,HR-V,ADVANCE,F,8,9.2,11.3,13,,
+Médio,HONDA,HR-V,TOURING,F,8,9.2,11.3,13,,
+Médio,HONDA,HR-V (mod. 26),ADVANCE,F,8.1,9.1,11.5,12.9,,
+Médio,HONDA,HR-V (mod. 26),TOURING,F,8.1,9.1,11.5,12.9,,
+Médio,Hyundai,HB20S,Comfort,F,9.7,10.9,13.4,15.4,,
+Médio,Hyundai,HB20S,Limited,F,9.7,10.9,13.4,15.4,,
+Médio,Hyundai,HB20S,Platinum,F,9.7,10.9,13.4,15.4,,
+Médio,Hyundai,HB20S,SE,F,9.7,10.9,13.4,15.4,,
+Médio,Hyundai,HB20S,Comfort,F,9.2,10.7,13,15.2,,
+Médio,Hyundai,HB20S,Platinum Safety,F,9.2,10.7,13,15.2,,
+Médio,Hyundai,HB20S,SE,F,9.2,10.7,13,15.2,,
+Médio,Hyundai,KONA,Ultimate,G,,,18.4,16,,
+Médio,Hyundai,KONA,Signature,G,,,18.4,16,,
+Médio,JAC,e-JS4,e-JS4,E,,,,,47.5,39.1
+Médio,Mercedes-Benz,A200 AMG LINE,,G,,,12.1,14.3,,
+Médio,MINI,Cooper,S 5P EXCLUSIVE,G,,,11.5,14.5,,
+Médio,MINI,Cooper,S 5P TOP,G,,,11.5,14.5,,
+Médio,MINI,Aceman,E,E,,,,,47.6,40.2
+Médio,MINI,Aceman,SE,E,,,,,40.8,36.7
+Médio,MINI,JCW-E,ACEMAN,E,,,,,41.2,39.8
+Médio,MG,MG4,64 KWH COM / 64 KWH LUX,E,,,,,43.3,37.4
+Médio,MG,MG4,64 KWH AWD,E,,,,,36.3,32.7
+Médio,Nissan,Versa,SENSE CVT,F,7.9,10.5,11.5,15,,
+Médio,Nissan,Versa,ADVNC CVT,F,7.9,10.5,11.5,15,,
+Médio,Nissan,Versa,SR CVT,F,7.9,10.5,11.5,15,,
+Médio,Nissan,Versa,EXCL CVT,F,7.9,10.5,11.5,15,,
+Médio,Peugeot,E2008,GT,E,,,,,38.2,35.3
+Médio,Renault,Mégane,E-TECH,E,,,,,41.4,38.8
+Médio,VOLVO,EX30,E60 ULTRA,E,,,,,43.2,35.3
+Médio,VOLVO,EX30,E60 PLUS,E,,,,,43.2,35.3
+Médio,VOLVO,EX30,E60 CORE,E,,,,,43.2,35.3
+Médio,VOLVO,EX30,TWIN ULTRA,E,,,,,33.4,32
+Médio,VOLVO,EX30,E40 CORE,E,,,,,40.1,33.9
+Médio,Volkswagen,VIRTUS,"COMFORTLINE 200TSI 
+AUTOMÁTICO",F,8.3,10.2,12.1,14.7,,
+Médio,Volkswagen,VIRTUS,"HIGHLINE 200TSI 
+AUTOMÁTICO",F,8.3,10.2,12.1,14.7,,
+Médio,Volkswagen,VIRTUS,TSI AUTOMÁTICO,F,8.5,10.4,12.2,14.9,,
+Médio,Volkswagen,VIRTUS,TSI MECÂNICO,F,9.2,11.2,13.2,15.8,,
+Médio,Volkswagen,VIRTUS,SENSE TSI MECÂNICO,F,9.2,11.2,13.2,15.8,,
+Médio,Volkswagen,VIRTUS,"EXCLUSIVE 250TSI 
+AUTOMÁTICO",F,8.1,9.9,11.7,14,,
+Médio,Volkswagen,POLO,TSI MECÂNICO,F,9.6,11.4,13.9,16.3,,
+Médio,Volkswagen,POLO,SENSE TSI AUTOMÁTICO,F,9,11.1,13.1,16.1,,
+Médio,Volkswagen,POLO,MPI,F,9.3,10.9,13.5,15.7,,
+Médio,Volkswagen,POLO,TRACK 1.0 MPI,F,9.3,10.9,13.5,15.7,,
+Médio,Volkswagen,POLO,TRACK ROBUST 1.0 MPI,F,9.3,10.9,13.5,15.7,,
+Médio,Volkswagen,TERA,MPI,F,9.1,10.2,13.2,14.7,,
+Grande,AUDI,A3 Sedan,Advanced (ed.0),G,,,9.7,13,,
+Grande,AUDI,A3 Sedan,Performance (ed.0),G,,,9.7,13,,
+Grande,AUDI,A3 Sedan,Performance Black (ed.0),G,,,9.7,13,,
+Grande,AUDI,RS3 Sedan,#NAME?,G,,,7.3,10.3,,
+Grande,AUDI,RS3 Sedan,Track (ed.0),G,,,7.3,10.3,,
+Grande,AUDI,RS3 Sedan,-,G,,,7.3,9.9,,
+Grande,AUDI,RS3 Sedan,Track,G,,,7.3,9.9,,
+Grande,BMW,X2,M35i,G,,,9.1,11.8,,
+Grande,BMW,X2,M35i,G,,,8.9,11.6,,
+Grande,BMW,iX1,xDrive30,E,,,,,35.7,32
+Grande,BMW,iX1,eDrive20,E,,,,,37.4,36.1
+Grande,BMW,iX2,xDrive30 MSP,E,,,,,35.7,32.8
+Grande,BMW,220,-,G,,,11.4,14.9,,
+Grande,BMW,220,MSP,G,,,11.4,14.9,,
+Grande,BMW,M235,xDrive,G,,,8.9,12.3,,
+Grande,BYD,D1,GL 180EV,E,,,,,39.2,34.2
+Grande,BYD,D1,GS 180EV,E,,,,,39.2,34.2
+Grande,GAC,AION Y,PREMIUM,E,,,,,36.5,35
+Grande,GAC,AION Y,ELITE,E,,,,,36.5,35
+Grande,GAC,AION Y,BEV Premium,E,,,,,36.5,35
+Grande,HONDA,CIVIC HYBRID,TOURING,G,,,18.4,15.9,,
+Grande,HONDA,CIVIC HYBRID,TOURING,G,,,18.4,15.9,,
+Grande,HONDA,ZR-V (mod.26),TOURING,G,,,10.4,12.3,,
+Grande,JAECOO,7,PRESTIGE,G,,,15.1,13.5,37,30.7
+Grande,JAECOO,7,LUXURY,G,,,15.1,13.5,37,30.7
+Grande,KIA,NIRO,HEV EX,G,,,18.3,15.9,,
+Grande,KIA,NIRO,HEV LX,G,,,18.3,15.9,,
+Grande,KIA,NIRO,HEV SX,G,,,18.3,15.9,,
+Grande,KIA,NIRO,HEV SX RIOPEN,G,,,18.3,15.9,,
+Grande,LEXUS,UX 300H,UX 300H,G,,,17.3,14.9,,
+Grande,Mercedes-Benz,GLA200,AMG LINE,G,,,11.4,12.4,,
+Grande,Mercedes-Benz,GLA200,PROGRESSIVE,G,,,11.4,12.4,,
+Grande,Mercedes-Benz,AMG A45S 4M,,G,,,8.3,10.7,,
+Grande,Mercedes-Benz,AMG GLA35 4M,,G,,,8.8,10.8,,
+Grande,MINI,Countryman,SE EXCLUSIVE,E,,,,,35,31.8
+Grande,MINI,Countryman,SE TOP,E,,,,,35,31.8
+Grande,MINI,JCW,COUNTRYMAN,G,,,9.6,11.7,,
+Grande,MINI,JCW,COUNTRYMAN EX,G,,,9.6,11.7,,
+Grande,MINI,JCW,COUNTRYMAN,G,,,9.5,11.6,,
+Grande,MINI,JCW,COUNTRYMAN EX,G,,,9.5,11.6,,
+Grande,MG,S5,EV 62KWH LUX,E,,,,,43,36.7
+Grande,MG,S5,EV 62KWH COM,E,,,,,43,36.7
+Grande,NETA,X,400 COMFORT,E,,,,,40.3,35.5
+Grande,NETA,X,500 COMFORT,E,,,,,38.4,35.2
+Grande,NETA,X,500 LUXURY,E,,,,,38.4,35.2
+Grande,Nissan,Sentra,SEN CVT,G,,,11,14,,
+Grande,Nissan,Sentra,ADV CVT,G,,,11,14,,
+Grande,Nissan,Sentra,EXCLUSIVE,G,,,11,14,,
+Grande,OMODA,E5,--,E,,,,,44.7,35.2
+Grande,TOYOTA,COROLLA CROSS,XR 20,F,7.6,8.8,11.2,13,,
+Grande,TOYOTA,COROLLA CROSS,XRE 20,F,7.6,8.8,11.2,13,,
+Grande,TOYOTA,COROLLA CROSS,XRX 20,F,7.6,8.8,11.2,13,,
+Grande,TOYOTA,COROLLA CROSS,GRS,F,7.6,8.8,11.2,13,,
+Grande,TOYOTA,COROLLA CROSS,XRV HYBRID,F,11.6,9.9,16.6,14,,
+Grande,TOYOTA,COROLLA CROSS,XRX HYBRID,F,11.6,9.9,16.6,14,,
+Grande,TOYOTA,COROLLA,GLI,F,8,10,11.9,14.5,,
+Grande,TOYOTA,COROLLA,GLI 20,F,8,10,11.9,14.5,,
+Grande,TOYOTA,COROLLA,XEI 20,F,8,10,11.9,14.5,,
+Grande,TOYOTA,COROLLA,ALTIS 20,F,8,10,11.9,14.5,,
+Grande,TOYOTA,COROLLA,GRS,F,8,10,11.9,14.5,,
+Grande,TOYOTA,COROLLA,ALTIS HV,F,12.5,10.7,17.5,15.2,,
+Grande,TOYOTA,COROLLA,APREMIUMH,F,12.5,10.7,17.5,15.2,,
+Grande,TOYOTA,COROLLA,GLI HEV,F,12.5,10.7,17.5,15.2,,
+Grande,VOLVO,EC40,6 CORE,E,,,,,41.7,37.2
+Grande,VOLVO,EC40,6 PLUS,E,,,,,41.7,37.2
+Grande,VOLVO,EC40,6 ULTRA,E,,,,,41.7,37.2
+Grande,VOLVO,EC40,8 CORE,E,,,,,36.6,32.6
+Grande,VOLVO,EC40,8 PLUS,E,,,,,36.6,32.6
+Grande,VOLVO,EC40,8 ULTRA,E,,,,,36.6,32.6
+Grande,VOLVO,EC40,PERF BLACK,E,,,,,36.6,32.6
+Grande,Volkswagen,ID.4,PRO PERFORMANCE,E,,,,,34.5,29.8
+Extra Grande,AUDI,e-tron GT,-,E,,,,,26,25
+Extra Grande,AUDI,RS e-tron GT,-,E,,,,,25.7,25.5
+Extra Grande,AUDI,Q5 SUV,Advanced (ed.0),G,,,8.3,10.2,,
+Extra Grande,AUDI,Q5 SUV,S line (ed.0),G,,,8.3,10.2,,
+Extra Grande,AUDI,Q5 SUV,Advanced,G,,,8.3,10.2,,
+Extra Grande,AUDI,Q5 SUV,S line,G,,,8.3,10.2,,
+Extra Grande,AUDI,SQ5 SUV,-,G,,,7.2,9.2,,
+Extra Grande,AUDI,SQ5 Sportback,-,G,,,6.9,8.9,,
+Extra Grande,AUDI,Q5 Sportback,Advanced (ed.0),G,,,8.1,10.2,,
+Extra Grande,AUDI,Q5 Sportback,S line (ed.0),G,,,8.1,10.2,,
+Extra Grande,AUDI,Q5 Sportback,Advanced,G,,,8.3,10.2,,
+Extra Grande,AUDI,Q5 Sportback,S line,G,,,8.3,10.2,,
+Extra Grande,AUDI,Q6 e-tron RWD,Performance,E,,,,,33.8,29.3
+Extra Grande,AUDI,Q6 e-tron Quattro,Performance,E,,,,,34,29.6
+Extra Grande,AUDI,Q6 e-tron Quattro,Performanec black,E,,,,,34,29.6
+Extra Grande,AUDI,"Q6 Sportback e-tron 
+Quattro",Performance black,E,,,,,35.4,31.2
+Extra Grande,AUDI,"SQ6 Sportback e-tron 
+Quattro",-,E,,,,,35.1,31.9
+Extra Grande,AUDI,RS 6 Avant,Performance,G,,,5.9,7.8,,
+Extra Grande,AUDI,RS 6 Avant,GT,G,,,5.9,7.8,,
+Extra Grande,AUDI,Q7,S Line (ed.0),G,,,6.6,8.1,,
+Extra Grande,AUDI,Q8 Sportback,Performance Black (ed.0),G,,,6.4,7.8,,
+Extra Grande,AUDI,Q8 e-tron Sportback 55,Launch Edition,E,,,,,24.7,25.5
+Extra Grande,AUDI,Q8 e-tron Sportback 55,Performance Black,E,,,,,24.7,25.5
+Extra Grande,AUDI,Q8 e-tron 55,Launch Edition,E,,,,,24.5,24.7
+Extra Grande,AUDI,A6 e-tron,Performance black,E,,,,,36.4,31.8
+Extra Grande,AUDI,A5,Performance S Edition  (ed.0),G,,,8.7,11.5,,
+Extra Grande,AUDI,A5,Performance S Edition,G,,,8.7,11.3,,
+Extra Grande,AUDI,SQ8 e-tron Sportback,-,E,,,,,21,21.3
+Extra Grande,AUDI,RSQ8,Performance,G,,,5.3,7,,
+Extra Grande,BMW,420i,Cabrio,G,,,9.8,12.5,,
+Extra Grande,BMW,530e,M SPORT,G,,,10.9,12.3,26.2,26.9
+Extra Grande,BMW,320i,M Sport Flex,F,7.4,9,10.5,13.1,,
+Extra Grande,BMW,320i,Sport GP Flex,F,7.6,9.2,10.9,13.3,,
+Extra Grande,BMW,320i,GP Flex,F,7.6,9.2,10.9,13.3,,
+Extra Grande,BMW,320i,Active Flex,F,7.1,8.6,10,12.3,,
+Extra Grande,BMW,330e,-,G,,,9.2,10.8,20.6,24
+Extra Grande,BMW,i4,40,E,,,,,34.2,32.3
+Extra Grande,BMW,i4,M50,E,,,,,35.6,32.1
+Extra Grande,BMW,i4,eDrive35,E,,,,,34,32
+Extra Grande,BMW,IX,xDrive 40,E,,,,,30.6,29.6
+Extra Grande,BMW,IX,xDrive 50,E,,,,,33.2,30.3
+Extra Grande,BMW,iX,M60,E,,,,,28.8,28
+Extra Grande,BMW,I5,M60,E,,,,,35.7,33
+Extra Grande,BMW,i5,M60 xDrive,E,,,,,32.6,33
+Extra Grande,BMW,i7,xDrive60,E,,,,,31.8,30.3
+Extra Grande,BYD,HAN,AWD GS 680EV,E,,,,,30.8,28.1
+Extra Grande,BYD,SEAL,AWD GS 590EV,E,,,,,34.9,30.5
+Extra Grande,BYD,TAN,AWD GS 700EV,E,,,,,30.2,25.3
+Extra Grande,BYD,SONG PLUS,PREM DM,G,,,12.2,10.1,33.4,27.5
+Extra Grande,BYD,SONG PLUS,GS DM,G,,,15,11.2,39.5,30.2
+Extra Grande,BYD,SONG PRO,GS DM,G,,,14.8,12,38.4,30
+Extra Grande,BYD,SONG PRO,GL DM,G,,,13.9,10.7,38.7,28.6
+Extra Grande,BYD,KING,GL DM,G,,,17.1,13.6,43.5,33.1
+Extra Grande,BYD,KING,GS DM,G,,,16.4,12.9,45.6,37.3
+Extra Grande,CHEVROLET,EQUINOX EV,-,E,,,,,37.1,35.6
+Extra Grande,CHEVROLET,BLAZER EV,RS,E,,,,,34.2,30.4
+Extra Grande,CHEVROLET,EQUINOX,ACTIV,G,,,9,10.7,,
+Extra Grande,CHEVROLET,EQUINOX,RS,G,,,9,10.7,,
+Extra Grande,FORD,Territory,Titanium,G,,,8.8,11.2,,
+Extra Grande,FORD,Mustang Mach-E,GT,E,,,,,31.1,27.5
+Extra Grande,GAC,AION ES,PLUS,E,,,,,47.1,42.9
+Extra Grande,GAC,HYPTEC HT,ELITE/ULTRA,E,,,,,38,31.8
+Extra Grande,GAC,AION V,ELITE,E,,,,,40.3,34.6
+Extra Grande,GAC,AION V,PREMIUM,E,,,,,38.8,34.7
+Extra Grande,Geely,EX5,MAX,E,,,,,43,37.1
+Extra Grande,Geely,EX5,PRO,E,,,,,51,44.7
+Extra Grande,HONDA,ACCORD HYBRID,TOURING,G,,,17.5,15.6,,
+Extra Grande,Hyundai,IONIQ 5,Platinum,E,,,,,33.6,28.1
+Extra Grande,Hyundai,IONIQ 5,Ultimate,E,,,,,33.6,28.1
+Extra Grande,Hyundai,IONIQ 5,Signature,E,,,,,33.6,28.1
+Extra Grande,JAC,e-J7,e-J7,E,,,,,44,37.1
+Extra Grande,KIA,EV5 2WD,AIR 2WD,E,,,,,37.6,30.5
+Extra Grande,KIA,EV5 2WD,LAND 2WD,E,,,,,37.6,30.5
+Extra Grande,KIA,EV5 4WD,WAVE 4WD,E,,,,,34.5,28
+Extra Grande,LAMBORGHINI,URUS,S,G,,,5.4,6.9,,
+Extra Grande,LAMBORGHINI,URUS,PERFORMANTE,G,,,5.4,6.9,,
+Extra Grande,LEAPMOTOR,B10,LIFE,E,,,,,41.2,32.8
+Extra Grande,LEAPMOTOR,C10,REEV,G,,,12,12,33.5,29.1
+Extra Grande,LEAPMOTOR,C10,Design,E,,,,,35.1,30.8
+Extra Grande,LEXUS,NX350H,DYNAMIC,G,,,15.7,13.8,,
+Extra Grande,LEXUS,NX350H,F-SPORT,G,,,15.7,13.8,,
+Extra Grande,LEXUS,NX350H,LUXURY,G,,,15.7,13.8,,
+Extra Grande,LEXUS,RX 450H PLUG-IN,RX450H PLUG-IN,G,,,14.8,13.5,37.3,31.6
+Extra Grande,LEXUS,NX 450H PLUG-IN,NX450H PLUG-IN,G,,,14.5,12.7,36.1,29.6
+Extra Grande,LEXUS,RX500H,F-SPORT,G,,,10.8,11,,
+Extra Grande,LEXUS,NX 450H PLUG-IN (MY26),NX450H PLUG-IN,G,,,14.5,13.1,37.1,29.5
+Extra Grande,Mercedes-Benz,C 200,AMG LINE,G,,,6.6,7.8,,
+Extra Grande,Mercedes-Benz,C 300,AMG LINE,G,,,10.8,13.4,,
+Extra Grande,Mercedes-Benz,C 300,AMG LINE,G,,,11.4,14.7,,
+Extra Grande,Mercedes-Benz,AMG C 63S EP,F1,G,,,7.2,8.1,10.7,11.9
+Extra Grande,Mercedes-Benz,AMG C 63S EP,,G,,,7.8,9.7,,
+Extra Grande,Mercedes-Benz,CLA 200,AMG LINE,G,,,12,14,,
+Extra Grande,Mercedes-Benz,CLA 200,PROGRESSIVE,G,,,8.1,11.7,,
+Extra Grande,Mercedes-Benz,AMG CLA35 4M,,G,,,9.9,12.8,,
+Extra Grande,Mercedes-Benz,AMG CLA45S 4M,,G,,,6.8,8.7,,
+Extra Grande,Mercedes-Benz,GLB 200,PROGRESSIVE,G,,,10.1,12,,
+Extra Grande,Mercedes-Benz,GLB 220 4M,AMG LINE,G,,,9.5,12,,
+Extra Grande,Mercedes-Benz,GLB 220 4M,PROGRESSIVE,G,,,8.4,9.8,,
+Extra Grande,Mercedes-Benz,AMG GLB 35 4M,,G,,,7.2,9.2,,
+Extra Grande,Mercedes-Benz,AMG GLB35 4M,,G,,,10.4,13,,
+Extra Grande,Mercedes-Benz,GLB 220 4M,AMG LINE,G,,,7.2,8.1,6.3,7.9
+Extra Grande,Mercedes-Benz,GLB 220 4M,PROGRESSIVE,G,,,7.2,8.1,10.7,11.9
+Extra Grande,Mercedes-Benz,AMG GLC 43,,G,,,7.2,9.2,,
+Extra Grande,Mercedes-Benz,AMG GLC 43,Coupé,G,,,7.2,7.8,6.3,7.6
+Extra Grande,Mercedes-Benz,AMG GLC 63S EP,,G,,,5.9,7.3,,
+Extra Grande,Mercedes-Benz,AMG GLC 43,CO,G,,,6.8,8.7,,
+Extra Grande,Mercedes-Benz,AMG GLC 43,,G,,,10.4,13,,
+Extra Grande,Mercedes-Benz,AMG GLE 63 S CO,Coupé,G,,,7.2,8.9,,
+Extra Grande,Mercedes-Benz,AMG GLE 53 4M,,G,,,10.3,13.2,,
+Extra Grande,Mercedes-Benz,AMG GLE 53 4M,,G,,,7.3,8.9,,
+Extra Grande,Mercedes-Benz,E300,EXCLUSIVE,G,,,9.5,12,,
+Extra Grande,Mercedes-Benz,E300,EXCLUSIVE,G,,,8.1,10.7,,
+Extra Grande,Mercedes-Benz,EQA 250,,E,,,,,36.4,33
+Extra Grande,Mercedes-Benz,EQA 250,AMG Line,E,,,,,36.4,33
+Extra Grande,Mercedes-Benz,EQB 250,,E,,,,,30,29.2
+Extra Grande,Mercedes-Benz,EQB 350 4M,,E,,,,,40.3,36.6
+Extra Grande,Mercedes-Benz,EQB 250+,,E,,,,,29.4,28.3
+Extra Grande,Mercedes-Benz,EQE 300,,E,,,,,29.9,27.9
+Extra Grande,Mercedes-Benz,EQE 300,SUV,E,,,,,27,23.9
+Extra Grande,Mercedes-Benz,AMG EQE 53,SUV,E,,,,,30.7,28.1
+Extra Grande,Mercedes-Benz,EQE 350,SUV,E,,,,,37.4,32.3
+Extra Grande,Mercedes-Benz,EQE 350,,E,,,,,27.5,25.9
+Extra Grande,Mercedes-Benz,EQS 450,,E,,,,,28.5,29.4
+Extra Grande,Mercedes-Benz,AMG EQS 53 4M,,E,,,,,29.3,27.3
+Extra Grande,Mercedes-Benz,EQS 450 4M,,G,,,12,14,,
+Extra Grande,Mercedes-Benz,AMG S63 EP,,G,,,8.4,9.8,,
+Extra Grande,Mercedes-Benz,GLS 450 4M,,G,,,7.5,9,,
+Extra Grande,Mercedes-Benz,GLS 450 4M,AMG L,G,,,11.6,10.4,27.7,25.2
+Extra Grande,Mitsubishi,Outlander,HPE-S E,G,,,11.6,10.4,27.7,25.2
+Extra Grande,Mitsubishi,Outlander,SIGNATURE E,G,,,11.6,10.4,27.7,25.2
+Extra Grande,NISSAN,Ariya,ENG 2WD,E,,,,,41.8,36
+Extra Grande,NISSAN,Ariya,ENG AWD,E,,,,,38.9,34.4
+Extra Grande,NISSAN,Ariya,PLT AWD / ENGPL AWD,E,,,,,34.4,32.2
+Extra Grande,PORSCHE,MACAN,GTS,G,,,6.8,8.4,,
+Extra Grande,PORSCHE,MACAN,S,G,,,7,8.4,,
+Extra Grande,PORSCHE,MACAN,E4,E,,,,,36.5,31
+Extra Grande,PORSCHE,MACAN,ETURBO,E,,,,,36.1,30.3
+Extra Grande,PORSCHE,MACAN,E2,E,,,,,36.5,31
+Extra Grande,PORSCHE,MACAN,E4S,E,,,,,36.2,30.4
+Extra Grande,PORSCHE,MACAN,--,G,,,7.3,8.5,,
+Extra Grande,PORSCHE,MACAN,T,G,,,7.3,8.5,,
+Extra Grande,TOYOTA,RAV4,SX CONNECT,G,,,15.3,14.1,,
+Extra Grande,TOYOTA,RAV4,S CONNECT,G,,,15.3,14.1,,
+Extra Grande,Volkswagen,ID.BUZZ,PRO,E,,,,,32,25.7
+Extra Grande,Volkswagen,TIGUAN,ALLSPACE RL,G,,,9.2,11.3,,
+Extra Grande,ZEEKR,1,Flagship,E,,,,,34.1,30.1
+Extra Grande,ZEEKR,1,Premium,E,,,,,34.1,30.1
+Extra Grande,ZEEKR,7X,Flagship AWD,E,,,,,34.5,29
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO HA,F,8.1,8.5,11.4,11.8,,
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO,F,6.5,8.4,10,12.1,,
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,SPORT,F,6.5,8.4,10,12.1,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,LT,F,8,9.8,11.6,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,MID,F,8,9.8,11.6,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,AT,F,8,9.8,11.6,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,LTZ,F,8,9.8,11.6,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,RS,F,7.7,10,11.2,14.1,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,PREMIER,F,7.7,10,11.2,14.1,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),LT,F,8.1,9.9,11.5,13.8,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),LTZ,F,8.1,9.9,11.5,13.8,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),AT,F,8.1,9.9,11.5,13.8,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),LT,F,8.1,9.9,11.5,13.8,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),LTZ,F,8.1,9.9,11.5,13.8,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),RS,F,7.6,9.7,11,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),PREMIER,F,7.6,9.7,11,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),100 ANOS,F,7.6,9.7,11,13.7,,
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER (MY26),PREMIER,F,7.6,9.7,11,13.7,,
+Utilitário Esportivo Compacto,CITROEN,BASALT,T200 1ST,F,8.4,9.6,12.1,13.7,,
+Utilitário Esportivo Compacto,CITROEN,BASALT,FEEL 1.0,F,9.2,10.1,13.2,14.3,,
+Utilitário Esportivo Compacto,CITROEN,BASALT,SHINE T200,F,8.4,9.6,12.1,13.7,,
+Utilitário Esportivo Compacto,CITROEN,BASALT,FEEL T200,F,8.4,9.6,12.1,13.7,,
+Utilitário Esportivo Compacto,CITROEN,C3,FEEL 1.0,F,9.3,10.3,13.2,14.5,,
+Utilitário Esportivo Compacto,CITROEN,C3,LIVE 1.0,F,9.3,10.3,13.2,14.5,,
+Utilitário Esportivo Compacto,CITROEN,C3,LIVE PK 1.0,F,9.3,10.3,13.2,14.5,,
+Utilitário Esportivo Compacto,CITROEN,C3,YOU 1.0T CVT,F,8.1,8.9,11.5,12.9,,
+Utilitário Esportivo Compacto,CITROEN,C3 AIRCROSS,FL,F,7.9,9.1,11.2,13,,
+Utilitário Esportivo Compacto,CITROEN,C3 AIRCROSS,FL 7,F,7.9,9.1,11.2,13,,
+Utilitário Esportivo Compacto,CITROEN,C3 AIRCROSS,FL PK,F,7.9,9.1,11.2,13,,
+Utilitário Esportivo Compacto,CITROEN,C3 AIRCROSS,FLPK7,F,7.9,9.1,11.2,13,,
+Utilitário Esportivo Compacto,CITROEN,C3 AIRCROSS,SH,F,7.9,9.1,11.2,13,,
+Utilitário Esportivo Compacto,CITROEN,C3 AIRCROSS,SH 7,F,7.9,9.1,11.2,13,,
+Utilitário Esportivo Compacto,FIAT,ARGO,TREKKING 1.3AT,F,9,10.3,12.8,14.3,,
+Utilitário Esportivo Compacto,FIAT,FASTBACK,AUDACE HYB,F,8.9,9.8,12.6,13.9,,
+Utilitário Esportivo Compacto,FIAT,FASTBACK,IMPETUS HY,F,8.9,9.8,12.6,13.9,,
+Utilitário Esportivo Compacto,FIAT,FASTBACK,ABARTH 270,F,7.3,9.1,10.8,12.9,,
+Utilitário Esportivo Compacto,FIAT,FASTBACK,LIMITED ED,F,7.8,9.8,11.3,13.6,,
+Utilitário Esportivo Compacto,FIAT,FASTBACK,TURBO 200,F,8.5,10.1,12.1,14.3,,
+Utilitário Esportivo Compacto,FIAT,PULSE,AUDACE HYB,F,9.3,10.2,13.4,14.4,,
+Utilitário Esportivo Compacto,FIAT,PULSE,IMPETUS HYB,F,9.3,10.2,13.4,14.4,,
+Utilitário Esportivo Compacto,FIAT,PULSE,DRIVE AT,F,8.9,10.5,13,14.7,,
+Utilitário Esportivo Compacto,FIAT,PULSE,DRIVE TF 200,F,8.6,10,12.3,14.4,,
+Utilitário Esportivo Compacto,FIAT,PULSE,ABARTH 270,F,7.2,8.8,10.5,12.2,,
+Utilitário Esportivo Compacto,HONDA,WR-V,EX,F,8.2,8.9,12,12.8,,
+Utilitário Esportivo Compacto,HONDA,WR-V,EXL,F,8.2,8.9,12,12.8,,
+Utilitário Esportivo Compacto,Hyundai,CRETA,Comfort,F,8.4,9,12,12.7,,
+Utilitário Esportivo Compacto,Hyundai,CRETA,Limited,F,8.4,9,12,12.7,,
+Utilitário Esportivo Compacto,Hyundai,CRETA,Platinum,F,8.4,9,12,12.7,,
+Utilitário Esportivo Compacto,Hyundai,CRETA,N Line,F,8.4,9,12,12.7,,
+Utilitário Esportivo Compacto,Hyundai,CRETA,Ultimate,G,,,11.9,13.5,,
+Utilitário Esportivo Compacto,JEEP,RENEGADE,SPT T270,F,7.8,8.9,11.1,12.4,,
+Utilitário Esportivo Compacto,JEEP,RENEGADE,LGTD T270,F,7.8,8.9,11.1,12.4,,
+Utilitário Esportivo Compacto,JEEP,RENEGADE,1.3 TURBO,F,7.8,8.9,11.1,12.4,,
+Utilitário Esportivo Compacto,JEEP,RENEGADE,1.3 T FLEX,F,7.8,8.9,11.1,12.4,,
+Utilitário Esportivo Compacto,JEEP,RENEGADE,SAHARA,F,7.8,8.9,11.1,12.4,,
+Utilitário Esportivo Compacto,Nissan,Kicks Play,SENSE,F,7.8,9.4,11.3,13.7,,
+Utilitário Esportivo Compacto,Nissan,Kicks Play,ADV,F,7.8,9.4,11.3,13.7,,
+Utilitário Esportivo Compacto,Nissan,Kicks Play,ACTIVE,F,7.8,9.4,11.3,13.7,,
+Utilitário Esportivo Compacto,Nissan,Kicks,SENSE AT,F,8.3,9.9,11.7,14.3,,
+Utilitário Esportivo Compacto,Nissan,Kicks,ADVANCE AT,F,8.3,9.9,11.7,14.3,,
+Utilitário Esportivo Compacto,Nissan,Kicks,EXCLUSIV AT,F,8.3,9.9,11.7,14.3,,
+Utilitário Esportivo Compacto,Nissan,Kicks,PLATINUM AT,F,8.3,9.9,11.7,14.3,,
+Utilitário Esportivo Compacto,PEUGEOT,2008,GT T200,F,8.5,9.8,12,14.1,,
+Utilitário Esportivo Compacto,PEUGEOT,2008,ACT T200,F,8.5,9.8,12,14.1,,
+Utilitário Esportivo Compacto,PEUGEOT,2008,ALLU T200,F,8.5,9.8,12,14.1,,
+Utilitário Esportivo Compacto,Renault,KWID,ZEN,F,10.4,10.8,14.6,15.5,,
+Utilitário Esportivo Compacto,Renault,KWID,INTENSE,F,10.4,10.8,14.6,15.5,,
+Utilitário Esportivo Compacto,Renault,KWID,OUTSIDER,F,10.4,10.8,14.6,15.5,,
+Utilitário Esportivo Compacto,Renault,KWID,INTENSE BITON,F,10.4,10.8,14.6,15.5,,
+Utilitário Esportivo Compacto,Renault,KWID,ICONIC 2,F,10.4,10.8,14.6,15.5,,
+Utilitário Esportivo Compacto,Renault,KWID,ZEN 2,F,10.4,10.7,14.4,15.4,,
+Utilitário Esportivo Compacto,Renault,KWID,INTENSE 2,F,10.4,10.7,14.4,15.4,,
+Utilitário Esportivo Compacto,Renault,KWID,OUTSIDER 2,F,10.4,10.7,14.4,15.4,,
+Utilitário Esportivo Compacto,Renault,KWID,INTENSE BITON 2,F,10.4,10.7,14.4,15.4,,
+Utilitário Esportivo Compacto,Renault,KWID,ICONIC 2,F,10.4,10.7,14.4,15.4,,
+Utilitário Esportivo Compacto,Renault,KWID,LIFE 2,F,10.4,10.7,14.4,15.4,,
+Utilitário Esportivo Compacto,Renault,KARDIAN,PREM AT,F,8.8,9.8,12.2,13.8,,
+Utilitário Esportivo Compacto,Renault,KARDIAN,TECH AT,F,8.8,9.8,12.2,13.8,,
+Utilitário Esportivo Compacto,Renault,KARDIAN,EVO AT,F,8.8,9.8,12.2,13.8,,
+Utilitário Esportivo Compacto,Renault,KARDIAN,EVO MT,F,8.6,10.2,12.4,14.8,,
+Utilitário Esportivo Compacto,Volkswagen,T CROSS,"HIGHLINE 250TSI 
+AUTOMÁTICO",F,8.2,9.9,11.8,14.2,,
+Utilitário Esportivo Compacto,Volkswagen,T CROSS,"COMFORTLINE 200TSI 
+AUTOMATICO",F,8.5,10.2,12.1,14.5,,
+Utilitário Esportivo Compacto,Volkswagen,T CROSS,200TSI AUTOMATICO,F,8.5,10.2,12.1,14.5,,
+Utilitário Esportivo Compacto,Volkswagen,T CROSS,"SENSE 200TSI 
+AUTOMATICO",F,8.5,10.2,12.1,14.5,,
+Utilitário Esportivo Compacto,Volkswagen,NIVUS,"HIGHLINE 200TSI 
+AUTOMÁTICO",F,8.6,10.3,12.4,14.8,,
+Utilitário Esportivo Compacto,Volkswagen,NIVUS,"COMFORTLINE 200TSI 
+AUTOMÁTICO",F,8.6,10.3,12.4,14.8,,
+Utilitário Esportivo Compacto,Volkswagen,TERA,COMFORT TSI,F,8.6,10.3,12.2,14.5,,
+Utilitário Esportivo Compacto,Volkswagen,TERA,HIGH TSI,F,8.6,10.3,12.2,14.5,,
+Utilitário Esportivo Compacto,Volkswagen,TERA,TSI,F,9,10.3,12.9,15,,
+Utilitário Esportivo Compacto 4x4,VOLVO,EX30,C COUNTRY,E,,,,,37.3,33.4
+Utilitário Esportivo Grande,BMW,X1,S20i GP,G,,,10.5,13.6,,
+Utilitário Esportivo Grande,BMW,X1,S20i X Line,G,,,10.5,13.6,,
+Utilitário Esportivo Grande,BMW,X1,S20i M Sport,G,,,10.3,13.3,,
+Utilitário Esportivo Grande,BMW,X1,S20i X Line,G,,,10.3,13.5,,
+Utilitário Esportivo Grande,BMW,X1,S20i X Line,G,,,10.3,13.5,,
+Utilitário Esportivo Grande,BMW,X1,S20i M Sport,G,,,10.2,13.2,,
+Utilitário Esportivo Grande,BMW,X1,S20i M Sport,G,,,10.2,13.2,,
+Utilitário Esportivo Grande,BMW,X1,S20i GP,G,,,10.3,13.5,,
+Utilitário Esportivo Grande,BMW,X1,S20i GP,G,,,10.3,13.5,,
+Utilitário Esportivo Grande,BMW,X2,xDrive20i MSP,G,,,10,12.7,,
+Utilitário Esportivo Grande,BMW,X2,xDrive20i MSP,G,,,9.9,13.1,,
+Utilitário Esportivo Grande,BYD,YUAN PLUS,GL310 EV,E,,,,,39.8,33.1
+Utilitário Esportivo Grande,BYD,YUAN PLUS,GS310 EV,E,,,,,39.8,33.1
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,PRO HA,F,7.8,8.3,11.1,11.6,,
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,SPORT,F,6.4,8.3,10.1,12.3,,
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 8,16TA,G,,,10,12.5,,
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,PRO 16TA,G,,,10.2,13,,
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 8,PHEV,G,,,11.8,11.3,33.6,27.7
+Utilitário Esportivo Grande,GAC,GS4,ELITE,G,,,14.1,11.8,,
+Utilitário Esportivo Grande,GAC,GS4,PREMIUM,G,,,14.1,11.8,,
+Utilitário Esportivo Grande,GWM,WEY,7,G,,,10.8,9.1,25.9,22.8
+Utilitário Esportivo Grande,GWM,HAVAL  H6,HEV,G,,,14.4,11.8,,
+Utilitário Esportivo Grande,GWM,HAVAL  H6,PHEV,G,,,12.7,10.5,31.5,25.1
+Utilitário Esportivo Grande,GWM,HAVAL  H6,PHEV 19,G,,,13.6,12.3,36.2,31.1
+Utilitário Esportivo Grande,GWM,HAVAL  H6,GT,G,,,11.8,10.1,29.7,25.2
+Utilitário Esportivo Grande,GWM,HAVAL H6,HEV ONE (MY26),G,,,14.7,11.4,,
+Utilitário Esportivo Grande,GWM,HAVAL H6,HEV2 (MY26),G,,,14.7,11.4,,
+Utilitário Esportivo Grande,GWM,HAVAL H6,PHEV19 (MY26),G,,,13.5,11.9,35.01,28.48
+Utilitário Esportivo Grande,GWM,HAVAL H6,PHEV35 (MY26),G,,,12,10.9,29.33,25.32
+Utilitário Esportivo Grande,GWM,HAVAL H6,GT (MY26),G,,,12.6,10.5,30.07,24.86
+Utilitário Esportivo Grande,HONDA,CR-V,TOURING,G,,,14.1,11.8,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,"OVR T270 (""Mestre"")",F,7,8.3,9.9,11.4,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,LIM T270,F,7,8.3,9.9,11.4,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,LONGITUDE,F,7,8.3,9.9,11.4,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,FLEX,F,7,8.3,9.9,11.4,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,OVE 7 270 (MY26),F,6.9,8.3,10,11.5,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,LIM 7 270 (MY26),F,6.9,8.3,10,11.5,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,LON 7 270 (MY26),F,6.9,8.3,10,11.5,,
+Utilitário Esportivo Grande,JEEP,COMMANDER,LON 5 270 (MY26),F,7.2,8.4,10.2,11.5,,
+Utilitário Esportivo Grande,JEEP,COMPASS,LIMITED T,F,7.3,8.6,10.1,12.1,,
+Utilitário Esportivo Grande,JEEP,COMPASS,LONG T,F,7.3,8.6,10.1,12.1,,
+Utilitário Esportivo Grande,JEEP,COMPASS,SERIE S T,F,7.3,8.6,10.1,12.1,,
+Utilitário Esportivo Grande,JEEP,COMPASS,SPORT T,F,7.3,8.6,10.1,12.1,,
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV EX,G,,,11.9,12.5,,
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV LX,G,,,11.9,12.5,,
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV SX,G,,,11.9,12.5,,
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV GT,G,,,11.9,12.5,,
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV EXP,G,,,11.9,12.5,,
+Utilitário Esportivo Grande,KIA,EV9 GTL,EV9 GTL 4WD,E,,,,,35.2,27.2
+Utilitário Esportivo Grande,KIA,SPORTAGE (2026),TMHEV EX,G,,,12.5,13.2,,
+Utilitário Esportivo Grande,KIA,SPORTAGE 2026),TMHEV  SX,G,,,12.5,13.2,,
+Utilitário Esportivo Grande,KIA,SPORTAGE (2026),TMHEV GT,G,,,12.5,13.2,,
+Utilitário Esportivo Grande,KIA,SPORTAGE (2026),TMHEV EXP,G,,,12.5,13.2,,
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,HPE BLACK,G,,,10.3,11.3,,
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,RUSH,G,,,10.3,11.3,,
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,HPE,G,,,10.3,11.3,,
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,HPE-S,G,,,10.3,11.3,,
+Utilitário Esportivo Grande,Renault,DUSTER,ICO,F,7.5,8.3,10.8,11.4,,
+Utilitário Esportivo Grande,Renault,DUSTER,ICOP,F,7.5,8.3,10.8,11.4,,
+Utilitário Esportivo Grande,Renault,DUSTER,INT,F,7.5,8.3,10.8,11.4,,
+Utilitário Esportivo Grande,Renault,DUSTER,INTP,F,7.5,8.3,10.8,11.4,,
+Utilitário Esportivo Grande,Renault,DUSTER,LIF,F,7.5,8.3,10.8,11.4,,
+Utilitário Esportivo Grande,Renault,DUSTER,ZEN,F,7.5,8.3,10.8,11.4,,
+Utilitário Esportivo Grande,Renault,DUSTER,DUSTER INT 16,F,7.6,8.4,11.2,12.3,,
+Utilitário Esportivo Grande,Renault,DUSTER,DUSTER INTP MT,F,7.6,8.4,11.2,12.3,,
+Utilitário Esportivo Grande,Renault,DUSTER,DUSTER ZEN 16,F,7.6,8.4,11.2,12.3,,
+Utilitário Esportivo Grande,Renault,DUSTER,ICO TCE,F,7.5,8.6,10.9,12.3,,
+Utilitário Esportivo Grande,Renault,DUSTER,ICOUT TCE,F,7.5,8.6,10.9,12.3,,
+Utilitário Esportivo Grande,Renault,DUSTER,ZEN 13TCE,F,7.5,8.6,10.9,12.3,,
+Utilitário Esportivo Grande,Renault,BOREAL,EVO,F,7.8,9.4,11.2,13.6,,
+Utilitário Esportivo Grande,Renault,BOREAL,TECH,F,7.8,9.4,11.2,13.6,,
+Utilitário Esportivo Grande,Renault,BOREAL,ICO,F,7.8,9.4,11.2,13.6,,
+Utilitário Esportivo Grande,VOLVO,EX40,6 PLUS,E,,,,,39.4,34.3
+Utilitário Esportivo Grande,VOLVO,EX40,6 ULTRA,E,,,,,39.4,34.3
+Utilitário Esportivo Grande,VOLVO,EX40,6 CORE,E,,,,,39.4,34.3
+Utilitário Esportivo Grande,Volkswagen,TAOS,"COMFORTLINE 250TSI 
+AUTOMÁTICO",F,7.7,9.3,11.1,13.3,,
+Utilitário Esportivo Grande,Volkswagen,TAOS,"HIGHLINE 250TSI 
+AUTOMÁTICO",F,7.7,9.3,11.1,13.3,,
+Utilitário Esportivo Grande,ZEEKR,X,Premium,E,,,,,39.5,34.7
+Utilitário Esportivo Grande 4x4,BMW,X3,M50i,G,,,9.6,10.9,,
+Utilitário Esportivo Grande 4x4,BMW,X3,30 XDRIVE,G,,,10.4,12.2,,
+Utilitário Esportivo Grande 4x4,BMW,X4,xDrive20i,G,,,9,10.8,,
+Utilitário Esportivo Grande 4x4,BMW,X5,xDrive50e MSP,G,,,9.2,9.9,22.8,23.4
+Utilitário Esportivo Grande 4x4,BMW,X5,xDrive50e XLINE,G,,,9.2,9.9,22.8,23.4
+Utilitário Esportivo Grande 4x4,BMW,X6,xDrive40i MSP,G,,,9,10.1,,
+Utilitário Esportivo Grande 4x4,BMW,X6,40I MSP DARK ED,G,,,9,10.1,,
+Utilitário Esportivo Grande 4x4,BMW,X7,xDrive40i,G,,,8,8.7,,
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLC300 4M,,G,,,9.5,11.6,,
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLC300 4M,Coupé,G,,,9.5,11.6,,
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLE450D 4M,,D,,,8.4,10.6,,
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLE450D 4M,,D,,,10.6,13,,
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLE450D 4M,Coupé,D,,,10.6,13,,
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLE450D 4M,Coupé,D,,,8.4,10.6,,
+Utilitário Esportivo Grande 4x4,Mitsubishi,Eclipse Cross,HPE-S S-AWC,G,,,10.2,11.5,,
+Utilitário Esportivo Grande 4x4,Mitsubishi,Eclipse Cross,HPE-S BLACK S-AWC,G,,,10.2,11.5,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,S,G,,,6.1,7.9,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,S CP,G,,,6.1,7.9,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,GTP,G,,,5.9,8.2,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,GTS CP,G,,,5.9,8.2,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,GT COUPE,G,,,5.8,7.9,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,S PHEV,G,,,7.8,8.4,20.6,20.4
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,SCPHEV,G,,,7.8,8.4,20.6,20.4
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,PHEV,G,,,7.7,8.1,20.2,18.7
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,CP PHE,G,,,7.7,8.1,20.2,18.7
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,COUPE,G,,,6.9,8.5,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,V6,G,,,6.9,8.5,,
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,T/TC PHEV,G,,,7.4,8.1,0,19.9
+Utilitário Esportivo Grande 4x4,VOLVO,EX40,8 CORE,E,,,,,35.7,33
+Utilitário Esportivo Grande 4x4,VOLVO,EX40,8 PLUS,E,,,,,35.7,33
+Utilitário Esportivo Grande 4x4,VOLVO,EX40,8 ULTRA,E,,,,,35.7,33
+Utilitário Esportivo Grande 4x4,VOLVO,EX40,PERF BLACK,E,,,,,35.7,33
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,INSC EXPRESS,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 CORE,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 INSCRIPT,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 MOMENTUM,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 PLUS,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 POLESTAR,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 R-DESIGN,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 ULT DARK,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 ULTIMATE,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 ULTRA,G,,,9.5,9.4,24.4,22.5
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,INSC EXPRESS,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 CORE,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 EXCELLEN,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 INSCRIPT,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 MOMENTUM,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 PLUS,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 POLESTAR,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 R-DESIGN,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 ULT DARK,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 ULTIMATE,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 ULTRA,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 AWD PLUS,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 AWD ULT,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 AWD ULTD,G,,,9.4,9.3,24.1,21.9
+Utilitário Esportivo Grande 4x4,VOLVO,EX90,PLUS TWIN,E,,,,,32.6,27.4
+Utilitário Esportivo Grande 4x4,VOLVO,EX90,ULTRA TWIN,E,,,,,32.6,27.4
+Utilitário Esportivo Grande 4x4,VOLVO,EX90,ULT TWIN PER,E,,,,,32.6,27.4
+Utilitário Esportivo Grande 4x4,ZEEKR,X,Flagship,E,,,,,36.6,32.2
+Fora de Estrada Compacto,JEEP,RENEGADE,S T2704X4T,F,6.3,7.4,9.2,10.1,,
+Fora de Estrada Compacto,JEEP,RENEGADE,TRAIL 4x4,F,6.3,7.4,9.2,10.1,,
+Fora de Estrada Compacto,JEEP,RENEGADE,WILLYS 4x4,F,6.3,7.4,9.2,10.1,,
+Fora de Estrada Grande,CHEVROLET,TRAILBLAZER,LT,D,,,9.5,11.6,,
+Fora de Estrada Grande,CHEVROLET,TRAILBLAZER,HIGH COUNTRY,D,,,9.5,11.6,,
+Fora de Estrada Grande,CHEVROLET,TRAILBLAZER (MY26.5),HIGH COUNTRY,D,,,9.4,11.6,,
+Fora de Estrada Grande,CHEVROLET,TRAILBLAZER (MY26.5),LT,D,,,9.4,11.6,,
+Fora de Estrada Grande,DENZA,B5,GS DM,G,,,8.4,7.9,23,20.4
+Fora de Estrada Grande,FORD,Bronco Sport,Badlands,G,,,8.4,10.7,,
+Fora de Estrada Grande,GWM,TANK 300,PHEV,G,,,7.5,7.7,18.4,18.7
+Fora de Estrada Grande,GWM,HAVAL H9,EXC,D,,,9,10.3,,
+Fora de Estrada Grande,JEEP,COMMANDER,BLACKHAWK,G,,,8,10.3,,
+Fora de Estrada Grande,JEEP,COMMANDER,OVR T 2.0,G,,,8,10.3,,
+Fora de Estrada Grande,JEEP,COMMANDER,OVR TD,D,,,10.3,13.4,,
+Fora de Estrada Grande,JEEP,COMMANDER,BLA 2.0 G (MY26),G,,,8,10.3,,
+Fora de Estrada Grande,JEEP,COMMANDER,OVE 2.0 G (MY26),G,,,8,10.3,,
+Fora de Estrada Grande,JEEP,COMMANDER,OVE 2.2 D (MY26),D,,,10.3,13.4,,
+Fora de Estrada Grande,JEEP,COMPASS,BLACKHAWK,G,,,8.5,10.8,,
+Fora de Estrada Grande,JEEP,COMPASS,OVERLA 2.0T,G,,,8.5,10.8,,
+Fora de Estrada Grande,JEEP,COMPASS,LONGIT 2.0T,G,,,8.5,10.8,,
+Fora de Estrada Grande,JEEP,WRANGLER,UNL RUBI,G,,,7.2,7.5,,
+Fora de Estrada Grande,LAND ROVER,EVOQUE,P250FF AB,F,5.1,6.6,7.4,9.4,,
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,PHEV S,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,PHEV SE,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,PHEV SED,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,PHEV HSED,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,PHEV AB,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,PHEV SV,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,PHEV SE,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,PHEV HSE,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,PHEV AB,G,,,7.5,8.4,17.5,19
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110 D350,HSE XD,D,,,9.1,10.6,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110 D350,HSEXD 7L,D,,,9.1,10.6,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110 D350,X,D,,,9.1,10.6,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110 D350,X 7L,D,,,9.1,10.6,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90 D350,HSE,D,,,9.1,10.6,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90 D350,HSE XD,D,,,9.1,10.6,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130 D350,X,D,,,9.2,10.9,,
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130 D350,X7L,D,,,9.2,10.9,,
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D350 LE,D,,,9.5,11.8,,
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D350 HSED,D,,,9.5,11.8,,
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF SE D,F,5.1,6.6,7.2,9.6,,
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF SED7L,F,5.1,6.6,7.2,9.6,,
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV AB,G,,,8.3,9.3,20.6,24.1
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV HSED,G,,,8.3,9.3,20.6,24.1
+Fora de Estrada Grande,Mercedes-Benz,G580 EQ,,E,,,,,25.8,20.6
+Fora de Estrada Grande,Mercedes-Benz,AMG G63,MFKT,G,,,5.3,6,,
+Fora de Estrada Grande,Mercedes-Benz,AMG G63 4M,,G,,,5.4,6.2,,
+Fora de Estrada Grande,Mitsubishi,Pajero Sport,HPE,D,,,8.9,11.4,,
+Fora de Estrada Grande,Mitsubishi,Pajero Sport,HPE-S,D,,,8.9,11.4,,
+Fora de Estrada Grande,Mitsubishi,Pajero Sport,LEGEND,D,,,8.9,11.4,,
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,DIAMOND AT,D,,,9.3,10.5,,
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,SRX PLATINUM AT,D,,,9.3,10.5,,
+Minivan,CHEVROLET,SPIN,LT7,F,7.7,8.6,11,12.5,,
+Minivan,CHEVROLET,SPIN,LT7,F,7.4,9.3,10.5,13.4,,
+Minivan,CHEVROLET,SPIN,LTZ,F,7.4,9.3,10.5,13.4,,
+Minivan,CHEVROLET,SPIN,PREMIER,F,7.4,9.3,10.5,13.4,,
+Minivan,CHEVROLET,SPIN (MY26.5),LTZ,F,7.1,9.1,10.1,13.1,,
+Minivan,CHEVROLET,SPIN (MY26.5),PREMIER,F,7.1,9.1,10.1,13.1,,
+Comercial,BYD,ET3,---,E,,,,,30.7,26.3
+Comercial,CHEVROLET,ONIX,LOG,F,9.6,11.9,13.8,16.9,,
+Comercial,CITROEN,JUMPER,COMFORT,D,,,10.4,10.5,,
+Comercial,CITROEN,JUMPER,MB16,D,,,10.4,10.5,,
+Comercial,CITROEN,JUMPER,CARGOPK,D,,,10.8,10.4,,
+Comercial,CITROEN,JUMPER,FURG PK,D,,,10.8,10.4,,
+Comercial,CITROEN,JUMPER,VITRE,D,,,11,10.6,,
+Comercial,CITROEN,JUMPY,CARGO,D,,,12.4,13.7,,
+Comercial,CITROEN,JUMPY,VITRE,D,,,12.4,13.7,,
+Comercial,CITROEN,E-JUMPY,CARGO,E,,,,,28.1,26.1
+Comercial,FIAT,E-SCUDO,CARGO,E,,,,,28.1,26.1
+Comercial,FIAT,FIORINO,ENDURANCE,F,8.7,9.6,12.4,13.6,,
+Comercial,FIAT,SCUDO,CARGO TD,D,,,12.4,13.7,,
+Comercial,FIAT,SCUDO,MULTI TD,D,,,12.4,13.7,,
+Comercial,FIAT,DUCATO,MB COMFORT,D,,,10.4,10.5,,
+Comercial,FIAT,DUCATO,MB LUXO 16,D,,,10.4,10.5,,
+Comercial,FIAT,DUCATO,CARGO11.5M,D,,,10.8,10.4,,
+Comercial,FIAT,DUCATO,MXCARGO13M,D,,,10.8,10.4,,
+Comercial,FIAT,DUCATO,FURGAO 13M,D,,,10.8,10.4,,
+Comercial,FIAT,DUCATO,MULTI 13M,D,,,11,10.6,,
+Comercial,FARIZON,V6E,--,E,,,,,32.1,24.5
+Comercial,FARIZON,SV,"AIR 11M3 / AIR PRO11M3 / 
+LUX 11M3 / LUX PRO11M3",E,,,,,23.9,20.3
+Comercial,FARIZON,SV,"AIR 8M3 / AIR PRO 8M3 / 
+LUX 8M3 / LUX PRO 8M3",E,,,,,25.3,23.1
+Comercial,FORD,E-Transit,F35MMAB,E,,,,,23.9,16.5
+Comercial,FORD,E-Transit,F35MAAB,E,,,,,23.9,16.5
+Comercial,FORD,E-Transit,F35LMAB,E,,,,,23.9,16.5
+Comercial,FORD,E-Transit,F35LAAB,E,,,,,23.9,16.5
+Comercial,FORD,E-Transit,F35EAAB,E,,,,,23.9,16.5
+Comercial,FORD,E-Transit,C35LBAB,E,,,,,23.9,16.5
+Comercial,FORD,E-Transit,C35EBAB,E,,,,,23.9,16.5
+Comercial,FORD,Transit,F35LAMA,D,,,9.8,9.7,,
+Comercial,FORD,Transit,F35MMMA,D,,,9.8,9.7,,
+Comercial,FORD,Transit,F35MAMA,D,,,9.8,9.7,,
+Comercial,FORD,Transit,F38LAMA,D,,,9.8,9.7,,
+Comercial,JAC,EJV5.5,CARGO,E,,,,,38,27.4
+Comercial,KIA,BONGO K2500 4X4 SC,HD SC 4WD,D,,,8.6,8.1,,
+Comercial,Mercedes-Benz,320 ESPRINTER,F,E,,,,,21.1,16.3
+Comercial,Mercedes-Benz,320 ESPRINTER,C,E,,,,,21.1,16.3
+Comercial,PEUGEOT,E-EXPERT,CARGO,E,,,,,28.1,26.1
+Comercial,PEUGEOT,EXPERT,CARGO,D,,,12.4,13.7,,
+Comercial,PEUGEOT,EXPERT,VITRE,D,,,12.4,13.7,,
+Comercial,PEUGEOT,PARTRAPID,BUSIPK,F,8.7,9.6,12.4,13.6,,
+Comercial,PEUGEOT,BOXER,16L LUXO,D,,,10.4,10.5,,
+Comercial,PEUGEOT,BOXER,COMFORT,D,,,10.4,10.5,,
+Comercial,PEUGEOT,BOXER,CARGO PK,D,,,10.8,10.4,,
+Comercial,PEUGEOT,BOXER,VIDRADA,D,,,11,10.6,,
+Comercial,PEUGEOT,BOXER,FURGAOPK,D,,,10.8,10.4,,
+Comercial,Renault,MASTER FURGÃO,FURGÃO L1,D,,,10.1,10.3,,
+Comercial,Renault,MASTER FURGÃO,FURGÃO L2,D,,,10.1,10.3,,
+Comercial,Renault,MASTER FURGÃO,FURGÃO L3,D,,,10.1,10.3,,
+Comercial,Renault,MASTER FUGÃO PRÓ,PRÓ L1,D,,,9.7,9.6,,
+Comercial,Renault,MASTER FUGÃO PRÓ,PRÓ L2,D,,,9.7,9.6,,
+Comercial,Renault,MASTER FUGÃO PRÓ,PRÓ L3,D,,,9.7,9.6,,
+Comercial,Renault,MASTER FUGÃO PRÓ,VITPRO3AC,D,,,9.7,9.6,,
+Comercial,Renault,MASTER FUGÃO PRÓ,VITPROL3R,D,,,9.7,9.6,,
+Comercial,Renault,MASTER BUS,MINIBUSL3,D,,,9.4,9.3,,
+Comercial,Renault,MASTER CHASSIS CABINE,CHASSICAB,D,,,10.2,9.7,,
+Comercial,Renault,MASTER FURGÃO,FURGÃOL1R,D,,,10.1,10.3,,
+Comercial,Renault,MASTER FURGÃO,FURGÃOL2R,D,,,10.1,10.3,,
+Comercial,Renault,MASTER FURGÃO,FURGÃOL3R,D,,,10.1,10.3,,
+Comercial,Renault,KANGOO,ADV16,F,7.6,8.1,11,11.7,,
+Comercial,Renault,KANGOO,EX PRO,F,7.6,8.1,11,11.7,,
+Comercial,Renault,KANGOO,SRT16,F,7.6,8.1,11,11.7,,
+Comercial,Renault,KANGOO,ETECHL2,E,,,,,37.5,30.3
+Comercial,Renault,E-KWID,CARGO,E,,,,,52.7,39.6
+Comercial,TOYOTA,HIACE,MINIBUS AT DX,D,,,8.5,9.8,,
+Picape Compacta,CHEVROLET,MONTANA,MT,F,8.4,9.7,12.3,13.7,,
+Picape Compacta,CHEVROLET,MONTANA,LT,F,8.4,9.7,12.3,13.7,,
+Picape Compacta,CHEVROLET,MONTANA,LTZ,F,7.5,9.7,11,13.5,,
+Picape Compacta,CHEVROLET,MONTANA,PREMIER,F,7.5,9.7,11,13.5,,
+Picape Compacta,CHEVROLET,MONTANA,RS,F,7.5,9.7,11,13.5,,
+Picape Compacta,FIAT,STRADA,ENDURAN CS13,F,9.1,10.1,13,14.7,,
+Picape Compacta,FIAT,STRADA,FREEDOM CS13,F,9.1,10.1,13,14.7,,
+Picape Compacta,FIAT,STRADA,FREEDOM CD13,F,8.9,10.1,12.8,14.4,,
+Picape Compacta,FIAT,STRADA,VOLCANO CD13,F,8.9,9.8,12.4,13.9,,
+Picape Compacta,FIAT,STRADA,VOLCANO 13AT,F,8.9,9.7,12.6,13.5,,
+Picape Compacta,FIAT,STRADA,RANCH T200AT,F,8.3,9.2,11.9,13.1,,
+Picape Compacta,FIAT,STRADA,ULTRA T200AT,F,8.3,9.2,11.9,13.1,,
+Picape Compacta,Renault,OROCH,Intense16M,F,7.6,8.1,11.3,11.7,,
+Picape Compacta,Renault,OROCH,PRO 16,F,7.6,8.1,11.3,11.7,,
+Picape Compacta,Volkswagen,SAVEIRO,"SAVEIRO CABINE SIMPLES 
+ROBUST MF",F,7.7,8.8,11.2,12.9,,
+Picape Compacta,Volkswagen,SAVEIRO,"CABINE SIMPLES 
+TRENDLINE MF",F,7.7,8.8,11.2,12.9,,
+Picape Compacta,Volkswagen,SAVEIRO,CABINE DUPLA ROBUST MF,F,7.9,8.7,11.3,12.4,,
+Picape Compacta,Volkswagen,SAVEIRO,"CABINE DUPLA EXTREME 
+MF",F,7.9,8.7,11.3,12.4,,
+Picape,BYD,SHARK,GS DM,G,,,8.7,8.5,24.3,20.3
+Picape,BYD,SHARK,GL DM,G,,,8.7,8.5,24.3,20.3
+Picape,CHEVROLET,S10,WT Cabine Simples,D,,,10.3,11.3,,
+Picape,CHEVROLET,S10,WT Cabine Chassis,D,,,10.3,11.3,,
+Picape,CHEVROLET,S10,WT Cabine Duple,D,,,8.9,12,,
+Picape,CHEVROLET,S10,LTZ Cabine Dupla,D,,,8.9,12,,
+Picape,CHEVROLET,S10,"HIGH COUNTRY Cabine 
+Dupla",D,,,8.9,12,,
+Picape,CHEVROLET,S10,Z71 Cabine Dupla,D,,,8.4,11.1,,
+Picape,CHEVROLET,S10,WT Cabine Dupla,D,,,10.2,11.4,,
+Picape,CHEVROLET,S10 (MY26.5),"HIGH COUNTRY Cabine 
+Dupla",D,,,8.8,11.9,,
+Picape,CHEVROLET,S10 (MY26.5),LTZ Cabine Dupla,D,,,8.8,11.9,,
+Picape,CHEVROLET,S10 (MY26.5),WT Cabine Duple,D,,,8.8,11.9,,
+Picape,CHEVROLET,S10 (MY26.5),WT Cabine Simples,D,,,10.2,11.4,,
+Picape,CHEVROLET,S10 (MY26.5),WT Cabine Chassis,D,,,10.2,11.4,,
+Picape,CHEVROLET,SILVERADO,HIGH COUNTRY,G,,,6,7.2,,
+Picape,FIAT,TITANO,ENDURANCE,D,,,10.5,10.5,,
+Picape,FIAT,TITANO,VOLCANO,D,,,9.9,10.8,,
+Picape,FIAT,TITANO,RANCH,D,,,9.9,10.8,,
+Picape,FIAT,TORO,ENDUR T270 AT6,F,6.9,8,9.9,11.5,,
+Picape,FIAT,TORO,FREED T270 AT6,F,6.5,7.8,9.4,10.8,,
+Picape,FIAT,TORO,VOLC T270 AT6,F,6.5,7.8,9.4,10.8,,
+Picape,FIAT,TORO,ULTRA T270 AT6,F,6.5,7.8,9.4,10.8,,
+Picape,FIAT,TORO,RANCH AT9 4X4,D,,,10.5,13.6,,
+Picape,FIAT,TORO,VOLC AT9 4X4,D,,,10.5,13.6,,
+Picape,FIAT,TORO,ENDUR T270 AT (MY26),F,,,,,,
+Picape,FIAT,TORO,FREED T270 AT (MY26),F,6.5,7.8,9.4,10.8,,
+Picape,FIAT,TORO,VOLC T270 AT (MY26),F,6.5,7.8,9.4,10.8,,
+Picape,FIAT,TORO,ULTRA T270 AT (MY26),F,6.5,7.8,9.4,10.8,,
+Picape,FIAT,TORO,RANCH TD450 AT (MY26),D,,,10.5,13.6,,
+Picape,FIAT,TORO,VOLC TD450 AT (MY26),D,,,10.5,13.6,,
+Picape,FIAT,TORO,FREED TD450 AT (MY26),D,,,10.3,13.1,,
+Picape,FORD,Nova Ranger 4x2,Black,D,,,10.2,12.1,,
+Picape,FORD,Nova Ranger 4x4,XL,D,,,10.3,11.2,,
+Picape,FORD,Nova Ranger 4x4,XLS,D,,,10.3,11.2,,
+Picape,FORD,Nova Ranger 4x4,XLS,D,,,9.9,11.6,,
+Picape,FORD,Nova Ranger 4x4,LTD,D,,,8.3,10.1,,
+Picape,FORD,Nova Ranger 4x4,XLS,D,,,8.6,10.1,,
+Picape,FORD,Nova Ranger 4x4,XLT,D,,,8.6,10.1,,
+Picape,FORD,Nova Ranger 4x4,LTD+,D,,,8.6,10.1,,
+Picape,FORD,Ranger Raptor,Raptor,G,,,6.7,7.4,,
+Picape,FORD,Nova F150,Lariat Black,G,,,6.5,8.5,,
+Picape,FORD,Nova F150,Lariat Chrome,G,,,6.5,8.5,,
+Picape,FORD,Nova F150,Tremor,G,,,6,7.5,,
+Picape,FORD,Maverick,Lariat,G,,,8.5,11.4,,
+Picape,FORD,Maverick,Tremor,G,,,8.4,10.7,,
+Picape,FOTON,TUNLAND,V7,D,,,8.7,9.9,,
+Picape,FOTON,TUNLAND,V9,D,,,8.7,9.9,,
+Picape,GWM,POER P30,EXC,D,,,9.4,10.4,,
+Picape,GWM,POER P30,TRL,D,,,9.4,10.4,,
+Picape,JAC,IEV330P,IEV330,E,,,,,29.2,25.1
+Picape,JAC,HUNTER,HUNTER AT,D,,,9,10.2,,
+Picape,JAC,HUNTER,HUNTER HD 4X4 AT,D,,,9,10.2,,
+Picape,JAC,HUNTER,HUNTER HD AT,D,,,9,10.2,,
+Picape,JAC,HUNTER,HUNTER HW AT,D,,,9,10.2,,
+Picape,JEEP,GLADIATOR,RUBICON,G,,,6.3,7.1,,
+Picape,Mitsubishi,Triton,GL AT2,D,,,10.2,12.3,,
+Picape,Mitsubishi,Triton,GLS AT2,D,,,10.2,12.3,,
+Picape,Mitsubishi,Triton,GL MT4,D,,,10.8,12.2,,
+Picape,Mitsubishi,Triton,GL AT4,D,,,9.5,11.7,,
+Picape,Mitsubishi,Triton,GLS AT4,D,,,9.5,11.7,,
+Picape,Mitsubishi,Triton,HPE AT4,D,,,9.5,11.7,,
+Picape,Mitsubishi,Triton,HPE-S AT4,D,,,9.5,11.7,,
+Picape,Mitsubishi,Triton,KATANA AT4,D,,,9.5,11.7,,
+Picape,Mitsubishi,L200 Triton Sport,GLS,D,,,9.3,10.3,,
+Picape,Mitsubishi,L200 Triton Sport,OUTDOOR GLS,D,,,9.3,10.3,,
+Picape,Mitsubishi,L200 Triton Sport,HPE,D,,,9.3,10.3,,
+Picape,Mitsubishi,L200 Triton Sport,HPE-S,D,,,9.3,10.3,,
+Picape,Nissan,Frontier,S MT X4,D,,,9.7,10.9,,
+Picape,Nissan,Frontier,ATK X4,D,,,9.4,10.9,,
+Picape,Nissan,Frontier,PRO4X,D,,,9.4,10.9,,
+Picape,Nissan,Frontier,SE X4,D,,,9.4,10.9,,
+Picape,Nissan,Frontier,PLT,D,,,9.4,11,,
+Picape,Nissan,Frontier,XE X4,D,,,9.4,11,,
+Picape,RAM,1500,LARAMIE,G,,,6,7,,
+Picape,RAM,1500,LARAMIE NE,G,,,6,7,,
+Picape,RAM,1500,REBEL,G,,,6,7,,
+Picape,RAM,RAMPAGE,BIGHORN DS,D,,,10.6,13.3,,
+Picape,RAM,RAMPAGE,LARAMIE DS,D,,,10.6,13.3,,
+Picape,RAM,RAMPAGE,REBEL DS,D,,,10.6,13.3,,
+Picape,RAM,RAMPAGE,REBEL AT GAS,G,,,8.2,9.8,,
+Picape,RAM,RAMPAGE,LARAMIE GAS,G,,,8.2,9.8,,
+Picape,RAM,RAMPAGE,RT GAS,G,,,7.7,9.9,,
+Picape,TOYOTA,HILUX DIESEL 4X4 MT,CHASSI MT,D,,,9.3,10.6,,
+Picape,TOYOTA,HILUX DIESEL 4X4 MT,CABINE SIMPLES MT,D,,,9.3,10.6,,
+Picape,TOYOTA,HILUX DIESEL 4X4 MT,POWER PACK MT,D,,,9.7,11.2,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,CHASSI AT,D,,,9.3,10,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,CABINE SIMPLES AT,D,,,9.3,10,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,POWER PACK AT,D,,,9.3,10,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,SR AT,D,,,9.3,10,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,SRV AT,D,,,9.3,10,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,SRX AT,D,,,9.3,10,,
+Picape,TOYOTA,HILUX DIESEL 4X4 AT,SRX PLUS AT,D,,,9.3,10,,
+Picape,Volkswagen,AMAROK,V6 COMFORT (MY26),D,,,8.1,9.4,,
+Picape,Volkswagen,AMAROK,V6 HIGH (MY26),D,,,8.1,9.4,,
+Picape,Volkswagen,AMAROK,V6 EXTREME (MY26),D,,,8.1,9.4,,
+Esportivo,BMW,M3,Competition,G,,,7,9.3,,
+Esportivo,BMW,M3,COMP TRACK,G,,,7,9.3,,
+Esportivo,BMW,M2,Coupe,G,,,7.2,9.3,,
+Esportivo,BMW,M2,Coupe Track,G,,,7.2,9.3,,
+Esportivo,BMW,M2,CS,G,,,7.2,9.5,,
+Esportivo,FERRARI,296,GTB,G,,,6.3,8.4,8.9,11.9
+Esportivo,FERRARI,296,GTS,G,,,6,8,8.8,13.1
+Esportivo,FERRARI,ROMA,SPIDER,G,,,6.7,8.7,,
+Esportivo,FERRARI,PUROSANGUE,--,G,,,4.1,5.6,,
+Esportivo,FERRARI,12 CILINDRI,--,G,,,4.8,6.7,,
+Esportivo,FERRARI,12 CILINDRI,SPI,G,,,4.6,6.4,,
+Esportivo,FORD,Mustang,GT AT,G,,,6.5,9,,
+Esportivo,FORD,Mustang,GT MT,G,,,6.1,8.9,,
+Esportivo,FORD,Mustang Dark Horse,Dark Horse,G,,,6.3,8.8,,
+Esportivo,LAMBORGHINI,REVUELTO,--,G,,,3.7,6.4,4.4,11.4
+Esportivo,MCLAREN,ARTURA,--,G,,,6.5,8.5,12.3,16.9
+Esportivo,MCLAREN,ARTURA,SPIDER,G,,,6.5,8.5,12.3,16.9
+Esportivo,MCLAREN,750S,COUPE,G,,,5.9,7.4,,
+Esportivo,MCLAREN,750S,SPIDER,G,,,5.9,7.4,,
+Esportivo,Mercedes-Benz,AMG GT63S EP,2P,G,,,6.4,7.6,5.6,7.4
+Esportivo,Mercedes-Benz,AMG GT63S EP,,G,,,6.4,7.5,9.8,11.1
+Esportivo,Mercedes-Benz,AMG GT63S EP,2P,G,,,6.4,7.6,11.5,11.4
+Esportivo,Mercedes-Benz,AMG SL63S EP,,G,,,6.2,7.4,7.8,10.8
+Esportivo,Mercedes-Benz,AMG SL63S EP,,G,,,8.8,11.1,5.3,7.1
+Esportivo,MG,CYBERSTER,77 KWH AWD,E,,,,,38.9,33.9
+Esportivo,PORSCHE,911,CARRERA S,G,,,7.3,8.9,,
+Esportivo,PORSCHE,911,CARRERA SC,G,,,7.3,8.9,,
+Esportivo,PORSCHE,911,CARRERA GTS,G,,,6.8,8.6,,
+Esportivo,PORSCHE,911,CARRERA GTS CA,G,,,6.9,8.7,,
+Esportivo,PORSCHE,911,GT3 MANUAL,G,,,5.2,6.9,,
+Esportivo,PORSCHE,911,GT3 TOURMT,G,,,5.2,6.9,,
+Esportivo,PORSCHE,911,GT3,G,,,5.6,6.8,,
+Esportivo,PORSCHE,911,GT3 TOURING,G,,,5.6,6.8,,
+Esportivo,PORSCHE,911,CARRERA,G,,,7,9.6,,
+Esportivo,PORSCHE,911,CARRERA C,G,,,7,9.6,,
+Esportivo,PORSCHE,911,CAR T MT,G,,,6.9,9.4,,
+Esportivo,PORSCHE,911,CAR T MT 2,G,,,6.9,9.4,,
+Esportivo,PORSCHE,911,CAR T MT,G,,,6.9,9.4,,
+Esportivo,PORSCHE,911,CAR T MT 2,G,,,6.9,9.4,,
+Esportivo,PORSCHE,911,CAR T MTCA,G,,,6.9,9.4,,
+Esportivo,PORSCHE,911,SPIRIT 70,G,,,7.2,9.2,,
+Esportivo,PORSCHE,911,CAR T MTCA,G,,,6.9,9.4,,
+Esportivo,PORSCHE,BOXSTER,GTS4.0,G,,,7.1,8.9,,
+Esportivo,PORSCHE,BOXSTER,25 ANOS,G,,,7.1,8.9,,
+Esportivo,PORSCHE,CAYMAN,GTS 4.0,G,,,7.1,8.9,,
+Esportivo,PORSCHE,PANAMERA,TPHEV,G,,,7,8.7,20.1,22.5
+Esportivo,PORSCHE,PANAMERA,TSEHY,G,,,6.9,8.6,20.1,22.2
+Esportivo,PORSCHE,PANAMERA,4EHYB,G,,,8,9.2,22,23.3
+Esportivo,PORSCHE,PANAMERA,4SEHY,G,,,8.1,9.4,21,23.1
+Esportivo,PORSCHE,TAYCAN,TURBO S,E,,,,,30.7,30.2
+Esportivo,PORSCHE,TAYCAN,L,E,,,,,33.7,32
+Esportivo,PORSCHE,TAYCAN,4,E,,,,,30,28.5
+Esportivo,PORSCHE,TAYCAN,4S,E,,,,,30,28.5
+Esportivo,PORSCHE,TAYCAN,4S CT,E,,,,,30,28.5
+Esportivo,PORSCHE,TAYCAN,4CT,E,,,,,30,28.5
+Esportivo,PORSCHE,TAYCAN,4GTS,E,,,,,30.8,29.9
+Esportivo,PORSCHE,TAYCAN,TURBOCT,E,,,,,30,28.5
+Esportivo,PORSCHE,TAYCAN,TURBO,E,,,,,30,28.5
+Esportivo,PORSCHE,TAYCAN,TURBOGT,E,,,,,33.7,29.7
+Esportivo,PORSCHE,TAYCAN,_,E,,,,,32.6,31.5
