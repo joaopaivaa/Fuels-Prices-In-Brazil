@@ -1,3 +1,4 @@
+import sys
 import requests
 import pandas as pd
 import chardet
@@ -47,8 +48,8 @@ def download_LPG(new_months):
                 except Exception as e:
 
                     print(f'LPG: Download - Failed - {year_str}/{month_str}')
-                    continue
-
+                    sys.exit(1)
+    
         print(f'LPG: Download - Ok - {year_str}/{month_str}')
 
         df_lpg = pd.concat([df_lpg, df_month_year])
@@ -112,7 +113,7 @@ def download_Gasoline_Ethanol(new_months):
                     except Exception as e:
 
                         print(f'Gasoline and Ethanol: Download - Failed - {year_str}/{month_str}')
-                        continue
+                        sys.exit(1)
         
         print(f'Gasoline and Ethanol: Download - Ok - {year_str}/{month_str}')
 
@@ -166,7 +167,7 @@ def download_Diesel_CNG(new_months):
                 except Exception as e:
 
                     print(f'Diesel and CNG: Download - Failed - {year_str}/{month_str}')
-                    continue
+                    sys.exit(1)
 
         print(f'Diesel and CNG: Download - Ok - {year_str}/{month_str}')
 
