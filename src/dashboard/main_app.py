@@ -1,17 +1,6 @@
 import streamlit as st
 
-main_page = st.Page(
-    "fuel_prices_dashboard.py",
-    title="Página principal",
-    icon="⛽"
-)
-
-about_page = st.Page(
-    "pages/about.py",
-    title="Sobre o painel",
-    icon='ℹ️'
-)
-
-nav = st.navigation([main_page, about_page])
-
-nav.run()
+p1 = st.Page("pages/fuels_prices.py", title="Indicadores", icon="⛽")
+p2 = st.Page("pages/about.py", title="Sobre", icon="ℹ️"  )
+pg = st.navigation([p1, p2])
+pg.run()
