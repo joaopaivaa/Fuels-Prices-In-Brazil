@@ -29,21 +29,19 @@ st.set_page_config(layout='wide')
 
 st.title('Preços de combustíveis no Brasil :fuelpump:')
 
-df_fuels = pd.read_parquet('databases/fuel_prices/gold/fuels_prices')
+df_fuels = pd.read_parquet('data/fuels_prices/gold/fuels_prices.parquet')
 
-df_fuels["estado"] = df_fuels["estado"].astype("category")
-df_fuels["municipio"] = df_fuels["municipio"].astype("category")
-df_fuels["produto"] = df_fuels["produto"].astype("category")
+df_fuels["nm_state"] = df_fuels["nm_state"].astype("category")
+df_fuels["nm_city"] = df_fuels["nm_city"].astype("category")
+df_fuels["nm_fuel_type"] = df_fuels["nm_fuel_type"].astype("category")
 
-df_fuels["preco_medio"] = df_fuels["preco_medio"].astype("float32")
+df_fuels["avg_fuel_price"] = df_fuels["avg_fuel_price"].astype("float32")
 
+df_vehicles = pd.read_csv('data/vehicles_efficiency/dim_vehicles_efficiency.csv', encoding="latin1")
 
-
-df_vehicles = pd.read_csv('databases/cars_efficiency/dim_vehicles_efficiency.csv', encoding="latin1")
-
-gdf_cities = gpd.read_file("databases/brazil_map/brazil_cities_shape_adjusted/brazil_cities.shp")
-gdf_states = gpd.read_file("databases/brazil_map/brazil_states_shape_adjusted/brazil_states.shp")
-gdf_regions = gpd.read_file("databases/brazil_map/brazil_regions_shape_adjusted/brazil_regions.shp")
+gdf_cities = gpd.read_file("data/shape_files/brazil_cities_shape_adjusted/brazil_cities.shp")
+gdf_states = gpd.read_file("data/shape_files/brazil_states_shape_adjusted/brazil_states.shp")
+gdf_regions = gpd.read_file("data/shape_files/brazil_regions_shape_adjusted/brazil_regions.shp")
 
 df_fuels_copy = df_fuels.copy()
 df_vehicles_copy = df_vehicles.copy()
@@ -152,7 +150,7 @@ with st.sidebar:
     today_date = date.today().strftime('%d/%m/%Y')
     st.text(f"Atualizado em: {today_date}")
 
-    st.text(f"Competência mais recente: {most_recent_month.strftime('%m/%Y')}")
+    st.text(f"Competência mais recente: {pd.to_datetime(most_recent_month).strftime('%m/%Y')}")
 
 
 
@@ -179,12 +177,12 @@ with tab_fuels_comparison:
             12: "Dezembro"
         }
 
-        month_number = most_recent_month.month
+        month_number = pd.to_datetime(most_recent_month).month
         month_name = months_in_portuguese.get(month_number)
 
-        month_year = most_recent_month.year
+        month_year = pd.to_datetime(most_recent_month).year
 
-        st.subheader(f"Preço médio de {month_name} de {month_year}")
+        st.subheader(f"Preço médio em {month_name} de {month_year}")
 
     with title_col2:
 
@@ -393,8 +391,10 @@ with tab_fuels_comparison:
 
     df_fuel_prices_by_brand = (
         df_fuels_copy
-        .groupby(['nm_fuel_brand', 'nm_fuel_type'], as_index=False)
-        .agg(avg_fuel_price=(avg_fuel_price_col, 'mean'))
+        .groupby(['nm_fuel_brand', 'nm_fuel_type'], as_index=False)[avg_fuel_price_col]
+        .mean()
+        .rename(columns={avg_fuel_price_col: 'avg_fuel_price'})
+        .dropna(subset=[avg_fuel_price_col])
     )
 
     if len(fuel_types_selected) != 1:
@@ -491,8 +491,14 @@ with tab_fuels_comparison:
 
     col1_inf, col2_inf = st.columns([2, 1], vertical_alignment="center", border=True)
 
-    df_fuel_prices_overtime = df_fuels_copy.groupby(['dt_date_month_start', 'nm_fuel_type']).mean(avg_fuel_price_col).reset_index()
-    
+    df_fuel_prices_overtime = (
+        df_fuels_copy
+        .groupby(['dt_date_month_start', 'nm_fuel_type'])
+        .mean(avg_fuel_price_col)
+        .dropna(subset=[avg_fuel_price_col])
+        .reset_index()
+    )
+
     fig_fuel_prices_overtime = px.line(
         df_fuel_prices_overtime,
         x='dt_date_month_start',
