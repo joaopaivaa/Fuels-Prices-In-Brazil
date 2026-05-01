@@ -61,6 +61,8 @@ else:
     avg_fuel_price_col = 'avg_fuel_price'
     df_fuels_copy = df_fuels_copy.drop('inflation_adjusted_avg_fuel_price', axis=1)
 
+# Sidebar
+
 with st.sidebar:
 
     st.title('Filtros')
@@ -152,8 +154,6 @@ with st.sidebar:
 
     st.text(f"Competência mais recente: {pd.to_datetime(most_recent_month).strftime('%m/%Y')}")
 
-
-
 tab_fuels_comparison, tab_gasoline_or_ethanol = st.tabs(['Comparativo de combustíveis', 'Gasolina ou etanol?'])
 
 with tab_fuels_comparison:
@@ -205,6 +205,8 @@ with tab_fuels_comparison:
 
     unavailable_fuel_type = sorted(list(set(df_fuels['nm_fuel_type'].unique()) - set(most_recent_average_price_fuel_type['nm_fuel_type'].unique())))
     unavailable_fuel_type_index = 0
+
+    # Last month change and most recent price for each fuel type
 
     with header_box1:
 
@@ -274,6 +276,12 @@ with tab_fuels_comparison:
     start_date = pd.to_datetime(start_date)
     end_date = pd.to_datetime(end_date)
 
+    start_date_month_name = months_in_portuguese.get(start_date.month)
+    start_date_month_year = start_date.year
+
+    end_date_month_name = months_in_portuguese.get(end_date.month)
+    end_date_month_year = end_date.year
+
     df_fuels_copy['dt_date_month_start'] = pd.to_datetime(df_fuels_copy['dt_date_month_start'])
 
     df_fuels_copy = df_fuels_copy[
@@ -289,7 +297,12 @@ with tab_fuels_comparison:
     if len(fuel_types_selected) != 0: 
         df_fuels_copy = df_fuels_copy[df_fuels_copy['nm_fuel_type'].isin(fuel_types_selected)].reset_index(drop=True)
 
+    df_fuel_prices_overtime = df_fuels_copy
+    df_fuels_copy = df_fuels_copy[df_fuels_copy['dt_date_month_start'] == end_date].reset_index(drop=True)
+
     col1_sup, col2_sup = st.columns([2, 1], vertical_alignment="center", border=True)
+
+    # Map of average fuel price by territory
 
     with col1_sup:
 
@@ -304,12 +317,15 @@ with tab_fuels_comparison:
 
         if map_selection == 'Municipal':
             territory_key = 'nm_city'
+            territory_level = "município"
             gdf_territory = gdf_cities.copy()
         elif map_selection == 'Estadual':
             territory_key = 'nm_state'
+            territory_level = "estado"
             gdf_territory = gdf_states.copy()
         else:
             territory_key = 'nm_region'
+            territory_level = "região"
             gdf_territory = gdf_regions.copy()
 
         if (len(region_selected) != 0) and ('nm_region' in gdf_territory.columns):
@@ -365,6 +381,14 @@ with tab_fuels_comparison:
         brazil_territory_map_blank.add_trace(brazil_territory_map.data[0])
 
         brazil_territory_map_blank.update_layout(
+            title={
+                'text': f'Preço médio por {territory_level} - {end_date_month_name} de {end_date_month_year}',
+                'y': 0.975,
+                'x': 0,
+                'xanchor': 'left',
+                'yanchor': 'top',
+                'font': {'color': 'white'}
+            },
             margin=dict(r=0,l=0,t=0,b=0),
             paper_bgcolor='#0e1117',
             plot_bgcolor='#0e1117',
@@ -417,7 +441,7 @@ with tab_fuels_comparison:
         color='nm_fuel_type',
         color_discrete_map=fuel_types_colors,
         text_auto='.2f',
-        title='5 marcas com maior preço médio',
+        title=f'5 marcas com maior preço médio<br>{end_date_month_name} de {end_date_month_year}',
         orientation='h',
         category_orders={"nm_brand_label": order_y_highest},
         hover_data={
@@ -457,7 +481,7 @@ with tab_fuels_comparison:
         color='nm_fuel_type',
         color_discrete_map=fuel_types_colors,
         text_auto='.2f',
-        title='5 marcas com menor preço médio',
+        title=f'5 marcas com menor preço médio<br>{end_date_month_name} de {end_date_month_year}',
         orientation='h',
         category_orders={"nm_brand_label": order_y_lowest},
         hover_data={
@@ -492,7 +516,7 @@ with tab_fuels_comparison:
     col1_inf, col2_inf = st.columns([2, 1], vertical_alignment="center", border=True)
 
     df_fuel_prices_overtime = (
-        df_fuels_copy
+        df_fuel_prices_overtime
         .groupby(['dt_date_month_start', 'nm_fuel_type'])
         .mean(avg_fuel_price_col)
         .dropna(subset=[avg_fuel_price_col])
@@ -506,7 +530,7 @@ with tab_fuels_comparison:
         color='nm_fuel_type',
         color_discrete_map=fuel_types_colors,
         markers=True,
-        title='Evolução do preço médio ao longo do tempo',
+        title=f'Evolução do preço médio<br>{start_date_month_name} de {start_date_month_year} - {end_date_month_name} de {end_date_month_year}',
         range_y=[0, df_fuel_prices_overtime[avg_fuel_price_col].max() * 1.1],
         hover_data={
             'dt_date_month_start': True,
