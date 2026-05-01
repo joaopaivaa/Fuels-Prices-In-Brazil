@@ -54,12 +54,12 @@ if "inflation_adjustment" not in st.session_state:
 
 inflation_adjustment = st.session_state.inflation_adjustment
 
-if inflation_adjustment:
+st.session_state.inflation_adjustment
+
+if st.session_state.inflation_adjustment:
     avg_fuel_price_col = 'inflation_adjusted_avg_fuel_price'
-    df_fuels_copy = df_fuels_copy.drop('avg_fuel_price', axis=1)
 else:
     avg_fuel_price_col = 'avg_fuel_price'
-    df_fuels_copy = df_fuels_copy.drop('inflation_adjusted_avg_fuel_price', axis=1)
 
 # Sidebar
 
@@ -186,17 +186,14 @@ with tab_fuels_comparison:
 
     with title_col2:
 
-        inflation_adjustment = st.toggle(
-            "Deflacionar preços"
-        )
+        st.toggle("Deflacionar preços", key="inflation_adjustment")
 
     header_box1, header_box2 = st.columns([2, 1], vertical_alignment="center", border=False)
 
     average_price_fuel_type = (
         df_fuels_copy
-        .groupby(['dt_date_month_start', 'nm_fuel_type'])
-        .agg(avg_fuel_price=(avg_fuel_price_col, 'mean'))
-        .sort_values('dt_date_month_start', ascending=False)
+        .groupby(['dt_date_month_start', 'nm_fuel_type'])[avg_fuel_price_col]
+        .mean()
         .reset_index()
     )
 
@@ -337,7 +334,7 @@ with tab_fuels_comparison:
         if (len(city_selected) != 0) and ('nm_city' in gdf_territory.columns):
             gdf_territory = gdf_territory[gdf_territory['nm_city'].isin(city_selected)].reset_index(drop=True)
 
-        df_fuels_by_territory = df_fuels_copy.groupby([territory_key], as_index=False).agg(avg_fuel_price=(avg_fuel_price_col, 'mean')).sort_values(territory_key).reset_index(drop=True)
+        df_fuels_by_territory = df_fuels_copy.groupby([territory_key], as_index=False)[avg_fuel_price_col].mean().sort_values(territory_key).reset_index(drop=True)
 
         gdf_territory = gdf_territory.sort_values(territory_key).reset_index(drop=True)
         gdf_territory = gdf_territory.merge(df_fuels_by_territory, left_on= territory_key, right_on=territory_key, how="left")
@@ -356,25 +353,25 @@ with tab_fuels_comparison:
             marker_line_color="black"
         )
 
-        gdf_territory_no_nan = gdf_territory.dropna(subset=["avg_fuel_price"]).reset_index(drop=True)
+        gdf_territory_no_nan = gdf_territory.dropna(subset=[avg_fuel_price_col]).reset_index(drop=True)
         gdf_territory_no_nan['id'] = gdf_territory_no_nan.index
 
         brazil_territory_map = px.choropleth(
             gdf_territory_no_nan,
             geojson=gdf_territory_no_nan.__geo_interface__,
             locations='id',
-            color="avg_fuel_price",
+            color=avg_fuel_price_col,
             hover_data={
                 'id': False,
                 territory_key: True,
-                "avg_fuel_price": ':.2f'
+                avg_fuel_price_col: ':.2f'
             },
             range_color=(min_price, max_price),
             labels={
                 "nm_region": "Região",
                 "nm_state": "Estado",
                 "nm_city": "Município",
-                "avg_fuel_price": "Preço Médio (R$)"
+                avg_fuel_price_col: "Preço Médio (R$)"
             }
         )
 
@@ -417,7 +414,6 @@ with tab_fuels_comparison:
         df_fuels_copy
         .groupby(['nm_fuel_brand', 'nm_fuel_type'], as_index=False)[avg_fuel_price_col]
         .mean()
-        .rename(columns={avg_fuel_price_col: 'avg_fuel_price'})
         .dropna(subset=[avg_fuel_price_col])
     )
 
@@ -447,12 +443,12 @@ with tab_fuels_comparison:
         hover_data={
             'nm_fuel_type': True,
             'nm_brand_label': True,
-            "avg_fuel_price": ':.2f'
+            avg_fuel_price_col: ':.2f'
         },
         labels={
             "nm_fuel_type": "Combustível",
             "nm_brand_label": "Marca",
-            "avg_fuel_price": "Preço Médio (R$)"
+            avg_fuel_price_col: "Preço Médio (R$)"
         }
     )
     fig_fuel_prices_by_brand_top5_highest.update_xaxes(title_text=None)
@@ -487,12 +483,12 @@ with tab_fuels_comparison:
         hover_data={
             'nm_fuel_type': True,
             'nm_brand_label': True,
-            "avg_fuel_price": ':.2f'
+            avg_fuel_price_col: ':.2f'
         },
         labels={
             "nm_fuel_type": "Combustível",
             "nm_brand_label": "Marca",
-            "avg_fuel_price": "Preço Médio (R$)"
+            avg_fuel_price_col: "Preço Médio (R$)"
         }
     )
     fig_fuel_prices_by_brand_top5_lowest.update_xaxes(title_text=None)
@@ -535,12 +531,12 @@ with tab_fuels_comparison:
         hover_data={
             'dt_date_month_start': True,
             'nm_fuel_type': True,
-            "avg_fuel_price": ':.2f'
+            avg_fuel_price_col: ':.2f'
         },
         labels={
             "dt_date_month_start": "Data",
             "nm_fuel_type": "Combustível",
-            "avg_fuel_price": "Preço Médio (R$)"
+            avg_fuel_price_col: "Preço Médio (R$)"
         }
     )
     fig_fuel_prices_overtime.update_xaxes(title_text=None)
@@ -615,6 +611,8 @@ with tab_gasoline_or_ethanol:
         st.space('small')
         st.link_button("Desenvolvido por João Paiva", "https://joaopaivaa.github.io/")
         st.stop()
+
+    df_fuels_copy_vehicles
     
     df_fuels_copy_vehicles = df_fuels_copy_vehicles[df_fuels_copy_vehicles['nm_fuel_type'].isin(['Etanol', 'Gasolina'])]
     df_fuels_copy_vehicles = df_fuels_copy_vehicles.groupby(['nm_region', 'ab_state', 'nm_state', 'nm_city', 'nm_fuel_type', 'dt_date_month_start', 'uf_city']).mean(avg_fuel_price_col).reset_index()
