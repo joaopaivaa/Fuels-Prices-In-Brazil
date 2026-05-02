@@ -1,6 +1,15 @@
 import pandas as pd
 from datetime import datetime
+import os
+from sqlalchemy import create_engine
 from download_functions import download_LPG, download_Gasoline_Ethanol, download_Diesel_CNG
+
+db_url = os.getenv("postgresql://gasoline_prices_brazil_db_user:XzY1BJlModxlNnutEWXJIaGZX0kRRmBJ@dpg-d7qkagegvqtc73asirv0-a.virginia-postgres.render.com/gasoline_prices_brazil_db")
+
+if db_url and db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+engine = create_engine(db_url)
 
 current_date = datetime.now().strftime('%d/%m/%Y')
 end = pd.to_datetime(current_date, format='%d/%m/%Y')
