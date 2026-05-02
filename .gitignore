@@ -1,9 +1,16 @@
 venv
+.env
 __pycache__
 
-databases/fuel_prices/bronze/
-databases/fuel_prices/silver/
+data/fuels_prices/bronze/
+data/fuels_prices/silver/
 
-databases/brazil_map/brazil_cities_shape/
-databases/brazil_map/brazil_regions_shape/
-databases/brazil_map/brazil_states_shape/
+data/inflation_adjustment/
+
+data/shape_files/brazil_cities_shape/
+data/shape_files/brazil_regions_shape/
+data/shape_files/brazil_states_shape/
+
+data/vehicles_efficiency/inmetro_2025.csv
+
+data/dates_memory.csv
