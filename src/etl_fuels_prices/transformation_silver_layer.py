@@ -1,9 +1,20 @@
 import time
 start = time.perf_counter()
 
+from dotenv import load_dotenv
 import pandas as pd
 import unicodedata
 import numpy as np
+import os
+from sqlalchemy import create_engine
+
+load_dotenv() 
+db_url = os.getenv('database_url')
+
+if db_url and db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+engine = create_engine(db_url)
 
 def remove_accents(s):
     if not isinstance(s, str):
@@ -12,9 +23,14 @@ def remove_accents(s):
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
     return s.replace("ç", "c").replace("Ç", "C")
 
-df_diesel_cng = pd.read_parquet("./data/fuels_prices/bronze/Diesel and CNG Prices.parquet")
-df_lpg = pd.read_parquet("./data/fuels_prices/bronze/LPG Prices.parquet")
-df_gasoline_ethanol = pd.read_parquet("./data/fuels_prices/bronze/Gasoline and Ethanol Prices.parquet")
+df_diesel_cng = pd.read_sql("SELECT * FROM bronze.diesel_cng_bronze", engine)
+# df_diesel_cng = pd.read_parquet("./data/fuels_prices/bronze/Diesel and CNG Prices.parquet")
+
+df_lpg = pd.read_sql("SELECT * FROM bronze.lpg_bronze", engine)
+# df_lpg = pd.read_parquet("./data/fuels_prices/bronze/LPG Prices.parquet")
+
+df_gasoline_ethanol = pd.read_sql("SELECT * FROM bronze.gasoline_ethanol_bronze", engine)
+# df_gasoline_ethanol = pd.read_parquet("./data/fuels_prices/bronze/Gasoline and Ethanol Prices.parquet")
 
 df = pd.concat([df_diesel_cng, df_lpg, df_gasoline_ethanol], ignore_index=True)
 
@@ -73,7 +89,8 @@ df['uf_city'] = (
 
 df = df[df['nm_fuel_type'] != 'GLP']
 
-df.to_parquet("data/fuels_prices/silver/fuels_prices.parquet", index=False)
+# df.to_parquet("data/fuels_prices/silver/fuels_prices.parquet", index=False)
+df.to_sql('fact_fuels_prices_silver', engine, if_exists='replace', index=False, schema='silver')
 
 print('Transformation to Silver Layer completed successfully!')
 
