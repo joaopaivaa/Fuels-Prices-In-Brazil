@@ -7,9 +7,9 @@ data/fuels_prices/silver/
 
 data/inflation_adjustment/
 
-data/shape_files/brazil_cities_shape/
-data/shape_files/brazil_regions_shape/
-data/shape_files/brazil_states_shape/
+data/shape_files/brazil_cities_shape/*
+data/shape_files/brazil_regions_shape/*
+data/shape_files/brazil_states_shape/*
 
 data/vehicles_efficiency/inmetro_2025.csv
 
