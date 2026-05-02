@@ -37,7 +37,7 @@ df_fuels["nm_fuel_type"] = df_fuels["nm_fuel_type"].astype("category")
 
 df_fuels["avg_fuel_price"] = df_fuels["avg_fuel_price"].astype("float32")
 
-df_vehicles = pd.read_csv('data/vehicles_efficiency/dim_vehicles_efficiency.csv', encoding="latin1")
+df_vehicles = pd.read_csv('data/vehicles_efficiency/dim_vehicles_efficiency.csv', encoding="utf-8")
 
 gdf_cities = gpd.read_file("data/shape_files/brazil_cities_shape_adjusted/brazil_cities.shp")
 gdf_states = gpd.read_file("data/shape_files/brazil_states_shape_adjusted/brazil_states.shp")
@@ -53,8 +53,6 @@ if "inflation_adjustment" not in st.session_state:
         st.session_state.inflation_adjustment = False
 
 inflation_adjustment = st.session_state.inflation_adjustment
-
-st.session_state.inflation_adjustment
 
 if st.session_state.inflation_adjustment:
     avg_fuel_price_col = 'inflation_adjusted_avg_fuel_price'
@@ -611,11 +609,9 @@ with tab_gasoline_or_ethanol:
         st.space('small')
         st.link_button("Desenvolvido por João Paiva", "https://joaopaivaa.github.io/")
         st.stop()
-
-    df_fuels_copy_vehicles
     
     df_fuels_copy_vehicles = df_fuels_copy_vehicles[df_fuels_copy_vehicles['nm_fuel_type'].isin(['Etanol', 'Gasolina'])]
-    df_fuels_copy_vehicles = df_fuels_copy_vehicles.groupby(['nm_region', 'ab_state', 'nm_state', 'nm_city', 'nm_fuel_type', 'dt_date_month_start', 'uf_city']).mean(avg_fuel_price_col).reset_index()
+    df_fuels_copy_vehicles = df_fuels_copy_vehicles.groupby(['nm_region', 'nm_state', 'nm_city', 'nm_fuel_type', 'dt_date_month_start', 'uf_city']).mean(avg_fuel_price_col).reset_index()
 
     col_city, col_road = st.columns(2, vertical_alignment="center", border=True)
 
