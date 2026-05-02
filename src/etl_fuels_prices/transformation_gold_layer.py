@@ -2,10 +2,21 @@ import time
 start = time.perf_counter()
 
 import pandas as pd
-import requests
 import time
+import os
+from sqlalchemy import create_engine
+from dotenv import load_dotenv
 
-df = pd.read_parquet("data/fuels_prices/silver/fuels_prices.parquet")
+load_dotenv() 
+db_url = os.getenv('database_url')
+
+if db_url and db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
+
+engine = create_engine(db_url)
+
+df = pd.read_sql("SELECT * FROM silver.fact_fuels_prices_silver", engine)
+#df = pd.read_parquet("data/fuels_prices/silver/fuels_prices.parquet")
 
 df = df.dropna(how='all')
 
@@ -41,10 +52,11 @@ df['inflation_adjusted_avg_fuel_price'] = round(df['avg_fuel_price'] * df['infla
 
 df.drop(columns=['Date', 'CPI Value', 'inflation_adjustment_factor'], inplace=True)
 
-df.to_parquet("data/fuels_prices/gold/fuels_prices.parquet", index=False)
+# df.to_parquet("data/fuels_prices/gold/fuels_prices.parquet", index=False)
+df.to_sql('fact_fuels_prices_gold', engine, if_exists='replace', index=False, schema='gold')
 
-df_dates_memory = df['dt_date_month_start'].sort_values()
-df_dates_memory.to_csv("data/dates_memory.csv", index=False)
+# df_dates_memory = df['dt_date_month_start'].sort_values()
+# df_dates_memory.to_csv("data/dates_memory.csv", index=False)
 
 print('Transformation to Gold Layer completed successfully!')
 
