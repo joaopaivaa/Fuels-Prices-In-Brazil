@@ -2,7 +2,6 @@ import time
 start = time.perf_counter()
 
 import pandas as pd
-import time
 import os
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
