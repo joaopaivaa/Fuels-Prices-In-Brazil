@@ -1,12 +1,6 @@
 import subprocess
 import sys
 
-steps = [
-    "src/etl_fuels_prices/extraction_bronze_layer.py",
-    "src/etl_fuels_prices/transformation_silver_layer.py",
-    "src/etl_fuels_prices/transformation_gold_layer.py",
-]
-
 try:
 
     print(f"Downloading new data ...")
