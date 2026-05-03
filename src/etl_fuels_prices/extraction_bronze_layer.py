@@ -26,7 +26,8 @@ new_months = pd.date_range(start, end, freq='MS').strftime('%m/%Y').tolist()
 df_lpg_new = download_LPG(new_months)
 
 df_lpg = pd.concat([df_lpg, df_lpg_new])
-df_lpg.to_parquet('data/fuels_prices/bronze/LPG Prices.parquet', index=False, engine='pyarrow')
+# df_lpg.to_parquet('data/fuels_prices/bronze/LPG Prices.parquet', index=False, engine='pyarrow')
+df_lpg.to_sql('lpg_bronze', engine, if_exists='replace', index=False, schema='bronze')
 
 # Gasoline Ethanol Prices
 
@@ -40,7 +41,8 @@ new_months = pd.date_range(start, end, freq='MS').strftime('%m/%Y').tolist()
 df_gasoline_ethanol_new = download_Gasoline_Ethanol(new_months)
 
 df_gasoline_ethanol = pd.concat([df_gasoline_ethanol, df_gasoline_ethanol_new])
-df_gasoline_ethanol.to_parquet('data/fuels_prices/bronze/Gasoline and Ethanol Prices.parquet', index=False, engine='pyarrow')
+# df_gasoline_ethanol.to_parquet('data/fuels_prices/bronze/Gasoline and Ethanol Prices.parquet', index=False, engine='pyarrow')
+df_gasoline_ethanol.to_sql('gasoline_ethanol_bronze', engine, if_exists='replace', index=False, schema='bronze')
 
 # Diesel and CNG Prices
 
@@ -54,4 +56,5 @@ new_months = pd.date_range(start, end, freq='MS').strftime('%m/%Y').tolist()
 df_diesel_cng_new = download_Diesel_CNG(new_months)
 
 df_diesel_cng = pd.concat([df_diesel_cng, df_diesel_cng_new])
-df_diesel_cng.to_parquet('data/fuels_prices/bronze/Diesel and CNG Prices.parquet', index=False, engine='pyarrow')
+# df_diesel_cng.to_parquet('data/fuels_prices/bronze/Diesel and CNG Prices.parquet', index=False, engine='pyarrow')
+df_diesel_cng.to_sql('diesel_cng_bronze', engine, if_exists='replace', index=False, schema='bronze')
