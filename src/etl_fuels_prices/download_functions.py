@@ -47,10 +47,23 @@ def download_LPG(new_months):
 
                 except Exception as e:
 
-                    print(f'LPG: Download - Failed - {year_str}/{month_str}')
-                    sys.exit(1)
+                    download_url = f"https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsan/{year_str}/precos-{year_str}-{month_str}-glp.csv"
+             
+                    try:
+                            
+                        response = requests.get(download_url)
+                        encoding = chardet.detect(response.content)['encoding']
+
+                        df_month_year = pd.read_csv(download_url, encoding=encoding, sep=';')
+
+                    except Exception as e:
+
+                        print(f'LPG: Download - Failed - {year_str}/{month_str}')
+                        print(download_url)
+                        sys.exit(1)
     
         print(f'LPG: Download - Ok - {year_str}/{month_str}')
+        print(download_url)
 
         df_lpg = pd.concat([df_lpg, df_month_year])
 
@@ -112,10 +125,23 @@ def download_Gasoline_Ethanol(new_months):
 
                     except Exception as e:
 
-                        print(f'Gasoline and Ethanol: Download - Failed - {year_str}/{month_str}')
-                        sys.exit(1)
+                        download_url = f"https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsan/{year_str}/precos-{year_str}-{month_str}-gasolina-etanol.csv"
+             
+                        try:
+                                
+                            response = requests.get(download_url)
+                            encoding = chardet.detect(response.content)['encoding']
+
+                            df_month_year = pd.read_csv(download_url, encoding=encoding, sep=';')
+
+                        except Exception as e:
+
+                            print(f'Gasoline and Ethanol: Download - Failed - {year_str}/{month_str}')
+                            print(download_url)
+                            sys.exit(1)
         
         print(f'Gasoline and Ethanol: Download - Ok - {year_str}/{month_str}')
+        print(download_url)
 
         df_gasoline_ethanol = pd.concat([df_gasoline_ethanol, df_month_year])
 
@@ -166,10 +192,23 @@ def download_Diesel_CNG(new_months):
 
                 except Exception as e:
 
-                    print(f'Diesel and CNG: Download - Failed - {year_str}/{month_str}')
-                    sys.exit(1)
+                    download_url = f"https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsan/{year_str}/precos-{year_str}-{month_str}-diesel-gnv.csv"
+             
+                    try:
+                            
+                        response = requests.get(download_url)
+                        encoding = chardet.detect(response.content)['encoding']
+
+                        df_month_year = pd.read_csv(download_url, encoding=encoding, sep=';')
+
+                    except Exception as e:
+
+                        print(f'Diesel and CNG: Download - Failed - {year_str}/{month_str}')
+                        print(download_url)
+                        sys.exit(1)
 
         print(f'Diesel and CNG: Download - Ok - {year_str}/{month_str}')
+        print(download_url)
 
         df_diesel_cng = pd.concat([df_diesel_cng, df_month_year])
 
