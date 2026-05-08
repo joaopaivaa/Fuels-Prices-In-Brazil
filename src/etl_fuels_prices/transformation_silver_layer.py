@@ -26,13 +26,13 @@ def remove_accents(s):
 df_diesel_cng = pd.read_sql("SELECT * FROM bronze.diesel_cng_bronze", engine)
 # df_diesel_cng = pd.read_parquet("./data/fuels_prices/bronze/Diesel and CNG Prices.parquet")
 
-df_lpg = pd.read_sql("SELECT * FROM bronze.lpg_bronze", engine)
+# df_lpg = pd.read_sql("SELECT * FROM bronze.lpg_bronze", engine)
 # df_lpg = pd.read_parquet("./data/fuels_prices/bronze/LPG Prices.parquet")
 
 df_gasoline_ethanol = pd.read_sql("SELECT * FROM bronze.gasoline_ethanol_bronze", engine)
 # df_gasoline_ethanol = pd.read_parquet("./data/fuels_prices/bronze/Gasoline and Ethanol Prices.parquet")
 
-df = pd.concat([df_diesel_cng, df_lpg, df_gasoline_ethanol], ignore_index=True)
+df = pd.concat([df_diesel_cng, df_gasoline_ethanol], ignore_index=True)
 
 cols_to_drop = ['CNPJ da Revenda', 'Nome da Rua', 'Numero Rua', 'Complemento', 'Cep', 'Valor de Compra']
 df = df.drop(columns=[c for c in cols_to_drop if c in df.columns])
