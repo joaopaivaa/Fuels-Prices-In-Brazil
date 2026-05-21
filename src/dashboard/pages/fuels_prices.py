@@ -1,22 +1,22 @@
-from sqlalchemy import create_engine
+# from sqlalchemy import create_engine
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import geopandas as gpd
 import numpy as np
 from datetime import date
-import os
-from dotenv import load_dotenv
+# import os
+# from dotenv import load_dotenv
 
-load_dotenv() 
-db_url = os.getenv('database_url')
+# load_dotenv() 
+# db_url = os.getenv('database_url')
 
-if db_url and db_url.startswith("postgres://"):
-    db_url = db_url.replace("postgres://", "postgresql://", 1)
+# if db_url and db_url.startswith("postgres://"):
+#     db_url = db_url.replace("postgres://", "postgresql://", 1)
 
-engine = create_engine(db_url)
+# engine = create_engine(db_url)
 
-df_fuels = pd.read_sql("SELECT * FROM gold.fact_fuels_prices_gold", engine)
+# df_fuels = pd.read_sql("SELECT * FROM gold.fact_fuels_prices_gold", engine)
 
 fuel_types_colors = {
     "Etanol": "#A8D8A8",
@@ -42,7 +42,7 @@ st.set_page_config(layout='wide')
 
 st.title('Preços de combustíveis no Brasil :fuelpump:')
 
-# df_fuels = pd.read_parquet('data/fuels_prices/gold/fuels_prices.parquet')
+df_fuels = pd.read_parquet('data/fuels_prices/gold/fuels_prices.parquet')
 
 df_fuels["nm_state"] = df_fuels["nm_state"].astype("category")
 df_fuels["nm_city"] = df_fuels["nm_city"].astype("category")
